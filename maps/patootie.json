@@ -28,6 +28,7 @@
     },
     {
       "theme": "Median Wealth per Adult in USD",
+      "size": [3, 3],
       "pairs": [
         ["27k", "China"],
         ["3.7k", "India"],
@@ -66,7 +67,7 @@
       "pairs": [
         ["Dictator, nationalism, no dissent", "Fascism"],
         ["Classless, stateless, property shared", "Communism"],
-        ["Public ownership of major industry", "Socialism"],
+        ["Public ownership of industry", "Socialism"],
         ["Private ownership, free markets", "Capitalism"],
         ["No rulers, no state", "Anarchism"],
         ["Max freedom, minimal government", "Libertarianism"],
@@ -75,15 +76,16 @@
         ["Rule by a king / queen", "Monarchism"],
         ["State controls every part of life", "Totalitarianism"],
         ["The people vs. the corrupt elite", "Populism"],
-        ["My nation's interests first", "Nationalism"],
+        ["Nation's interests first", "Nationalism"],
         ["Equal rights for women", "Feminism"],
         ["Power split: federal and state", "Federalism"],
-        ["Stay out of foreign affairs", "Isolationism"],
+        ["No foreign affairs", "Isolationism"],
         ["Build empire by taking territory", "Imperialism"]
       ]
     },
     {
       "theme": "Spookytown",
+      "size": [3, 3],
       "pairs": [
         ["Spiders", "Arachnophobia"],
         ["Heights", "Acrophobia"],
