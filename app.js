@@ -399,14 +399,18 @@ async function puzzleView(id, pi) {
   const signal = newView();
   const p = progress.get(id);
   const N = map.pc * map.pr;
+  const fresh = !p[pi];           // never opened, or reset after a strike-out
   const st = gridState(map, p, pi);
   const solved = new Set(st.s);   // solved *positions* — a position is always the same pixel
-  const layout = st.l;            // which pair's prompt sits at each position (changes on shuffle)
+  const layout = fresh            // which pair's prompt sits at each position (changes on shuffle)
+    ? seededShuffle(st.l, String(Math.random()))
+    : st.l;
   let strikes = st.k;
   const maxStrikes = map.strikes;
   let locked = false;
   const pairAt = pos => pz.pairs[layout[pos]];
   const save = () => { p[pi] = { s: [...solved], l: layout, k: strikes }; progress.set(id, p); };
+  if (fresh) save();              // keep this starting order until the grid is solved or reset
   const openPairs = [...Array(N).keys()].filter(pos => !solved.has(pos)).map(pos => layout[pos]);
   const order = seededShuffle(openPairs, `${id}:${pi}`);
 
