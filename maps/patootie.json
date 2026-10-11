@@ -8,43 +8,36 @@
     {
       "theme": "Inside that Counts",
       "pairs": [
-        ["Adamantium claws", "Wolverine"],
-        ["Spider-sense", "Spider-Man"],
-        ["Grows huge when angry", "Hulk"],
-        ["World's top telepath", "Professor X"],
+        ["Wings and Shield", "Sam Wilson"],
+        ["Density Manipulation", "Vision"],
+        ["Science + tech", "Doctor Doom"],
+        ["telepath and telekinesis", "Jean Grey"],
         ["Controls metal", "Magneto"],
         ["Controls the weather", "Storm"],
         ["Steals powers by touch", "Rogue"],
         ["Optic blasts", "Cyclops"],
-        ["Teleports with a BAMF", "Nightcrawler"],
-        ["Shrinks with Pym Particles", "Ant-Man"],
-        ["Chaos magic, rewrites reality", "Scarlet Witch"],
+        ["Teleports", "Nightcrawler"],
+        ["Super sense", "Daredevil"],
+        ["Rewrites reality", "Scarlet Witch"],
         ["Charges cards with energy", "Gambit"],
-        ["Heals, breaks the 4th wall", "Deadpool"],
-        ["Rides a cosmic surfboard", "Silver Surfer"],
-        ["Flaming skull, Penance Stare", "Ghost Rider"],
-        ["Turns invisible, force fields", "Invisible Woman"]
+        ["10 Rings", "Shang-Chi"],
+        ["Shapeshifting", "Mystique"],
+        ["Penance Stare", "Ghost Rider"],
+        ["Invisibility, force fields", "Invisible Woman"]
       ]
     },
     {
-      "theme": "Cancelled Shows",
+      "theme": "Median Wealth per Adult in USD",
       "pairs": [
-        ["Racist tweet sank her reboot", "Roseanne"],
-        ["Oscars slap", "Will Smith"],
-        ["Antisemitic posts", "Kanye"],
-        ["Antisemitic DUI rant", "Mel Gibson"],
-        ["Lost her cooking show over a slur", "Paula Deen"],
-        ["Racist rant at a comedy club", "Michael Richards"],
-        ["Slur caught on a neighbor's video", "Morgan Wallen"],
-        ["Old tweets cost him Oscars host", "Kevin Hart"],
-        ["Old tweets got him fired by Marvel", "James Gunn"],
-        ["Toxic workplace reports", "Ellen"],
-        ["Lip-synced, then a track skipped", "Milli Vanilli"],
-        ["Prison over a stock sale", "Martha Stewart"],
-        ["Tore up the Pope's photo on SNL", "Sinéad O'Connor"],
-        ["Super Bowl wardrobe malfunction", "Janet Jackson"],
-        ["Faked a Spanish accent", "Hilaria Baldwin"],
-        ["Admitted to doping", "Lance Armstrong"]
+        ["27k", "China"],
+        ["3.7k", "India"],
+        ["107k", "United States"],
+        ["5.7k", "Brazil"],
+        ["104k", "Japan"],
+        ["92k", "South Korea"],
+        ["5.3k", "Vietnam"],
+        ["413k", "Iceland"],
+        ["90k", "Ireland"]
       ]
     },
     {
@@ -71,22 +64,22 @@
     {
       "theme": "Isms",
       "pairs": [
-        ["Dictator, extreme nationalism, no dissent", "Fascism"],
-        ["Classless, stateless, all property shared", "Communism"],
+        ["Dictator, nationalism, no dissent", "Fascism"],
+        ["Classless, stateless, property shared", "Communism"],
         ["Public ownership of major industry", "Socialism"],
         ["Private ownership, free markets", "Capitalism"],
         ["No rulers, no state", "Anarchism"],
         ["Max freedom, minimal government", "Libertarianism"],
         ["Individual rights, rule by consent", "Liberalism"],
         ["Preserve tradition, change slowly", "Conservatism"],
-        ["Rule by a king or queen", "Monarchism"],
+        ["Rule by a king / queen", "Monarchism"],
         ["State controls every part of life", "Totalitarianism"],
         ["The people vs. the corrupt elite", "Populism"],
         ["My nation's interests first", "Nationalism"],
         ["Equal rights for women", "Feminism"],
         ["Power split: federal and state", "Federalism"],
         ["Stay out of foreign affairs", "Isolationism"],
-        ["Build an empire by taking territory", "Imperialism"]
+        ["Build empire by taking territory", "Imperialism"]
       ]
     },
     {
@@ -115,7 +108,7 @@
       "pairs": [
         ["Marvel's Wolverine", "Insomniac"],
         ["GTA 6", "Rockstar"],
-        ["Silksong", "Team Cherry"],
+        ["The Blood of Dawnwalker", "Rebel Wolves"],
         ["Resident Evil Requiem", "Capcom"],
         ["Zero Parades", "ZA/UM"],
         ["007 First Light", "IO Interactive"],
