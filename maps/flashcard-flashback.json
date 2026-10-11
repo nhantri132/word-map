@@ -1,0 +1,93 @@
+{
+  "title": "Flashcard Flashback",
+  "image": "images/flashcard-flashback.png",
+  "puzzleSize": [4, 4],
+  "mapSize": [2, 2],
+  "palette": 10,
+  "puzzles": [
+    {
+      "theme": "More like Amend Men",
+      "pairs": [
+        ["Hanks", "Tom"],
+        ["DiCaprio", "Leonardo"],
+        ["Pitt", "Brad"],
+        ["Washington", "Denzel"],
+        ["Freeman", "Morgan"],
+        ["Reeves", "Keanu"],
+        ["Clooney", "George"],
+        ["Gosling", "Ryan"],
+        ["Chalamet", "Timothée"],
+        ["Pascal", "Pedro"],
+        ["Elba", "Idris"],
+        ["Styles", "Harry"],
+        ["Damon", "Matt"],
+        ["Jackman", "Hugh"],
+        ["Momoa", "Jason"],
+        ["Rogen", "Seth"]
+      ]
+    },
+    {
+      "theme": "It's a Numbers Game",
+      "pairs": [
+        ["Free speech", "1st"],
+        ["Bear arms", "2nd"],
+        ["No troops in your house", "3rd"],
+        ["No unreasonable searches", "4th"],
+        ["Plead the ___", "5th"],
+        ["Speedy trial", "6th"],
+        ["No cruel punishment", "8th"],
+        ["States' rights", "10th"],
+        ["Ends slavery", "13th"],
+        ["Equal protection", "14th"],
+        ["Income tax", "16th"],
+        ["Prohibition", "18th"],
+        ["Women vote", "19th"],
+        ["Repeals Prohibition", "21st"],
+        ["Two-term limit", "22nd"],
+        ["Voting age 18", "26th"]
+      ]
+    },
+    {
+      "theme": "Capital Gains",
+      "pairs": [
+        ["Florida", "Tallahassee"],
+        ["Texas", "Austin"],
+        ["Vermont", "Montpelier"],
+        ["South Dakota", "Pierre"],
+        ["North Dakota", "Bismarck"],
+        ["Nevada", "Carson City"],
+        ["Kentucky", "Frankfort"],
+        ["Delaware", "Dover"],
+        ["Maine", "Augusta"],
+        ["Montana", "Helena"],
+        ["Missouri", "Jefferson City"],
+        ["Wyoming", "Cheyenne"],
+        ["Alaska", "Juneau"],
+        ["Oregon", "Salem"],
+        ["New York", "Albany"],
+        ["Illinois", "Springfield"]
+      ]
+    },
+    {
+      "theme": "Blind Leading the Blind",
+      "pairs": [
+        ["USA", "Trump"],
+        ["Mexico", "Sheinbaum"],
+        ["Canada", "Carney"],
+        ["UK", "Burnham"],
+        ["Italy", "Meloni"],
+        ["Germany", "Merz"],
+        ["Japan", "Takaichi"],
+        ["India", "Modi"],
+        ["South Korea", "Lee"],
+        ["Argentina", "Milei"],
+        ["Ukraine", "Zelenskyy"],
+        ["Ireland", "Martin"],
+        ["Iceland", "Frostadóttir"],
+        ["Bhutan", "Tobgay"],
+        ["Nepal", "Shah"],
+        ["Kenya", "Ruto"]
+      ]
+    }
+  ]
+}
