@@ -85,22 +85,15 @@
     {
       "theme": "Spookytown",
       "pairs": [
-        ["Fear of spiders", "Arachnophobia"],
-        ["Fear of heights", "Acrophobia"],
-        ["Fear of tight spaces", "Claustrophobia"],
-        ["Fear of crowded public places", "Agoraphobia"],
-        ["Fear of snakes", "Ophidiophobia"],
-        ["Fear of the number 13", "Triskaidekaphobia"],
-        ["Fear of clowns", "Coulrophobia"],
-        ["Fear of germs", "Mysophobia"],
-        ["Fear of clustered holes", "Trypophobia"],
-        ["Fear of the dark", "Nyctophobia"],
-        ["Fear of dogs", "Cynophobia"],
-        ["Fear of public speaking", "Glossophobia"],
-        ["Fear of thunder and lightning", "Astraphobia"],
-        ["Fear of blood", "Hemophobia"],
-        ["Fear of flying", "Aerophobia"],
-        ["Fear of water", "Aquaphobia"]
+        ["Spiders", "Arachnophobia"],
+        ["Heights", "Acrophobia"],
+        ["Tight spaces", "Claustrophobia"],
+        ["Crowded public places", "Agoraphobia"],
+        ["Snakes", "Ophidiophobia"],
+        ["Number 13", "Triskaidekaphobia"],
+        ["Clowns", "Coulrophobia"],
+        ["Germs", "Mysophobia"],
+        ["Clustered holes", "Trypophobia"]
       ]
     },
     {
