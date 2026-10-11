@@ -1,0 +1,135 @@
+{
+  "title": "Patootie",
+  "image": "images/patootie.jpg",
+  "puzzleSize": [4, 4],
+  "mapSize": [2, 3],
+  "palette": 0,
+  "puzzles": [
+    {
+      "theme": "Inside that Counts",
+      "pairs": [
+        ["Adamantium claws", "Wolverine"],
+        ["Spider-sense", "Spider-Man"],
+        ["Grows huge when angry", "Hulk"],
+        ["World's top telepath", "Professor X"],
+        ["Controls metal", "Magneto"],
+        ["Controls the weather", "Storm"],
+        ["Steals powers by touch", "Rogue"],
+        ["Optic blasts", "Cyclops"],
+        ["Teleports with a BAMF", "Nightcrawler"],
+        ["Shrinks with Pym Particles", "Ant-Man"],
+        ["Chaos magic, rewrites reality", "Scarlet Witch"],
+        ["Charges cards with energy", "Gambit"],
+        ["Heals, breaks the 4th wall", "Deadpool"],
+        ["Rides a cosmic surfboard", "Silver Surfer"],
+        ["Flaming skull, Penance Stare", "Ghost Rider"],
+        ["Turns invisible, force fields", "Invisible Woman"]
+      ]
+    },
+    {
+      "theme": "Cancelled Shows",
+      "pairs": [
+        ["Racist tweet sank her reboot", "Roseanne"],
+        ["Oscars slap", "Will Smith"],
+        ["Antisemitic posts", "Kanye"],
+        ["Antisemitic DUI rant", "Mel Gibson"],
+        ["Lost her cooking show over a slur", "Paula Deen"],
+        ["Racist rant at a comedy club", "Michael Richards"],
+        ["Slur caught on a neighbor's video", "Morgan Wallen"],
+        ["Old tweets cost him Oscars host", "Kevin Hart"],
+        ["Old tweets got him fired by Marvel", "James Gunn"],
+        ["Toxic workplace reports", "Ellen"],
+        ["Lip-synced, then a track skipped", "Milli Vanilli"],
+        ["Prison over a stock sale", "Martha Stewart"],
+        ["Tore up the Pope's photo on SNL", "Sinéad O'Connor"],
+        ["Super Bowl wardrobe malfunction", "Janet Jackson"],
+        ["Faked a Spanish accent", "Hilaria Baldwin"],
+        ["Admitted to doping", "Lance Armstrong"]
+      ]
+    },
+    {
+      "theme": "Paired Up",
+      "pairs": [
+        ["Taylor Swift", "Travis Kelce"],
+        ["Kourtney Kardashian", "Travis Barker"],
+        ["Kylie Jenner", "Timothée Chalamet"],
+        ["Kris Jenner", "Corey Gamble"],
+        ["Selena Gomez", "Benny Blanco"],
+        ["Beyoncé", "Jay-Z"],
+        ["Blake Lively", "Ryan Reynolds"],
+        ["Zendaya", "Tom Holland"],
+        ["Rihanna", "A$AP Rocky"],
+        ["Gigi Hadid", "Bradley Cooper"],
+        ["Priyanka Chopra", "Nick Jonas"],
+        ["Dua Lipa", "Callum Turner"],
+        ["Margot Robbie", "Tom Ackerley"],
+        ["Emily Blunt", "John Krasinski"],
+        ["Kristen Bell", "Dax Shepard"],
+        ["Chrissy Teigen", "John Legend"]
+      ]
+    },
+    {
+      "theme": "Isms",
+      "pairs": [
+        ["Dictator, extreme nationalism, no dissent", "Fascism"],
+        ["Classless, stateless, all property shared", "Communism"],
+        ["Public ownership of major industry", "Socialism"],
+        ["Private ownership, free markets", "Capitalism"],
+        ["No rulers, no state", "Anarchism"],
+        ["Max freedom, minimal government", "Libertarianism"],
+        ["Individual rights, rule by consent", "Liberalism"],
+        ["Preserve tradition, change slowly", "Conservatism"],
+        ["Rule by a king or queen", "Monarchism"],
+        ["State controls every part of life", "Totalitarianism"],
+        ["The people vs. the corrupt elite", "Populism"],
+        ["My nation's interests first", "Nationalism"],
+        ["Equal rights for women", "Feminism"],
+        ["Power split: federal and state", "Federalism"],
+        ["Stay out of foreign affairs", "Isolationism"],
+        ["Build an empire by taking territory", "Imperialism"]
+      ]
+    },
+    {
+      "theme": "Spookytown",
+      "pairs": [
+        ["Fear of spiders", "Arachnophobia"],
+        ["Fear of heights", "Acrophobia"],
+        ["Fear of tight spaces", "Claustrophobia"],
+        ["Fear of crowded public places", "Agoraphobia"],
+        ["Fear of snakes", "Ophidiophobia"],
+        ["Fear of the number 13", "Triskaidekaphobia"],
+        ["Fear of clowns", "Coulrophobia"],
+        ["Fear of germs", "Mysophobia"],
+        ["Fear of clustered holes", "Trypophobia"],
+        ["Fear of the dark", "Nyctophobia"],
+        ["Fear of dogs", "Cynophobia"],
+        ["Fear of public speaking", "Glossophobia"],
+        ["Fear of thunder and lightning", "Astraphobia"],
+        ["Fear of blood", "Hemophobia"],
+        ["Fear of flying", "Aerophobia"],
+        ["Fear of water", "Aquaphobia"]
+      ]
+    },
+    {
+      "theme": "2026 Nerd",
+      "pairs": [
+        ["Marvel's Wolverine", "Insomniac"],
+        ["GTA 6", "Rockstar"],
+        ["Silksong", "Team Cherry"],
+        ["Resident Evil Requiem", "Capcom"],
+        ["Zero Parades", "ZA/UM"],
+        ["007 First Light", "IO Interactive"],
+        ["Control Resonant", "Remedy"],
+        ["Big Walk", "House House"],
+        ["Mixtape", "Beethoven & Dinosaur"],
+        ["Tomodachi Life", "Nintendo"],
+        ["Saros", "Housemarque"],
+        ["Marathon", "Bungie"],
+        ["Slay the Spire 2", "Mega Crit"],
+        ["Nioh 3", "Team Ninja"],
+        ["Reanimal", "Tarsier"],
+        ["Mina the Hollower", "Yacht Club"]
+      ]
+    }
+  ]
+}
