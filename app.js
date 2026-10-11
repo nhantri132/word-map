@@ -39,7 +39,8 @@ const Haptics = (() => {
     get enabled() { return enabled; },
     set enabled(v) { enabled = v; localStorage.setItem(STORE + 'haptics', v ? 'on' : 'off'); },
     correct: () => play(28, 1),                                  // small: one match
-    wrong:   () => play([12, 70, 12], 0),                        // a soft "nope" (Android only)
+    wrong:   () => play([40, 60, 40], 2),                        // a strike: double buzz
+    fail:    () => play([300, 100, 300], 4),                     // out of strikes
     puzzle:  () => play([90, 70, 90, 70, 260], 3),               // large: puzzle grid done
     map:     () => play([120, 60, 120, 60, 120, 60, 500], 5),    // largest: whole Word Map
   };
@@ -86,6 +87,7 @@ function normalizeMap(raw, file) {
     palette: raw.palette ?? 8,
     background: raw.background || '#f6efe2',
     revealOriginal: raw.revealOriginal !== false,
+    strikes: Math.max(0, raw.strikes ?? 3),
   };
 }
 
@@ -184,7 +186,18 @@ const progress = {
   set(id, p) { localStorage.setItem(STORE + 'p.' + id, JSON.stringify(p)); },
   clear(id) { localStorage.removeItem(STORE + 'p.' + id); },
 };
-const solvedIn = (p, pi) => new Set(p[pi] || []);
+// A grid's saved state: s = solved positions, l = layout (position → pair index), k = strikes used.
+// (Older saves stored just an array of solved positions.)
+function gridState(map, p, pi) {
+  const N = map.pc * map.pr, raw = p[pi], ident = [...Array(N).keys()];
+  if (Array.isArray(raw)) return { s: raw.slice(), l: ident, k: 0 };
+  return {
+    s: (raw && raw.s) ? raw.s.slice() : [],
+    l: (raw && raw.l && raw.l.length === N) ? raw.l.slice() : ident,
+    k: (raw && raw.k) || 0,
+  };
+}
+const solvedIn = (p, pi) => new Set(Array.isArray(p[pi]) ? p[pi] : ((p[pi] && p[pi].s) || []));
 const puzzleDone = (map, p, pi) => solvedIn(p, pi).size >= map.pc * map.pr;
 const mapDone = (map, p) => map.puzzles.every((_, pi) => puzzleDone(map, p, pi));
 const allSolved = map => Object.fromEntries(map.puzzles.map((_, pi) => [pi, [...Array(map.pc * map.pr).keys()]]));
@@ -210,6 +223,7 @@ function fitText(sq, max = 16, min = 9) {
   const box = sq.querySelector('.txt'), inner = box && box.firstElementChild;
   if (!inner) return;
   let s = max;
+  sq.classList.remove('clipped');
   inner.style.fontSize = s + 'px';
   const over = () => inner.offsetHeight > box.clientHeight + 1 || inner.scrollWidth > box.clientWidth + 1;
   while (s > min && over()) { s -= 0.5; inner.style.fontSize = s + 'px'; }
@@ -332,6 +346,9 @@ async function mapView(id, { peek = false } = {}) {
 
   const from = peek ? null : sessionStorage.getItem('wm.zoomFrom');
   sessionStorage.removeItem('wm.zoomFrom');
+  const failed = sessionStorage.getItem('wm.failed');
+  sessionStorage.removeItem('wm.failed');
+  if (failed !== null) mapEl.querySelector(`[data-pi="${+failed}"]`)?.classList.add('struck');
   if (from !== null) await zoomOut(mapEl, +from);
   if (signal.aborted || !complete) return;
 
@@ -381,42 +398,67 @@ async function puzzleView(id, pi) {
   const pixels = await getPixels(map);
   const signal = newView();
   const p = progress.get(id);
-  const solved = solvedIn(p, pi);
   const N = map.pc * map.pr;
-  const order = seededShuffle([...Array(N).keys()], `${id}:${pi}`);
+  const st = gridState(map, p, pi);
+  const solved = new Set(st.s);   // solved *positions* — a position is always the same pixel
+  const layout = st.l;            // which pair's prompt sits at each position (changes on shuffle)
+  let strikes = st.k;
+  const maxStrikes = map.strikes;
+  let locked = false;
+  const pairAt = pos => pz.pairs[layout[pos]];
+  const save = () => { p[pi] = { s: [...solved], l: layout, k: strikes }; progress.set(id, p); };
+  const openPairs = [...Array(N).keys()].filter(pos => !solved.has(pos)).map(pos => layout[pos]);
+  const order = seededShuffle(openPairs, `${id}:${pi}`);
 
   app.innerHTML = `<main>
     <header class="bar"><a class="back" href="#/m/${encodeURIComponent(id)}" aria-label="Back to map">‹</a>
       <div class="ttl"><h2>${esc(pz.theme)}</h2><small id="count"></small></div></header>
     <div class="boardwrap"><div class="board" style="--cols:${map.pc};--rows:${map.pr}">
-      ${pz.pairs.map((q, i) => `<button class="sq" data-i="${i}"><span class="txt prompt"><span>${esc(q.prompt)}</span></span></button>`).join('')}
+      ${[...Array(N).keys()].map(pos => `<button class="sq" data-i="${pos}"><span class="txt prompt"><span>${esc(pairAt(pos).prompt)}</span></span></button>`).join('')}
     </div></div>
-    <div class="tray" id="tray">${order.filter(i => !solved.has(i)).map(i =>
-      `<button class="tile" data-a="${esc(pz.pairs[i].answer)}">${esc(pz.pairs[i].answer)}</button>`).join('')}
+    <div class="tools" id="tools">
+      ${maxStrikes ? `<div class="strikes" id="strikes"></div>` : '<span></span>'}
+      <button class="chip" id="shuffle"><span aria-hidden="true">⤨</span> Shuffle</button>
+    </div>
+    <div class="tray" id="tray">${order.map(j =>
+      `<button class="tile" data-a="${esc(pz.pairs[j].answer)}">${esc(pz.pairs[j].answer)}</button>`).join('')}
       <p class="trayhint">Drag an answer onto its prompt, or tap one then tap the square. Tap a prompt to read it in full.</p></div>
     <div class="donebar" id="donebar" hidden></div>
   </main>`;
 
   const board = $('.board'), tray = $('#tray'), count = $('#count'), donebar = $('#donebar');
+  const tools = $('#tools'), strikesEl = $('#strikes'), shuffleBtn = $('#shuffle');
   const squares = [...board.querySelectorAll('.sq')];
-  const updateCount = () => { count.textContent = `Puzzle ${pi + 1} of ${map.puzzles.length} · ${solved.size}/${N} matched`; };
+  const updateCount = () => {
+    count.textContent = `Puzzle ${pi + 1} of ${map.puzzles.length} · ${solved.size}/${N} matched`;
+    shuffleBtn.disabled = N - solved.size < 2;
+  };
+  const renderStrikes = (bump) => {
+    if (!strikesEl) return;
+    const left = maxStrikes - strikes;
+    strikesEl.setAttribute('aria-label', `${left} ${left === 1 ? 'strike' : 'strikes'} left`);
+    strikesEl.innerHTML = `<span class="slbl">Strikes</span>` + [...Array(maxStrikes).keys()]
+      .map(i => `<i class="${i < strikes ? 'used' : ''}${bump && i === strikes - 1 ? ' bump' : ''}"></i>`).join('');
+  };
   const fill = i => {
     const sq = squares[i], c = pixelOf(map, pixels, pi, i);
     sq.classList.add('solved');
     sq.style.setProperty('--c', rgb(c));
     sq.style.setProperty('--ci', inkFor(c));
-    sq.innerHTML = `<span class="txt"><span>${esc(pz.pairs[i].answer)}</span></span>`;
+    sq.innerHTML = `<span class="txt"><span>${esc(pairAt(i).answer)}</span></span>`;
     fitText(sq, 15, 7);
   };
   const fitAll = () => squares.forEach(sq => sq.classList.contains('solved') ? fitText(sq, 15, 7) : fitText(sq));
   solved.forEach(fill);
   updateCount();
+  renderStrikes(false);
   requestAnimationFrame(fitAll);
   document.fonts?.ready.then(fitAll);
   let rt; window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(fitAll, 120); }, { signal });
 
   const showDone = (last) => {
     tray.hidden = true;
+    tools.hidden = true;
     donebar.hidden = false;
     donebar.innerHTML = last
       ? `<p>That was the last piece.</p><a class="btn" href="#/m/${encodeURIComponent(id)}">Reveal the Word Map</a>`
@@ -435,16 +477,23 @@ async function puzzleView(id, pi) {
 
   /* --- matching --- */
   function attempt(tile, sq, ghost) {
+    if (locked) { if (ghost) flyHome(ghost, tile); return false; }
     const i = +sq.dataset.i;
-    if (norm(tile.dataset.a) !== norm(pz.pairs[i].answer)) {
+    if (norm(tile.dataset.a) !== norm(pairAt(i).answer)) {
       sq.classList.remove('shake'); void sq.offsetWidth; sq.classList.add('shake');
-      Haptics.wrong();
       if (ghost) flyHome(ghost, tile);
+      if (selected) setSelected(null);
+      if (maxStrikes) {
+        strikes++;
+        save();
+        renderStrikes(true);
+        if (strikes >= maxStrikes) { strikeOut(); return false; }
+      }
+      Haptics.wrong();
       return false;
     }
     solved.add(i);
-    p[pi] = [...solved];
-    progress.set(id, p);
+    save();
     ghost?.remove();
     if (selected === tile) setSelected(null);
     tile.remove();
@@ -467,18 +516,61 @@ async function puzzleView(id, pi) {
     if (!signal.aborted) showDone(last);
   }
 
+  /* --- three strikes: this grid starts over, back to the map --- */
+  async function strikeOut() {
+    locked = true;
+    Haptics.fail();  // inside the touch event, like the other haptics
+    if (selected) setSelected(null);
+    delete p[pi];
+    progress.set(id, p);
+    sessionStorage.removeItem('wm.zoomFrom');
+    sessionStorage.setItem('wm.failed', String(pi));
+    board.classList.add('failed');
+    await sleep(450);
+    if (signal.aborted) return;
+    const o = document.createElement('div');
+    o.className = 'overlay';
+    o.innerHTML = `<div class="sheet out"><h3>Three strikes</h3><p>“${esc(pz.theme)}” starts over from scratch.</p></div>`;
+    document.body.appendChild(o);
+    await sleep(2000);
+    if (!signal.aborted) location.hash = `#/m/${encodeURIComponent(id)}`;
+  }
+
+  /* --- shuffle the prompts still unsolved; solved squares stay put (they're pixels) --- */
+  shuffleBtn.addEventListener('click', () => {
+    if (locked) return;
+    const open = [...Array(N).keys()].filter(pos => !solved.has(pos));
+    if (open.length < 2) return;
+    const before = open.map(pos => layout[pos]);
+    let after = before;
+    for (let t = 0; t < 12 && after.every((v, k) => v === before[k]); t++) after = seededShuffle(before, String(Math.random()));
+    open.forEach((pos, k) => { layout[pos] = after[k]; });
+    save();
+    open.forEach((pos, k) => {
+      const sq = squares[pos], delay = k * 22;
+      sq.classList.remove('flip'); void sq.offsetWidth;
+      sq.style.animationDelay = delay + 'ms';
+      sq.classList.add('flip');
+      setTimeout(() => {
+        sq.querySelector('.txt > span').textContent = pairAt(pos).prompt;
+        fitText(sq);
+      }, 170 + delay);
+      setTimeout(() => { sq.classList.remove('flip'); sq.style.animationDelay = ''; }, 380 + delay);
+    });
+  }, { signal });
+
   board.addEventListener('click', e => {
     const sq = e.target.closest('.sq');
-    if (!sq || sq.classList.contains('solved')) return;
+    if (locked || !sq || sq.classList.contains('solved')) return;
     if (selected) attempt(selected, sq, null);
-    else showSheet(`<p>${esc(pz.pairs[+sq.dataset.i].prompt)}</p>`);
+    else showSheet(`<p>${esc(pairAt(+sq.dataset.i).prompt)}</p>`);
   }, { signal });
 
   /* --- dragging --- */
   let drag = null;
   tray.addEventListener('pointerdown', e => {
     const tile = e.target.closest('.tile');
-    if (!tile || drag || (e.pointerType === 'mouse' && e.button !== 0)) return;
+    if (locked || !tile || drag || (e.pointerType === 'mouse' && e.button !== 0)) return;
     drag = { tile, id: e.pointerId, x0: e.clientX, y0: e.clientY, moved: false, ghost: null, over: null };
   }, { signal });
 

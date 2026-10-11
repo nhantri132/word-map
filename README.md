@@ -55,6 +55,7 @@ images/heart.png     ← the picture a map reveals
 | `palette` | Number of colours to reduce the picture to (pixel-art look). `0` keeps exact average colours. Default 8. |
 | `background` | Colour behind transparent PNGs. Default cream. |
 | `revealOriginal` | `false` to skip fading in the original picture at the end. |
+| `strikes` | Wrong guesses allowed per grid before it resets. Default `3`; `0` turns strikes off. |
 
 The image is pixelated automatically in the browser: it's centre-cropped to the map's shape and averaged down to one colour per square. You don't need to prepare it.
 
@@ -63,6 +64,11 @@ If something doesn't add up (wrong number of pairs, missing answer), the map scr
 **Preview before writing content:** open `#/peek/your-map` (e.g. `…/word-map/#/peek/heart`) to see the finished pixel picture without touching your progress. Use it to choose sizes and palette before writing 200 prompts.
 
 Answers are matched case-insensitively. If two prompts share the same answer, either tile fits either square.
+
+## Strikes and shuffle
+
+- **Strikes:** each wrong guess (a tile dropped or tapped onto the wrong square) is a strike. On the third, that grid's progress is wiped and you're sent back to the map; other grids are untouched. Strikes are saved, so leaving and coming back doesn't clear them. Dropping a tile between squares or back in the tray is free.
+- **Shuffle:** rearranges the prompts that are still unsolved. Solved squares stay where they are, because each position is a fixed pixel of the picture. The new arrangement is saved.
 
 ## Choosing sizes — the honest trade-off
 
