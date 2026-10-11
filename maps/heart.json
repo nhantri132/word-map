@@ -1,6 +1,5 @@
 {
   "title": "Starter Heart",
-  "subtitle": "demo",
   "image": "images/heart.png",
   "puzzleSize": [3, 3],
   "mapSize": [2, 2],
@@ -10,14 +9,14 @@
       "theme": "Omakase",
       "pairs": [
         ["Lean red tuna", "Akami"],
-        ["medium fat bluefin tuna", "Chutoro"],
+        ["Medium fat bluefin tuna", "Chutoro"],
         ["Fattiest bluefin tuna", "Otoro"],
         ["Yellowtail", "Hamachi"],
         ["Amberjack", "Kanpachi"],
         ["Striped jack", "Shima Aji"],
         ["Traditional salmon", "Sake"],
         ["Sea bream", "Madai"],
-        ["Horse mackeral", "Aji"]
+        ["Horse mackerel", "Aji"]
       ]
     },
     {
@@ -41,7 +40,7 @@
         ["Young Forever", "2016"],
         ["Face Yourself", "2018"],
         ["BTS World", "2019"],
-        ["Map of the Soul", "2020"],
+        ["Map of the Soul: 7", "2020"],
         ["Arirang", "2026"],
         ["O!RUL8,2?", "2013"],
         ["The Most Beautiful Moment in Life", "2015"],
@@ -59,7 +58,7 @@
         ["One Battle After Another", "Chase Infiniti"],
         ["Obsession", "Inde Navarrette"],
         ["Weapons", "Julia Garner"],
-        ["undertone", "Nina Kiri"]
+        ["Undertone", "Nina Kiri"]
       ]
     }
   ]
