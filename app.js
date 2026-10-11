@@ -65,17 +65,20 @@ async function loadJSON(url) {
 function normalizeMap(raw, file) {
   const errors = [];
   const id = file.replace(/\.json$/i, '').replace(/[^\w-]/g, '-');
+  // puzzleSize is the default grid AND sets the shape of each block on the map.
+  // A puzzle can override its grid with "size": the block stays the same, its pixels get bigger or smaller.
   const [pc, pr] = raw.puzzleSize || [4, 4];
   const [mc, mr] = raw.mapSize || [1, 1];
-  const N = pc * pr;
   const puzzles = (raw.puzzles || []).map((p, pi) => {
+    const [c, r] = Array.isArray(p.size) && p.size.length === 2 ? p.size : [pc, pr];
+    const N = c * r;
     const pairs = (p.pairs || []).map(x => Array.isArray(x)
       ? { prompt: x[0], answer: x[1] }
       : { prompt: x.prompt, answer: x.answer });
     const theme = p.theme || `Puzzle ${pi + 1}`;
-    if (pairs.length !== N) errors.push(`Puzzle ${pi + 1} (“${theme}”) has ${pairs.length} pairs but a ${pc}×${pr} grid needs ${N}.`);
+    if (pairs.length !== N) errors.push(`Puzzle ${pi + 1} (“${theme}”) has ${pairs.length} pairs but a ${c}×${r} grid needs ${N}.`);
     pairs.forEach((q, i) => { if (!q.prompt || !q.answer) errors.push(`Puzzle ${pi + 1}, pair ${i + 1} is missing its prompt or answer.`); });
-    return { theme, pairs };
+    return { theme, pairs, c, r, N };
   });
   if (puzzles.length !== mc * mr) errors.push(`There are ${puzzles.length} puzzles, but a ${mc}×${mr} map needs ${mc * mr}.`);
   if (!raw.image) errors.push('No "image" given.');
@@ -119,42 +122,62 @@ function loadImage(src) {
   });
 }
 
+// Scale a region of a canvas down to tw×th, halving first so the result is a fair average.
+function downsample(src, sx, sy, sw, sh, tw, th) {
+  let cur = document.createElement('canvas');
+  cur.width = Math.max(1, Math.round(sw)); cur.height = Math.max(1, Math.round(sh));
+  cur.getContext('2d').drawImage(src, sx, sy, sw, sh, 0, 0, cur.width, cur.height);
+  while (cur.width / 2 >= tw && cur.height / 2 >= th) {
+    const n = document.createElement('canvas');
+    n.width = Math.round(cur.width / 2); n.height = Math.round(cur.height / 2);
+    const g = n.getContext('2d'); g.imageSmoothingQuality = 'high';
+    g.drawImage(cur, 0, 0, n.width, n.height); cur = n;
+  }
+  const out = document.createElement('canvas'); out.width = tw; out.height = th;
+  const g = out.getContext('2d'); g.imageSmoothingQuality = 'high';
+  g.drawImage(cur, 0, 0, tw, th);
+  return out;
+}
+
+// Returns { px: [puzzleIndex][squareIndex] = [r,g,b] }. Each puzzle's block of the
+// picture is sampled at that puzzle's own grid size, so a 2×2 paints 4 big pixels.
 async function getPixels(map) {
   if (cache.pixels[map.id]) return cache.pixels[map.id];
   const img = await loadImage(map.image);
-  const { W, H } = map, S = 6;
-  const iw = img.naturalWidth, ih = img.naturalHeight, ar = W / H;
+  const S = 4;
+  const iw = img.naturalWidth, ih = img.naturalHeight, ar = map.W / map.H;
   let sw = iw, sh = ih;
   if (iw / ih > ar) sw = ih * ar; else sh = iw / ar;
 
-  let src = document.createElement('canvas');
-  src.width = Math.max(1, Math.round(sw)); src.height = Math.max(1, Math.round(sh));
-  let g = src.getContext('2d');
-  g.fillStyle = map.background; g.fillRect(0, 0, src.width, src.height);
-  g.drawImage(img, (iw - sw) / 2, (ih - sh) / 2, sw, sh, 0, 0, src.width, src.height);
-  // Halve repeatedly so the browser's resampling stays a fair average.
-  while (src.width / 2 >= W * S && src.height / 2 >= H * S) {
-    const n = document.createElement('canvas');
-    n.width = Math.round(src.width / 2); n.height = Math.round(src.height / 2);
-    const ng = n.getContext('2d'); ng.imageSmoothingQuality = 'high';
-    ng.drawImage(src, 0, 0, n.width, n.height); src = n;
-  }
-  const c = document.createElement('canvas'); c.width = W * S; c.height = H * S;
-  g = c.getContext('2d'); g.imageSmoothingQuality = 'high';
-  g.drawImage(src, 0, 0, c.width, c.height);
-  const d = g.getImageData(0, 0, c.width, c.height).data;
+  // Centre-crop to the map's shape, flatten onto the background, and shrink to a working size.
+  const crop = document.createElement('canvas');
+  crop.width = Math.max(1, Math.round(sw)); crop.height = Math.max(1, Math.round(sh));
+  const cg = crop.getContext('2d');
+  cg.fillStyle = map.background; cg.fillRect(0, 0, crop.width, crop.height);
+  cg.drawImage(img, (iw - sw) / 2, (ih - sh) / 2, sw, sh, 0, 0, crop.width, crop.height);
+  const maxC = Math.max(...map.puzzles.map(p => p.c)), maxR = Math.max(...map.puzzles.map(p => p.r));
+  const work = downsample(crop, 0, 0, crop.width, crop.height,
+    Math.max(map.mc * maxC * S * 2, 1), Math.max(map.mr * maxR * S * 2, 1));
 
-  let px = [];
-  for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) {
-    let r = 0, gg = 0, b = 0;
-    for (let yy = 0; yy < S; yy++) for (let xx = 0; xx < S; xx++) {
-      const k = ((y * S + yy) * c.width + (x * S + xx)) * 4;
-      r += d[k]; gg += d[k + 1]; b += d[k + 2];
+  const bw = work.width / map.mc, bh = work.height / map.mr;
+  const flat = [], owner = [];
+  map.puzzles.forEach((pz, pi) => {
+    const bx = (pi % map.mc) * bw, by = Math.floor(pi / map.mc) * bh;
+    const block = downsample(work, bx, by, bw, bh, pz.c * S, pz.r * S);
+    const d = block.getContext('2d').getImageData(0, 0, block.width, block.height).data;
+    for (let y = 0; y < pz.r; y++) for (let x = 0; x < pz.c; x++) {
+      let r = 0, g = 0, b = 0;
+      for (let yy = 0; yy < S; yy++) for (let xx = 0; xx < S; xx++) {
+        const k = ((y * S + yy) * block.width + (x * S + xx)) * 4;
+        r += d[k]; g += d[k + 1]; b += d[k + 2];
+      }
+      flat.push([r / (S * S), g / (S * S), b / (S * S)]);
+      owner.push(pi);
     }
-    px.push([r / (S * S), gg / (S * S), b / (S * S)]);
-  }
-  if (map.palette > 0) px = quantize(px, map.palette);
-  px = px.map(p => p.map(Math.round));
+  });
+  const colours = (map.palette > 0 ? quantize(flat, map.palette) : flat).map(p => p.map(Math.round));
+  const px = map.puzzles.map(() => []);
+  colours.forEach((c, i) => px[owner[i]].push(c));
   return (cache.pixels[map.id] = { px });
 }
 
@@ -189,7 +212,7 @@ const progress = {
 // A grid's saved state: s = solved positions, l = layout (position → pair index), k = strikes used.
 // (Older saves stored just an array of solved positions.)
 function gridState(map, p, pi) {
-  const N = map.pc * map.pr, raw = p[pi], ident = [...Array(N).keys()];
+  const N = map.puzzles[pi].N, raw = p[pi], ident = [...Array(N).keys()];
   if (Array.isArray(raw)) return { s: raw.slice(), l: ident, k: 0 };
   return {
     s: (raw && raw.s) ? raw.s.slice() : [],
@@ -198,14 +221,10 @@ function gridState(map, p, pi) {
   };
 }
 const solvedIn = (p, pi) => new Set(Array.isArray(p[pi]) ? p[pi] : ((p[pi] && p[pi].s) || []));
-const puzzleDone = (map, p, pi) => solvedIn(p, pi).size >= map.pc * map.pr;
+const puzzleDone = (map, p, pi) => solvedIn(p, pi).size >= map.puzzles[pi].N;
 const mapDone = (map, p) => map.puzzles.every((_, pi) => puzzleDone(map, p, pi));
-const allSolved = map => Object.fromEntries(map.puzzles.map((_, pi) => [pi, [...Array(map.pc * map.pr).keys()]]));
-function pixelOf(map, pixels, pi, si) {
-  const X = (pi % map.mc) * map.pc + (si % map.pc);
-  const Y = Math.floor(pi / map.mc) * map.pr + Math.floor(si / map.pc);
-  return pixels.px[Y * map.W + X];
-}
+const allSolved = map => Object.fromEntries(map.puzzles.map((pz, pi) => [pi, [...Array(pz.N).keys()]]));
+const pixelOf = (map, pixels, pi, si) => pixels.px[pi][si];
 
 /* ---------------------------------------------------------------- helpers */
 function seededShuffle(arr, seedStr) {
@@ -219,9 +238,10 @@ function seededShuffle(arr, seedStr) {
 }
 
 // Shrink text until it fits its square; mark the square if it still overflows.
-function fitText(sq, max = 16, min = 9) {
+function fitText(sq, max, min = 9) {
   const box = sq.querySelector('.txt'), inner = box && box.firstElementChild;
   if (!inner) return;
+  if (!max) max = Math.round(Math.min(24, Math.max(16, sq.clientWidth / 5.5)));  // bigger squares, bigger text
   let s = max;
   sq.classList.remove('clipped');
   inner.style.fontSize = s + 'px';
@@ -249,12 +269,14 @@ function newView() {
 
 function drawThumb(canvas, map, pixels, p) {
   const g = canvas.getContext('2d');
-  map.puzzles.forEach((_, pi) => {
-    const s = solvedIn(p, pi);
-    for (let si = 0; si < map.pc * map.pr; si++) {
-      const X = (pi % map.mc) * map.pc + (si % map.pc), Y = Math.floor(pi / map.mc) * map.pr + Math.floor(si / map.pc);
+  const bw = canvas.width / map.mc, bh = canvas.height / map.mr;
+  map.puzzles.forEach((pz, pi) => {
+    const s = solvedIn(p, pi), bx = (pi % map.mc) * bw, by = Math.floor(pi / map.mc) * bh;
+    for (let si = 0; si < pz.N; si++) {
+      const x0 = Math.round(bx + (si % pz.c) * bw / pz.c), x1 = Math.round(bx + (si % pz.c + 1) * bw / pz.c);
+      const y0 = Math.round(by + Math.floor(si / pz.c) * bh / pz.r), y1 = Math.round(by + (Math.floor(si / pz.c) + 1) * bh / pz.r);
       g.fillStyle = s.has(si) ? rgb(pixelOf(map, pixels, pi, si)) : '#282c54';
-      g.fillRect(X, Y, 1, 1);
+      g.fillRect(x0, y0, x1 - x0, y1 - y0);
     }
   });
 }
@@ -286,7 +308,7 @@ async function homeView() {
     const done = m.puzzles.filter((_, i) => puzzleDone(m, p, i)).length;
     const status = done === m.puzzles.length ? 'Complete' : `${done} of ${m.puzzles.length} puzzles`;
     return `<li><a class="card" href="#/m/${encodeURIComponent(m.id)}">
-      <canvas class="thumb" data-id="${esc(m.id)}" width="${m.W}" height="${m.H}"></canvas>
+      <canvas class="thumb" data-id="${esc(m.id)}" width="${m.W * 12}" height="${m.H * 12}"></canvas>
       <div><h2>${esc(m.title)}</h2><p>${esc(status)}${m.subtitle ? ' · ' + esc(m.subtitle) : ''}</p>
       ${m.errors.length ? `<p class="warn">${m.errors.length} problem${m.errors.length > 1 ? 's' : ''} in this map</p>` : ''}</div></a></li>`;
   };
@@ -315,16 +337,15 @@ async function mapView(id, { peek = false } = {}) {
   const p = peek ? allSolved(map) : progress.get(id);
   const done = map.puzzles.filter((_, i) => puzzleDone(map, p, i)).length;
   const complete = done === map.puzzles.length;
-  const N = map.pc * map.pr;
 
   const sector = (pz, pi) => {
-    const s = solvedIn(p, pi), isDone = s.size >= N;
+    const N = pz.N, s = solvedIn(p, pi), isDone = s.size >= N;
     let cells = '';
     for (let si = 0; si < N; si++) cells += s.has(si) ? `<i style="background:${rgb(pixelOf(map, pixels, pi, si))}"></i>` : '<i></i>';
     const tag = peek ? 'div' : 'a';
     const href = peek ? '' : ` href="#/m/${encodeURIComponent(id)}/p/${pi}"`;
     const lbl = isDone ? '' : `<span class="lbl"><b>${esc(pz.theme)}</b><small>${s.size}/${N}</small></span>`;
-    return `<${tag} class="sector${isDone ? ' done' : ''}"${href} data-pi="${pi}"><span class="cells">${cells}</span>${lbl}</${tag}>`;
+    return `<${tag} class="sector${isDone ? ' done' : ''}"${href} data-pi="${pi}"><span class="cells" style="--c:${pz.c};--r:${pz.r}">${cells}</span>${lbl}</${tag}>`;
   };
 
   app.innerHTML = `<main>
@@ -398,7 +419,7 @@ async function puzzleView(id, pi) {
   const pixels = await getPixels(map);
   const signal = newView();
   const p = progress.get(id);
-  const N = map.pc * map.pr;
+  const N = pz.N;
   const fresh = !p[pi];           // never opened, or reset after a strike-out
   const st = gridState(map, p, pi);
   const solved = new Set(st.s);   // solved *positions* — a position is always the same pixel
@@ -417,7 +438,7 @@ async function puzzleView(id, pi) {
   app.innerHTML = `<main>
     <header class="bar"><a class="back" href="#/m/${encodeURIComponent(id)}" aria-label="Back to map">‹</a>
       <div class="ttl"><h2>${esc(pz.theme)}</h2><small id="count"></small></div></header>
-    <div class="boardwrap"><div class="board" style="--cols:${map.pc};--rows:${map.pr}">
+    <div class="boardwrap"><div class="board" style="--cols:${pz.c};--rows:${pz.r}">
       ${[...Array(N).keys()].map(pos => `<button class="sq" data-i="${pos}"><span class="txt prompt"><span>${esc(pairAt(pos).prompt)}</span></span></button>`).join('')}
     </div></div>
     <div class="tools" id="tools">

@@ -78,8 +78,8 @@ button { font: inherit; color: inherit; cursor: pointer; }
 }
 .cells {
   position: absolute; inset: 0; display: grid; gap: 2px; padding: 2px;
-  grid-template-columns: repeat(var(--pc), 1fr);
-  grid-template-rows: repeat(var(--pr), 1fr);
+  grid-template-columns: repeat(var(--c, var(--pc)), 1fr);
+  grid-template-rows: repeat(var(--r, var(--pr)), 1fr);
   transition: gap .6s, padding .6s;
 }
 .cells i { background: var(--empty); border-radius: 2px; transition: border-radius .6s; }

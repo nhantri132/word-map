@@ -48,9 +48,10 @@ images/heart.png     ← the picture a map reveals
 
 | Field | Meaning |
 |---|---|
-| `puzzleSize` | `[columns, rows]` of prompt squares in each puzzle grid. Every pair is one pixel. |
+| `puzzleSize` | `[columns, rows]` of prompt squares in each puzzle grid. Every pair is one pixel. It also sets the shape of each puzzle's block on the map. |
 | `mapSize` | `[columns, rows]` of puzzle grids in the Word Map. |
-| `puzzles` | Exactly `columns × rows` of the map, listed left→right, top→bottom. Each needs exactly `columns × rows` pairs of its puzzle, listed the same way. |
+| `puzzles` | Exactly `columns × rows` of the map, listed left→right, top→bottom. Each needs exactly `columns × rows` pairs of its puzzle. |
+| `size` *(per puzzle, optional)* | Give one puzzle its own grid, e.g. `"size": [2, 2]` or `[3, 3]`. It still covers the same block of the map; its pixels are just bigger or smaller. Leave it out to use `puzzleSize`. |
 | `pairs` | `["prompt", "answer"]`, or `{ "prompt": "...", "answer": "..." }`. |
 | `palette` | Number of colours to reduce the picture to (pixel-art look). `0` keeps exact average colours. Default 8. |
 | `background` | Colour behind transparent PNGs. Default cream. |
@@ -69,6 +70,16 @@ Answers are matched case-insensitively. If two prompts share the same answer, ei
 
 - **Strikes:** each wrong guess (a tile dropped or tapped onto the wrong square) is a strike. On the third, that grid's progress is wiped and you're sent back to the map; other grids are untouched. Strikes are saved, so leaving and coming back doesn't clear them. Dropping a tile between squares or back in the tray is free.
 - **Shuffle:** rearranges the prompts that are still unsolved. Solved squares stay where they are, because each position is a fixed pixel of the picture. The new arrangement is saved.
+
+## Mixing grid sizes
+
+Puzzles in one map can be different sizes:
+
+```json
+{ "theme": "Quick warm-up", "size": [2, 2], "pairs": [["…","…"], ["…","…"], ["…","…"], ["…","…"]] }
+```
+
+Every puzzle covers an equal block of the map. A 2×2 paints its block with 4 big pixels, a 4×4 with 16 small ones, so the finished pixel picture is chunkier where the small puzzles were. Use it for topics that can't fill 16 squares, or to mix quick and long rounds.
 
 ## Choosing sizes — the honest trade-off
 
