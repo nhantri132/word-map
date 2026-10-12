@@ -29,24 +29,17 @@
     },
     {
       "theme": "And Men",
-      "size": [4, 4],
+      "size": [3, 3],
       "pairs": [
-        ["George Washington", "1st"],
         ["John Adams", "2nd"],
-        ["Thomas Jefferson", "3rd"],
         ["Andrew Jackson", "7th"],
         ["Abraham Lincoln", "16th"],
         ["Ulysses S. Grant", "18th"],
         ["Teddy Roosevelt", "26th"],
         ["Franklin D. Roosevelt", "32nd"],
-        ["Harry Truman", "33rd"],
-        ["Dwight Eisenhower", "34th"],
         ["John F. Kennedy", "35th"],
         ["Richard Nixon", "37th"],
-        ["Ronald Reagan", "40th"],
-        ["Bill Clinton", "42nd"],
-        ["Barack Obama", "44th"],
-        ["Joe Biden", "46th"]
+        ["Barack Obama", "44th"]
       ]
     },
     {
@@ -75,22 +68,22 @@
       "theme": "And Sounds",
       "size": [4, 4],
       "pairs": [
-        ["Death ___", "Grips"],
-        ["Remi ___", "Wolf"],
-        ["Az ___", "Chike"],
-        ["Alabama ___", "Shakes"],
-        ["Busta ___", "Rhymes"],
-        ["Phoebe ___", "Bridgers"],
-        ["Fred ___", "again.."],
-        ["Creepy ___", "Nuts"],
-        ["The Lemon ___", "Twigs"],
-        ["Sleep ___", "Token"],
-        ["Pussy ___", "Riot"],
-        ["Tierra ___", "Whack"],
-        ["Big ___", "Freedia"],
-        ["Olivia ___", "Rodrigo"],
-        ["Action ___", "Bronson"],
-        ["Danny ___", "Brown"]
+        ["Death", "Grips"],
+        ["Remi", "Wolf"],
+        ["Az", "Chike"],
+        ["Alabama", "Shakes"],
+        ["Busta", "Rhymes"],
+        ["Phoebe", "Bridgers"],
+        ["Fred", "again.."],
+        ["Creepy", "Nuts"],
+        ["Lemon", "Twigs"],
+        ["Sleep", "Token"],
+        ["Pussy", "Riot"],
+        ["Tierra", "Whack"],
+        ["Big", "Freedia"],
+        ["Olivia", "Rodrigo"],
+        ["Action", "Bronson"],
+        ["Danny", "Brown"]
       ]
     }
   ]
