@@ -1,0 +1,83 @@
+{
+  "title": "Monday Funday",
+  "image": "images/monday-funday.jpg",
+  "puzzleSize": [4, 5],
+  "mapSize": [2, 2],
+  "palette": 0,
+  "puzzles": [
+    {
+      "theme": "Sleeper Pick",
+      "size": [3, 3],
+      "pairs": [
+        ["Q. Judkins", "Browns"],
+        ["D. Swift", "Bears"],
+        ["G. Pickens", "Cowboys"],
+        ["C. Sutton", "Broncos"],
+        ["H. Henry", "Patriots"],
+        ["K. Gainwell", "Buccaneers"],
+        ["M. Gesicki", "Bengals"],
+        ["C.J. Stroud", "Texans"],
+        ["S. Diggs", "Commanders"]
+      ]
+    },
+    {
+      "theme": "What Did You Say",
+      "size": [4, 4],
+      "pairs": [
+        ["Kind and well-meaning", "Benevolent"],
+        ["Honest and frank", "Candid"],
+        ["Extremely careful about detail", "Meticulous"],
+        ["Sociable, loves company", "Gregarious"],
+        ["No longer in use", "Obsolete"],
+        ["Practical, realistic", "Pragmatic"],
+        ["Having mixed feelings", "Ambivalent"],
+        ["Found everywhere", "Ubiquitous"],
+        ["Using very few words", "Laconic"],
+        ["Overly eager to please", "Obsequious"],
+        ["Harmful in a subtle way", "Pernicious"],
+        ["Talks way too much", "Garrulous"],
+        ["Lasting a very short time", "Ephemeral"],
+        ["Understood by only a few", "Esoteric"],
+        ["Place side by side to compare", "Juxtapose"],
+        ["To drain of energy", "Enervate"]
+      ]
+    },
+    {
+      "theme": "Welcome to My House",
+      "size": [3, 3],
+      "pairs": [
+        ["Arya", "Stark"],
+        ["Tyrion", "Lannister"],
+        ["Daenerys", "Targaryen"],
+        ["Stannis", "Baratheon"],
+        ["Theon", "Greyjoy"],
+        ["Olenna", "Tyrell"],
+        ["Oberyn", "Martell"],
+        ["The Blackfish", "Tully"],
+        ["Robin (Sweetrobin)", "Arryn"]
+      ]
+    },
+    {
+      "theme": "Sexy Time",
+      "size": [4, 4],
+      "pairs": [
+        ["Attracted to the opposite gender", "Heterosexual"],
+        ["Attracted to the same gender", "Homosexual"],
+        ["Attracted to more than one gender", "Bisexual"],
+        ["Attracted regardless of gender", "Pansexual"],
+        ["Umbrella term for not straight", "Queer"],
+        ["No sexual attraction", "Asexual"],
+        ["Rarely feels sexual attraction", "Graysexual"],
+        ["Attraction only after a close bond", "Demisexual"],
+        ["Feels sexual attraction (not ace)", "Allosexual"],
+        ["Attraction fades as you get closer", "Fraysexual"],
+        ["Orientation shifts over time", "Abrosexual"],
+        ["Attracted to masculinity", "Androsexual"],
+        ["Attracted to femininity", "Gynesexual"],
+        ["Attracted to nonbinary people", "Skoliosexual"],
+        ["Attracted to intelligence", "Sapiosexual"],
+        ["No romantic attraction", "Aromantic"]
+      ]
+    }
+  ]
+}
