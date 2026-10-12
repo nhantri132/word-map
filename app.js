@@ -315,7 +315,7 @@ async function homeView() {
   app.innerHTML = `<main>
     <header class="top"><h1 class="logo">Word<span>Map</span></h1>
       <button class="chip" id="hap"></button></header>
-    <ul class="cards">${maps.map(card).join('')}</ul>
+    <ul class="cards">${maps.slice().reverse().map(card).join('')}</ul>
     <p class="hint">Match each answer to its prompt. Every match paints one pixel of a hidden picture.</p>
   </main>`;
   const hap = $('#hap');
@@ -447,7 +447,7 @@ async function puzzleView(id, pi) {
     </div>
     <div class="tray" id="tray">${order.map(j =>
       `<button class="tile" data-a="${esc(pz.pairs[j].answer)}">${esc(pz.pairs[j].answer)}</button>`).join('')}
-      <p class="trayhint">Drag an answer onto its prompt, or tap one then tap the square. Tap a prompt to read it in full.</p></div>
+      <p class="trayhint">Drag an answer onto its prompt, or tap one then tap the square. Tap a prompt to read it in full; tap a match to flip it back.</p></div>
     <div class="donebar" id="donebar" hidden></div>
   </main>`;
 
@@ -474,6 +474,24 @@ async function puzzleView(id, pi) {
     fitText(sq, 15, 7);
   };
   const fitAll = () => squares.forEach(sq => sq.classList.contains('solved') ? fitText(sq, 15, 7) : fitText(sq));
+
+  // Tap a matched square to flip it between its answer and its prompt (works on finished grids too).
+  board.addEventListener('click', e => {
+    const sq = e.target.closest('.sq.solved');
+    if (!sq || sq.classList.contains('flip')) return;
+    const i = +sq.dataset.i, toPrompt = !sq.classList.contains('showp');
+    sq.classList.add('flip');
+    setTimeout(() => {
+      sq.classList.toggle('showp', toPrompt);
+      const span = sq.querySelector('.txt > span'), q = pairAt(i);
+      if (toPrompt && board.classList.contains('complete')) {
+        // Finished grid: answers are hidden under the picture, so show both.
+        span.innerHTML = `${esc(q.prompt)}<b class="ans">${esc(q.answer)}</b>`;
+      } else span.textContent = toPrompt ? q.prompt : q.answer;
+      fitText(sq, 15, 7);
+    }, 170);
+    setTimeout(() => sq.classList.remove('flip'), 360);
+  }, { signal });
   solved.forEach(fill);
   updateCount();
   renderStrikes(false);
@@ -488,6 +506,7 @@ async function puzzleView(id, pi) {
     donebar.innerHTML = last
       ? `<p>That was the last piece.</p><a class="btn" href="#/m/${encodeURIComponent(id)}">Reveal the Word Map</a>`
       : `<p>Puzzle complete!</p><a class="btn" href="#/m/${encodeURIComponent(id)}">Back to the map</a>`;
+    donebar.insertAdjacentHTML('beforeend', '<small class="donehint">Tap any square to see its prompt.</small>');
   };
   if (solved.size >= N) { board.classList.add('complete'); showDone(false); return; }
 
