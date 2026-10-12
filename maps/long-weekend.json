@@ -1,0 +1,97 @@
+{
+  "title": "Long Weekend",
+  "image": "images/long-weekend.jpg",
+  "puzzleSize": [4, 3],
+  "mapSize": [2, 2],
+  "palette": 0,
+  "puzzles": [
+    {
+      "theme": "Of Monsters",
+      "size": [4, 4],
+      "pairs": [
+        ["Halloween", "Michael Myers"],
+        ["A Nightmare on Elm Street", "Freddy Krueger"],
+        ["Friday the 13th", "Jason Voorhees"],
+        ["The Texas Chain Saw Massacre", "Leatherface"],
+        ["Child's Play", "Chucky"],
+        ["Scream", "Ghostface"],
+        ["Hellraiser", "Pinhead"],
+        ["The Exorcist", "Pazuzu"],
+        ["The Ring", "Samara"],
+        ["The Grudge", "Kayako"],
+        ["Hereditary", "Paimon"],
+        ["Nope", "Jean Jacket"],
+        ["The Black Phone", "The Grabber"],
+        ["The Conjuring 2", "Valak"],
+        ["Terrifier", "Art the Clown"],
+        ["The Silence of the Lambs", "Hannibal Lecter"]
+      ]
+    },
+    {
+      "theme": "And Men",
+      "size": [4, 4],
+      "pairs": [
+        ["George Washington", "1st"],
+        ["John Adams", "2nd"],
+        ["Thomas Jefferson", "3rd"],
+        ["Andrew Jackson", "7th"],
+        ["Abraham Lincoln", "16th"],
+        ["Ulysses S. Grant", "18th"],
+        ["Teddy Roosevelt", "26th"],
+        ["Franklin D. Roosevelt", "32nd"],
+        ["Harry Truman", "33rd"],
+        ["Dwight Eisenhower", "34th"],
+        ["John F. Kennedy", "35th"],
+        ["Richard Nixon", "37th"],
+        ["Ronald Reagan", "40th"],
+        ["Bill Clinton", "42nd"],
+        ["Barack Obama", "44th"],
+        ["Joe Biden", "46th"]
+      ]
+    },
+    {
+      "theme": "Sights",
+      "size": [4, 4],
+      "pairs": [
+        ["Machu Picchu", "Peru"],
+        ["Angkor Wat", "Cambodia"],
+        ["Petra", "Jordan"],
+        ["Taj Mahal", "India"],
+        ["Colosseum", "Italy"],
+        ["Great Wall", "China"],
+        ["Christ the Redeemer", "Brazil"],
+        ["Sydney Opera House", "Australia"],
+        ["Eiffel Tower", "France"],
+        ["Chichén Itzá", "Mexico"],
+        ["Big Ben", "UK"],
+        ["Sagrada Família", "Spain"],
+        ["Acropolis", "Greece"],
+        ["Pyramids of Giza", "Egypt"],
+        ["Mount Fuji", "Japan"],
+        ["Hagia Sophia", "Turkey"]
+      ]
+    },
+    {
+      "theme": "And Sounds",
+      "size": [4, 4],
+      "pairs": [
+        ["Death ___", "Grips"],
+        ["Remi ___", "Wolf"],
+        ["Az ___", "Chike"],
+        ["Alabama ___", "Shakes"],
+        ["Busta ___", "Rhymes"],
+        ["Phoebe ___", "Bridgers"],
+        ["Fred ___", "again.."],
+        ["Creepy ___", "Nuts"],
+        ["The Lemon ___", "Twigs"],
+        ["Sleep ___", "Token"],
+        ["Pussy ___", "Riot"],
+        ["Tierra ___", "Whack"],
+        ["Big ___", "Freedia"],
+        ["Olivia ___", "Rodrigo"],
+        ["Action ___", "Bronson"],
+        ["Danny ___", "Brown"]
+      ]
+    }
+  ]
+}
