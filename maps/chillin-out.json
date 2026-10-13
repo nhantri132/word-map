@@ -1,0 +1,83 @@
+{
+  "title": "Chillin' Out",
+  "image": "images/chillin-out.jpg",
+  "puzzleSize": [3, 4],
+  "mapSize": [2, 2],
+  "palette": 0,
+  "puzzles": [
+    {
+      "theme": "CarMax",
+      "size": [3, 3],
+      "pairs": [
+        ["Toyota", "Camry"],
+        ["Honda", "Civic"],
+        ["Ford", "Mustang"],
+        ["Chevrolet", "Corvette"],
+        ["Jeep", "Wrangler"],
+        ["Tesla", "Model 3"],
+        ["Subaru", "Outback"],
+        ["Volkswagen", "Beetle"],
+        ["Dodge", "Charger"]
+      ]
+    },
+    {
+      "theme": "Sweet Treat",
+      "size": [3, 3],
+      "pairs": [
+        ["Original Glazed", "Krispy Kreme"],
+        ["Oreo Blizzard", "Dairy Queen"],
+        ["Milk Chocolate Chip Cookie", "Crumbl"],
+        ["Red Velvet Cupcake", "Sprinkles"],
+        ["Cake Batter", "Cold Stone"],
+        ["Classic Roll", "Cinnabon"],
+        ["Cherry Garcia", "Ben & Jerry's"],
+        ["Mint Chocolate Chip", "Baskin-Robbins"],
+        ["Vanilla", "Häagen-Dazs"]
+      ]
+    },
+    {
+      "theme": "She Smells Good",
+      "size": [4, 4],
+      "pairs": [
+        ["Fantasy", "Britney Spears"],
+        ["Cloud", "Ariana Grande"],
+        ["Glow", "Jennifer Lopez"],
+        ["Heat", "Beyoncé"],
+        ["Wonderstruck", "Taylor Swift"],
+        ["Reb'l Fleur", "Rihanna"],
+        ["Can Can", "Paris Hilton"],
+        ["Lovely", "Sarah Jessica Parker"],
+        ["White Diamonds", "Elizabeth Taylor"],
+        ["Your Turn", "Billie Eilish"],
+        ["Purr", "Katy Perry"],
+        ["Vivamore", "Selena Gomez"],
+        ["Fame", "Lady Gaga"],
+        ["Sweet Tooth", "Sabrina Carpenter"],
+        ["Cosmic", "Kylie Jenner"],
+        ["Fleur Fatale", "Kim Kardashian"]
+      ]
+    },
+    {
+      "theme": "Work Sucks, I Know",
+      "size": [4, 4],
+      "pairs": [
+        ["Yuri Lowenthal", "Peter Parker"],
+        ["Nadji Jeter", "Miles Morales"],
+        ["Laura Bailey", "Mary Jane"],
+        ["Tony Todd", "Venom"],
+        ["William Salyers", "Doctor Octopus"],
+        ["Darin De Paul", "J. Jonah Jameson"],
+        ["Nancy Linari", "Aunt May"],
+        ["Stephen Oyoung", "Mister Negative"],
+        ["Mark Rolston", "Norman Osborn"],
+        ["Graham Phillips", "Harry Osborn"],
+        ["Jim Pirri", "Kraven"],
+        ["Erica Lindbeck", "Black Cat"],
+        ["Griffin Puatu", "Ganke Lee"],
+        ["Travis Willingham", "Kingpin"],
+        ["Dwight Schultz", "Vulture"],
+        ["Fred Tatasciore", "Rhino"]
+      ]
+    }
+  ]
+}
