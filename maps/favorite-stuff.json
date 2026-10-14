@@ -1,0 +1,73 @@
+{
+  "title": "Favorite Stuff",
+  "image": "images/favorite-stuff.jpg",
+  "puzzleSize": [4, 5],
+  "mapSize": [2, 2],
+  "palette": 0,
+  "puzzles": [
+    {
+      "theme": "Lauren and Tri Blend",
+      "size": [4, 4],
+      "pairs": [
+        ["BEAT UP CHANEL$", "Slayyyter"],
+        ["The Outside", "Phoebe Bridgers"],
+        ["Melatonin", "Tinashe"],
+        ["Exhibitionism", "Rebecca Black"],
+        ["the beginning of the end", "hemlocke springs"],
+        ["Still Around", "Friko"],
+        ["Parachute", "Hayley Williams"],
+        ["My Life Is Loving You", "Portraits of Tracy"],
+        ["Come Over", "BTS"],
+        ["hate that i made you love me", "Ariana Grande"],
+        ["ICONIC BY MISTAKE", "KATSEYE"],
+        ["SaWaDiKa", "LISA"],
+        ["Lo Quiero Ya!", "CA7RIEL & Paco"],
+        ["Pretty Ugly", "Zara Larsson"],
+        ["Don't Leave Me On The Dance Floor", "Carly Rae Jepsen"],
+        ["The Largest", "BigXthePlug"]
+      ]
+    },
+    {
+      "theme": "Screen Time",
+      "size": [3, 3],
+      "pairs": [
+        ["I Love Lucy", "1951"],
+        ["The Andy Griffith Show", "1960"],
+        ["The Brady Bunch", "1969"],
+        ["M*A*S*H", "1972"],
+        ["Cheers", "1982"],
+        ["Seinfeld", "1989"],
+        ["Friends", "1994"],
+        ["The Office (US)", "2005"],
+        ["Modern Family", "2009"]
+      ]
+    },
+    {
+      "theme": "Tri's Favorite Books",
+      "size": [2, 3],
+      "pairs": [
+        ["Watchmen", "Alan Moore"],
+        ["Calvin and Hobbes", "Bill Watterson"],
+        ["Outlive", "Peter Attia"],
+        ["No Bad Parts", "Richard Schwartz"],
+        ["Man's Search for Meaning", "Viktor Frankl"],
+        ["Persepolis", "Marjane Satrapi"]
+      ]
+    },
+    {
+      "theme": "Girl's Best Friend",
+      "size": [3, 3],
+      "pairs": [
+        ["Lululemon Align leggings", "$98"],
+        ["Golden Goose Super-Star sneakers", "$595"],
+        ["Louboutin So Kate heels", "$945"],
+        ["Prada Re-Edition 2005 nylon bag", "$1,390"],
+        ["Saint Laurent Loulou small bag", "$2,750"],
+        ["Loewe Small Puzzle bag", "$3,850"],
+        ["Bottega Veneta Andiamo tote", "$5,900"],
+        ["Van Cleef Alhambra diamond pendant", "$9,100"],
+        ["Van Cleef Alhambra 5-motif diamond bracelet", "$35,900"]
+      ]
+    }
+  ]
+}
