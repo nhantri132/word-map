@@ -1,0 +1,76 @@
+{
+  "title": "Zoo Boo",
+  "image": "images/zoo-boo.jpg",
+  "puzzleSize": [3, 4],
+  "mapSize": [2, 2],
+  "palette": 0,
+  "puzzles": [
+    {
+      "theme": "Real Name Basis",
+      "size": [3, 3],
+      "pairs": [
+        ["Lady Gaga", "Stefani Germanotta"],
+        ["Bruno Mars", "Peter Hernandez"],
+        ["Rico Nasty", "Maria-Cecilia Kelly"],
+        ["JPEGMAFIA", "Barrington Hendricks"],
+        ["Slayyyter", "Catherine Garner"],
+        ["Lorde", "Ella Yelich-O'Connor"],
+        ["Danny Brown", "Daniel Sewell"],
+        ["RM", "Kim Nam-joon"],
+        ["Rihanna", "Robyn Fenty"]
+      ]
+    },
+    {
+      "theme": "Lost in Translation",
+      "size": [3, 3],
+      "pairs": [
+        ["Schadenfreude", "German"],
+        ["Wabi-sabi", "Japanese"],
+        ["Sobremesa", "Spanish"],
+        ["Dolce far niente", "Italian"],
+        ["Toska", "Russian"],
+        ["Joie de vivre", "French"],
+        ["Nunchi", "Korean"],
+        ["Meraki", "Greek"],
+        ["Gigil", "Filipino"]
+      ]
+    },
+    {
+      "theme": "Previously On",
+      "size": [3, 3],
+      "pairs": [
+        ["Buffy the Vampire Slayer", "Sunnydale"],
+        ["Stranger Things", "Hawkins"],
+        ["Parks and Recreation", "Pawnee"],
+        ["The Simpsons", "Springfield"],
+        ["Powerpuff Girls", "Townsville"],
+        ["Family Guy", "Quahog"],
+        ["Wandavision", "Westview"],
+        ["Superman", "Metropolis"],
+        ["The Andy Griffith Show", "Mayberry"]
+      ]
+    },
+    {
+      "theme": "National Treasure",
+      "size": [4, 4],
+      "pairs": [
+        ["Poutine", "Canada"],
+        ["Pho", "Vietnam"],
+        ["Feijoada", "Brazil"],
+        ["Paella", "Spain"],
+        ["Pad Thai", "Thailand"],
+        ["Kimchi", "South Korea"],
+        ["Haggis", "Scotland"],
+        ["Pierogi", "Poland"],
+        ["Goulash", "Hungary"],
+        ["Moussaka", "Greece"],
+        ["Ceviche", "Peru"],
+        ["Tagine", "Morocco"],
+        ["Wiener Schnitzel", "Austria"],
+        ["Sushi", "Japan"],
+        ["Bobotie", "South Africa"],
+        ["Adobo", "Philippines"]
+      ]
+    }
+  ]
+}
