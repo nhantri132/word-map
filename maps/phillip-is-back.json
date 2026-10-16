@@ -1,0 +1,80 @@
+{
+  "title": "Phillip is Back",
+  "image": "images/phillip-is-back.jpg",
+  "puzzleSize": [4, 3],
+  "mapSize": [2, 2],
+  "palette": 0,
+  "puzzles": [
+    {
+      "theme": "Weeb",
+      "size": [3, 3],
+      "pairs": [
+        ["One Piece", "Luffy"],
+        ["Ouran High School Host Club", "Haruhi"],
+        ["Attack on Titan", "Eren"],
+        ["Demon Slayer", "Tanjiro"],
+        ["Jujutsu Kaisen", "Yuji"],
+        ["My Hero Academia", "Deku"],
+        ["Death Note", "Light"],
+        ["Fullmetal Alchemist", "Edward"],
+        ["Cowboy Bebop", "Spike"]
+      ]
+    },
+    {
+      "theme": "Submissive",
+      "size": [4, 4],
+      "pairs": [
+        ["Avengers", "Endgame"],
+        ["2001", "A Space Odyssey"],
+        ["Mad Max", "Fury Road"],
+        ["Star Wars", "The Empire Strikes Back"],
+        ["Spider-Man", "Brand New Day"],
+        ["Pirates of the Caribbean", "Dead Man's Chest"],
+        ["Harry Potter", "Prisoner of Azkaban"],
+        ["Twilight", "New Moon"],
+        ["Wicked", "For Good"],
+        ["Now You See Me", "Now You Don't"],
+        ["Mamma Mia!", "Here We Go Again"],
+        ["Top Gun", "Maverick"],
+        ["Jurassic Park", "The Lost World"],
+        ["Sherlock Holmes", "A Game of Shadows"],
+        ["Terminator", "Judgement Day"],
+        ["Die Hard", "With a Vengeance"]
+
+      ]
+    },
+    {
+      "theme": "Groupthink",
+      "size": [3, 3],
+      "pairs": [
+        ["Crows", "Murder"],
+        ["Owls", "Parliament"],
+        ["Lions", "Pride"],
+        ["Flamingos", "Flamboyance"],
+        ["Jellyfish", "Smack"],
+        ["Hyenas", "Cackle"],
+        ["Rhinos", "Crash"],
+        ["Zebras", "Dazzle"],
+        ["Ferrets", "Business"]
+      ]
+    },
+    {
+      "theme": "More Like Amend Men... Right?",
+      "size": [3, 4],
+      "pairs": [
+        ["Free speech", "1st"],
+        ["Jury trial in civil cases", "7th"],
+        ["Rights not listed still exist", "9th"],
+        ["Can't sue state in federal court", "11th"],
+        ["No unreasonable search and seizure", "4th"],
+        ["Race can't bar voting", "15th"],
+        ["Prohibition of Liquor", "18th"],
+        ["Women's suffrage", "19th"],
+        ["Abolition of Slavery", "13th"],
+        ["No double jeopardy, self incrimination", "5th"],
+        ["Presidential succession", "25th"],
+        ["No cruel or unusual punishment", "8th"]
+      ]
+    }
+  ]
+}
