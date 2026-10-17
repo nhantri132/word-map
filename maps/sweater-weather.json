@@ -1,0 +1,76 @@
+{
+  "title": "Sweater Weather",
+  "image": "images/sweater-weather.jpg",
+  "puzzleSize": [4,  3],
+  "mapSize": [2,  2],
+  "palette": 0,
+  "puzzles": [
+    {
+      "theme": "Portmanteau",
+      "size": [4,  4],
+      "pairs": [
+        ["Brunch = breakfast +", "Lunch"],
+        ["Smog = smoke +", "Fog"],
+        ["Motel = motor +", "Hotel"],
+        ["Spork = spoon +", "Fork"],
+        ["Podcast = iPod +", "Broadcast"],
+        ["Emoticon = emotion +", "Icon"],
+        ["Labradoodle = Labrador +", "Poodle"],
+        ["Sitcom = situation +", "Comedy"],
+        ["Pokémon = pocket +", "Monsters"],
+        ["Glamping = glamorous +", "Camping"],
+        ["Hangry = hungry +", "Angry"],
+        ["Frenemy = friend +", "Enemy"],
+        ["Chillax = chill +", "Relax"],
+        ["Bromance = brother +", "Romance"],
+        ["Cosplay = costume +", "Play"],
+        ["Infomercial = information +", "Commercial"]
+      ]
+    },
+    {
+      "theme": "The Land Before Time",
+      "size": [3,  3],
+      "pairs": [
+        ["Kangaroo", "Australia"],
+        ["Kiwi", "New Zealand"],
+        ["Giant panda", "China"],
+        ["Lemur", "Madagascar"],
+        ["Komodo dragon", "Indonesia"],
+        ["Axolotl", "Mexico"],
+        ["Galápagos tortoise", "Ecuador"],
+        ["Okapi", "DR Congo"],
+        ["Snow monkey", "Japan"]
+      ]
+    },
+    {
+      "theme": "Virgos",
+      "size": [3, 3],
+      "pairs": [
+        ["Sophia Loren", "1934"],
+        ["Gloria Estefan", "1957"],
+        ["Salma Hayek", "1966"],
+        ["Cameron Diaz", "1972"],
+        ["Pink", "1979"],
+        ["Beyoncé", "1981"],
+        ["Amy Winehouse", "1983"],
+        ["Blake Lively", "1987"],
+        ["Zendaya", "1996"]
+      ]
+    },
+    {
+      "theme": "WHO's in charge??",
+      "size": [3, 3],
+      "pairs": [
+        ["California", "Gavin Newsom"],
+        ["Texas", "Greg Abbott"],
+        ["Florida", "Ron DeSantis"],
+        ["New York", "Kathy Hochul"],
+        ["Illinois", "JB Pritzker"],
+        ["Pennsylvania", "Josh Shapiro"],
+        ["Michigan", "Gretchen Whitmer"],
+        ["Georgia", "Brian Kemp"],
+        ["Minnesota", "Tim Walz"]
+      ]
+    }
+  ]
+}
