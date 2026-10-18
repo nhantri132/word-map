@@ -1,0 +1,75 @@
+{
+  "title": "You Can't See Everything",
+  "image": "images/you-cant-see-everything.jpg",
+  "puzzleSize": [3, 4],
+  "mapSize": [2, 2],
+  "palette": 0,
+  "puzzles": [
+    {
+      "theme": "Fail Sons and Daughters",
+      "size": [3, 3],
+      "pairs": [
+        ["Theranos", "Elizabeth Holmes"],
+        ["FTX", "Sam Bankman-Fried"],
+        ["WeWork", "Adam Neumann"],
+        ["Fyre Festival", "Billy McFarland"],
+        ["Enron", "Kenneth Lay"],
+        ["Quibi", "Meg Whitman"],
+        ["Juicero", "Doug Evans"],
+        ["Nikola", "Trevor Milton"],
+        ["Lehman Brothers", "Dick Fuld"]
+      ]
+    },
+    {
+      "theme": "H-Town",
+      "size": [3, 4],
+      "pairs": [
+        ["Beyoncé", "Knowles"],
+        ["Simone", "Biles"],
+        ["Megan", "Thee Stallion"],
+        ["Travis", "Scott"],
+        ["Jim", "Parsons"],
+        ["Hakeem", "Olajuwon"],
+        ["Wes", "Anderson"],
+        ["Patrick", "Swayze"],
+        ["Kenny", "Rogers"],
+        ["Hilary", "Duff"],
+        ["Dennis", "Quaid"],
+        ["Paul", "Wall"]
+      ]
+    },
+    {
+      "theme": "One Drop of Blood",
+      "size": [3, 4],
+      "pairs": [
+        ["Psycho", "The shower"],
+        ["A Clockwork Orange", "The eye-clamp treatment"],
+        ["The Exorcist", "The head spin"],
+        ["Basic Instinct", "The leg-cross interrogation"],
+        ["Irréversible", "The fire extinguisher"],
+        ["American Psycho", "\"Hip to Be Square\""],
+        ["Midsommar", "The cliff ritual"],
+        ["Hereditary", "The telephone pole"],
+        ["Saltburn", "The bathtub"],
+        ["Drive", "The elevator"],
+        ["Terrifier", "The hacksaw"],
+        ["Saving Private Ryan", "Omaha Beach"]
+      ]
+    },
+    {
+      "theme": "Jargon",
+      "size": [3, 3],
+      "pairs": [
+        ["Epistaxis", "Nosebleed"],
+        ["Singultus", "Hiccups"],
+        ["Rhinorrhea", "Runny nose"],
+        ["Sternutation", "Sneezing"],
+        ["Pruritus", "Itching"],
+        ["Cerumen", "Earwax"],
+        ["Halitosis", "Bad breath"],
+        ["Myocardial infarction", "Heart attack"],
+        ["Borborygmi", "Stomach growling"]
+      ]
+    }
+  ]
+}
