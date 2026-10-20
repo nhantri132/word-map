@@ -1,0 +1,66 @@
+{
+  "title": "Oversigned",
+  "image": "images/oversigned.jpg",
+  "puzzleSize": [3, 4],
+  "mapSize": [2, 2],
+  "palette": 0,
+  "puzzles": [
+    {
+      "theme": "The Devils",
+      "size": [2, 3],
+      "pairs": [
+        ["The Devil's Advocate", "Al Pacino"],
+        ["Constantine", "Peter Stormare"],
+        ["The Passion of the Christ", "Rosalinda Celentano"],
+        ["Tenacious D in The Pick of Destiny", "Dave Grohl"],
+        ["Supernatural (TV)", "Mark Pellegrino"],
+        ["The Vampire Diaries (TV)", "Wole Parks"]
+      ]
+    },
+    {
+      "theme": "Blood Contract",
+      "size": [3, 3],
+      "pairs": [
+        ["Lying under oath", "Perjury"],
+        ["False written statement that harms a reputation", "Libel"],
+        ["Right to challenge unlawful detention", "Habeas corpus"],
+        ["Order to appear in court", "Subpoena"],
+        ["Sworn written statement", "Affidavit"],
+        ["The person who signs below", "Undersigned"],
+        ["Money paid for release before trial", "Bail"],
+        ["Civil wrong that causes harm", "Tort"],
+        ["Plead guilty for a lighter sentence", "Plea bargain"]
+      ]
+    },
+    {
+      "theme": "Legs",
+      "size": [3, 3],
+      "pairs": [
+        ["Quads", "Barbell squat"],
+        ["Core", "Pilates teaser"],
+        ["Hamstrings", "Romanian deadlift"],
+        ["Glutes", "Hip thrust"],
+        ["Calves", "Jump rope"],
+        ["Chest", "Bench press"],
+        ["Lats", "Pull-up"],
+        ["Biceps", "Hammer curl"],
+        ["Shoulders", "Overhead press"]
+      ]
+    },
+    {
+      "theme": "The Gears of War",
+      "size": [3, 3],
+      "pairs": [
+        ["1337–1453", "Hundred Years' War"],
+        ["1618–1648", "Thirty Years' War"],
+        ["1775–1783", "American Revolutionary War"],
+        ["1861–1865", "American Civil War"],
+        ["1914–1918", "World War I"],
+        ["1939–1945", "World War II"],
+        ["1950–1953", "Korean War"],
+        ["1955–1975", "Vietnam War"],
+        ["1990–1991", "Gulf War"]
+      ]
+    }
+  ]
+}
