@@ -1,0 +1,81 @@
+{
+  "title": "10/21/26",
+  "image": "images/10-21-26.jpg",
+  "puzzleSize": [5,  3],
+  "mapSize": [2,  2],
+  "palette": 0,
+  "puzzles": [
+    {
+      "theme": "Valor Mortis",
+      "size": [4,  3],
+      "pairs": [
+        ["Carpe diem", "Seize the day"],
+        ["Veni, vidi, vici", "I came, I saw, I conquered"],
+        ["Et tu, Brute?", "And you, Brutus?"],
+        ["Memento mori", "Remember you will die"],
+        ["Cogito, ergo sum", "I think, therefore I am"],
+        ["Tempus fugit", "Time flies"],
+        ["Alea iacta est", "The die is cast"],
+        ["In vino veritas", "In wine, truth"],
+        ["E pluribus unum", "Out of many, one"],
+        ["Amor vincit omnia", "Love conquers all"],
+        ["Semper fidelis", "Always faithful"],
+        ["Ad astra", "To the stars"]
+      ]
+    },
+    {
+      "theme": "Welcome to my Talk",
+      "size": [4,  3],
+      "pairs": [
+        ["Jane Goodall", "Chimpanzees"],
+        ["Ralph Nader", "Car safety"],
+        ["Greta Thunberg", "Climate change"],
+        ["Malala Yousafzai", "Girls' education"],
+        ["Brené Brown", "Vulnerability"],
+        ["Simon Sinek", "Start with why"],
+        ["Martin Luther King Jr.", "Civil rights"],
+        ["Gloria Steinem", "Feminism"],
+        ["Temple Grandin", "Autism"],
+        ["Carl Sagan", "The cosmos"],
+        ["Marie Kondo", "Tidying up"],
+        ["Steve Irwin", "Crocodiles"]
+      ]
+    },
+    {
+      "theme": "The Boys are Back in Town",
+      "size": [4,  3],
+      "pairs": [
+        ["Carry On Wayward Son", "Kansas"],
+        ["Back in Black", "AC/DC"],
+        ["Eye of the Tiger", "Survivor"],
+        ["Renegade", "Styx"],
+        ["Bad Moon Rising", "Creedence Clearwater Revival"],
+        ["Smoke on the Water", "Deep Purple"],
+        ["Wanted Dead or Alive", "Bon Jovi"],
+        ["Heat of the Moment", "Asia"],
+        ["Don't Fear the Reaper", "Blue Öyster Cult"],
+        ["Simple Man", "Lynyrd Skynyrd"],
+        ["The Boys Are Back in Town", "Thin Lizzy"],
+        ["Night Moves", "Bob Seger"]
+      ]
+    },
+    {
+      "theme": "Taking Back this Country",
+      "size": [4,  3],
+      "pairs": [
+        ["Dolly Parton", "Jolene"],
+        ["Johnny Cash", "Ring of Fire"],
+        ["Patsy Cline", "Crazy"],
+        ["Willie Nelson", "On the Road Again"],
+        ["Hank Williams", "Your Cheatin' Heart"],
+        ["Tammy Wynette", "Stand By Your Man"],
+        ["Kenny Rogers", "The Gambler"],
+        ["John Denver", "Take Me Home, Country Roads"],
+        ["Garth Brooks", "Friends in Low Places"],
+        ["Billy Ray Cyrus", "Achy Breaky Heart"],
+        ["Shania Twain", "Man! I Feel Like a Woman!"],
+        ["Carrie Underwood", "Before He Cheats"]
+      ]
+    }
+  ]
+}
