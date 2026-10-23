@@ -1,0 +1,83 @@
+{
+  "title": "10/23/26",
+  "image": "images/10-23-26.jpg",
+  "puzzleSize": [3,  2],
+  "mapSize": [2,  2],
+  "palette": 0,
+  "puzzles": [
+    {
+      "theme": "States",
+      "size": [3,  4],
+      "pairs": [
+        ["images/prompts/10-23-26/state-california.jpg", "California"],
+        ["images/prompts/10-23-26/state-florida.jpg", "Florida"],
+        ["images/prompts/10-23-26/state-idaho.jpg", "Idaho"],
+        ["images/prompts/10-23-26/state-louisiana.jpg", "Louisiana"],
+        ["images/prompts/10-23-26/state-maine.jpg", "Maine"],
+        ["images/prompts/10-23-26/state-michigan.jpg", "Michigan"],
+        ["images/prompts/10-23-26/state-nevada.jpg", "Nevada"],
+        ["images/prompts/10-23-26/state-new-jersey.jpg", "New Jersey"],
+        ["images/prompts/10-23-26/state-oklahoma.jpg", "Oklahoma"],
+        ["images/prompts/10-23-26/state-tennessee.jpg", "Tennessee"],
+        ["images/prompts/10-23-26/state-texas.jpg", "Texas"],
+        ["images/prompts/10-23-26/state-utah.jpg", "Utah"]
+      ]
+    },
+    {
+      "theme": "Justice... for All?",
+      "size": [3,  3],
+      "pairs": [
+        ["images/prompts/10-23-26/justice-1.jpg", "Amy Coney Barrett"],
+        ["images/prompts/10-23-26/justice-2.jpg", "Neil Gorsuch"],
+        ["images/prompts/10-23-26/justice-3.jpg", "Brett Kavanaugh"],
+        ["images/prompts/10-23-26/justice-4.jpg", "Ketanji Brown Jackson"],
+        ["images/prompts/10-23-26/justice-5.jpg", "Sonia Sotomayor"],
+        ["images/prompts/10-23-26/justice-6.jpg", "Clarence Thomas"],
+        ["images/prompts/10-23-26/justice-7.jpg", "John Roberts"],
+        ["images/prompts/10-23-26/justice-8.jpg", "Samuel Alito"],
+        ["images/prompts/10-23-26/justice-9.jpg", "Elena Kagan"]
+      ]
+    },
+    {
+      "theme": "Recent Gamer",
+      "size": [3,  3],
+      "pairs": [
+        ["images/prompts/10-23-26/game-1.jpg", "Gears of War: E-Day"],
+        ["images/prompts/10-23-26/game-2.jpg", "Assassin's Creed Shadows"],
+        ["images/prompts/10-23-26/game-3.jpg", "Onimusha: Way of the Sword"],
+        ["images/prompts/10-23-26/game-4.jpg", "Control Resonant"],
+        ["images/prompts/10-23-26/game-5.jpg", "Big Walk"],
+        ["images/prompts/10-23-26/game-6.jpg", "Machine Party"],
+        ["images/prompts/10-23-26/game-7.jpg", "Saros"],
+        ["images/prompts/10-23-26/game-8.jpg", "Mixtape"],
+        ["images/prompts/10-23-26/game-9.jpg", "No, I'm Not a Human"]
+      ]
+    },
+    {
+      "theme": "Billboard Top 100",
+      "size": [4,  5],
+      "pairs": [
+        ["images/prompts/10-23-26/single-1.jpg", "Taylor Swift"],
+        ["images/prompts/10-23-26/single-2.jpg", "Ella Langley"],
+        ["images/prompts/10-23-26/single-3.jpg", "Stella Lefty"],
+        ["images/prompts/10-23-26/single-4.jpg", "Cardi B"],
+        ["images/prompts/10-23-26/single-5.jpg", "Tame Impala"],
+        ["images/prompts/10-23-26/single-6.jpg", "ADELA"],
+        ["images/prompts/10-23-26/single-7.jpg", "Ariana Grande"],
+        ["images/prompts/10-23-26/single-8.jpg", "Olivia Rodrigo"],
+        ["images/prompts/10-23-26/single-9.jpg", "Bruno Mars"],
+        ["images/prompts/10-23-26/single-10.jpg", "Dominic Fike"],
+        ["images/prompts/10-23-26/single-11.jpg", "Zara Larsson"],
+        ["images/prompts/10-23-26/single-12.jpg", "Malcolm Todd"],
+        ["images/prompts/10-23-26/single-13.jpg", "Drake"],
+        ["images/prompts/10-23-26/single-14.jpg", "KATSEYE"],
+        ["images/prompts/10-23-26/single-15.jpg", "Teddy Swims"],
+        ["images/prompts/10-23-26/single-16.jpg", "Luke Combs"],
+        ["images/prompts/10-23-26/single-17.jpg", "sombr"],
+        ["images/prompts/10-23-26/single-18.jpg", "Ashe"],
+        ["images/prompts/10-23-26/single-19.jpg", "Noah Kahan"],
+        ["images/prompts/10-23-26/single-20.jpg", "Steve Lacy"]
+      ]
+    }
+  ]
+}
