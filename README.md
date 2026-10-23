@@ -66,6 +66,24 @@ If something doesn't add up (wrong number of pairs, missing answer), the map scr
 
 Answers are matched case-insensitively. If two prompts share the same answer, either tile fits either square.
 
+## Image prompts
+
+A prompt can be a picture instead of text. Put the image in `images/prompts/` and use its path as the prompt:
+
+```json
+["images/prompts/corgi.jpg", "Corgi"]
+```
+
+To add a caption under the picture, use the longer form:
+
+```json
+{ "image": "images/prompts/office.jpg", "prompt": "Where was this?", "answer": "Office" }
+```
+
+Text and image prompts can be mixed in the same grid. Tap an image prompt to see it full size; tap a matched image square to flip back to the picture.
+
+Keep prompt images small (around 400–600 px wide) so grids load quickly on a phone.
+
 ## Strikes and shuffle
 
 - **Strikes:** each wrong guess (a tile dropped or tapped onto the wrong square) is a strike. On the third, that grid's progress is wiped and you're sent back to the map; other grids are untouched. Strikes are saved, so leaving and coming back doesn't clear them. Dropping a tile between squares or back in the tray is free.

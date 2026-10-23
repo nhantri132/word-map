@@ -237,3 +237,19 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .sheet.out h3 { color: #c2412f; font-size: 28px; margin-bottom: 8px; }
 .err { padding: 40px 20px; text-align: center; color: var(--muted); }
 .err b { color: var(--accent); display: block; margin-bottom: 8px; }
+
+/* ---------- image prompts ---------- */
+.sq .pimg {
+  position: absolute; inset: 0; border-radius: inherit;
+  background: var(--bg2) center / cover no-repeat;
+}
+.sq .cap {
+  position: absolute; left: 0; right: 0; bottom: 0; z-index: 1;
+  padding: 3px 5px 4px; font-size: 12px; font-weight: 600; line-height: 1.15;
+  color: #fff; background: rgba(10, 11, 25, .68); text-align: center;
+  overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+}
+.sq.hasimg { box-shadow: inset 0 0 0 1px var(--line); }
+.board.placing .sq.hasimg:not(.solved) .pimg { box-shadow: inset 0 0 0 3px var(--tile); }
+.board.complete .sq.showp .pimg, .board.complete .sq.showp .cap { opacity: 1; }
+.sheet .bigimg { display: block; width: 100%; max-height: 60vh; object-fit: contain; border-radius: 12px; margin-bottom: 12px; background: #000; }

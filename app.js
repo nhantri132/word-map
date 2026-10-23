@@ -10,6 +10,16 @@ const norm = s => String(s).trim().toLowerCase().replace(/\s+/g, ' ');
 const rgb = c => `rgb(${c[0]},${c[1]},${c[2]})`;
 const inkFor = c => (0.299 * c[0] + 0.587 * c[1] + 0.114 * c[2]) > 150 ? '#1b1830' : '#fffaf0';
 const sleep = ms => new Promise(r => setTimeout(r, ms));
+const IMG_RE = /\.(jpe?g|png|gif|webp|avif|svg)(\?.*)?$/i;
+const cssUrl = u => `url("${String(u).replace(/["\\]/g, '\\$&')}")`;
+// What an unsolved square shows: text, or an image (with an optional caption).
+const promptHTML = q => q.image
+  ? `<span class="pimg" style="background-image:${esc(cssUrl(q.image))}"></span>${q.prompt ? `<span class="cap">${esc(q.prompt)}</span>` : ''}`
+  : `<span class="txt prompt"><span>${esc(q.prompt)}</span></span>`;
+// The enlarged view when you tap a prompt.
+const promptSheet = q => q.image
+  ? `<img class="bigimg" src="${esc(q.image)}" alt="">${q.prompt ? `<p>${esc(q.prompt)}</p>` : ''}`
+  : `<p>${esc(q.prompt)}</p>`;
 
 /* ---------------------------------------------------------------- haptics */
 const Haptics = (() => {
@@ -72,12 +82,16 @@ function normalizeMap(raw, file) {
   const puzzles = (raw.puzzles || []).map((p, pi) => {
     const [c, r] = Array.isArray(p.size) && p.size.length === 2 ? p.size : [pc, pr];
     const N = c * r;
-    const pairs = (p.pairs || []).map(x => Array.isArray(x)
-      ? { prompt: x[0], answer: x[1] }
-      : { prompt: x.prompt, answer: x.answer });
+    const pairs = (p.pairs || []).map(x => {
+      const q = Array.isArray(x) ? { prompt: x[0], answer: x[1] } : { prompt: x.prompt, answer: x.answer, image: x.image };
+      // A prompt that's just an image path (e.g. "images/prompts/cat.jpg") becomes an image prompt.
+      if (!q.image && typeof q.prompt === 'string' && IMG_RE.test(q.prompt.trim())) { q.image = q.prompt.trim(); q.prompt = ''; }
+      q.prompt = q.prompt || '';
+      return q;
+    });
     const theme = p.theme || `Puzzle ${pi + 1}`;
     if (pairs.length !== N) errors.push(`Puzzle ${pi + 1} (“${theme}”) has ${pairs.length} pairs but a ${c}×${r} grid needs ${N}.`);
-    pairs.forEach((q, i) => { if (!q.prompt || !q.answer) errors.push(`Puzzle ${pi + 1}, pair ${i + 1} is missing its prompt or answer.`); });
+    pairs.forEach((q, i) => { if ((!q.prompt && !q.image) || !q.answer) errors.push(`Puzzle ${pi + 1}, pair ${i + 1} is missing its prompt or answer.`); });
     return { theme, pairs, c, r, N };
   });
   if (puzzles.length !== mc * mr) errors.push(`There are ${puzzles.length} puzzles, but a ${mc}×${mr} map needs ${mc * mr}.`);
@@ -439,7 +453,7 @@ async function puzzleView(id, pi) {
     <header class="bar"><a class="back" href="#/m/${encodeURIComponent(id)}" aria-label="Back to map">‹</a>
       <div class="ttl"><h2>${esc(pz.theme)}</h2><small id="count"></small></div></header>
     <div class="boardwrap"><div class="board" style="--cols:${pz.c};--rows:${pz.r}">
-      ${[...Array(N).keys()].map(pos => `<button class="sq" data-i="${pos}"><span class="txt prompt"><span>${esc(pairAt(pos).prompt)}</span></span></button>`).join('')}
+      ${[...Array(N).keys()].map(pos => `<button class="sq${pairAt(pos).image ? ' hasimg' : ''}" data-i="${pos}">${promptHTML(pairAt(pos))}</button>`).join('')}
     </div></div>
     <div class="tools" id="tools">
       ${maxStrikes ? `<div class="strikes" id="strikes"></div>` : '<span></span>'}
@@ -468,6 +482,7 @@ async function puzzleView(id, pi) {
   const fill = i => {
     const sq = squares[i], c = pixelOf(map, pixels, pi, i);
     sq.classList.add('solved');
+    sq.classList.remove('hasimg');
     sq.style.setProperty('--c', rgb(c));
     sq.style.setProperty('--ci', inkFor(c));
     sq.innerHTML = `<span class="txt"><span>${esc(pairAt(i).answer)}</span></span>`;
@@ -483,11 +498,17 @@ async function puzzleView(id, pi) {
     sq.classList.add('flip');
     setTimeout(() => {
       sq.classList.toggle('showp', toPrompt);
-      const span = sq.querySelector('.txt > span'), q = pairAt(i);
-      if (toPrompt && board.classList.contains('complete')) {
+      const q = pairAt(i), done = board.classList.contains('complete');
+      if (toPrompt && q.image) {
+        // Image prompt: show the picture, labelled with the answer on a finished grid.
+        sq.innerHTML = `<span class="pimg" style="background-image:${esc(cssUrl(q.image))}"></span>` +
+          `<span class="cap">${esc(done ? q.answer : (q.prompt || q.answer))}</span>`;
+      } else if (toPrompt && done) {
         // Finished grid: answers are hidden under the picture, so show both.
-        span.innerHTML = `${esc(q.prompt)}<b class="ans">${esc(q.answer)}</b>`;
-      } else span.textContent = toPrompt ? q.prompt : q.answer;
+        sq.innerHTML = `<span class="txt"><span>${esc(q.prompt)}<b class="ans">${esc(q.answer)}</b></span></span>`;
+      } else {
+        sq.innerHTML = `<span class="txt"><span>${esc(toPrompt ? q.prompt : q.answer)}</span></span>`;
+      }
       fitText(sq, 15, 7);
     }, 170);
     setTimeout(() => sq.classList.remove('flip'), 360);
@@ -596,7 +617,8 @@ async function puzzleView(id, pi) {
       sq.style.animationDelay = delay + 'ms';
       sq.classList.add('flip');
       setTimeout(() => {
-        sq.querySelector('.txt > span').textContent = pairAt(pos).prompt;
+        sq.innerHTML = promptHTML(pairAt(pos));
+        sq.classList.toggle('hasimg', !!pairAt(pos).image);
         fitText(sq);
       }, 170 + delay);
       setTimeout(() => { sq.classList.remove('flip'); sq.style.animationDelay = ''; }, 380 + delay);
@@ -607,7 +629,7 @@ async function puzzleView(id, pi) {
     const sq = e.target.closest('.sq');
     if (locked || !sq || sq.classList.contains('solved')) return;
     if (selected) attempt(selected, sq, null);
-    else showSheet(`<p>${esc(pairAt(+sq.dataset.i).prompt)}</p>`);
+    else showSheet(promptSheet(pairAt(+sq.dataset.i)));
   }, { signal });
 
   /* --- dragging --- */
