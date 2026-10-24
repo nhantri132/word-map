@@ -1,0 +1,72 @@
+{
+  "title": "10/25/26",
+  "image": "images/10-25-26.jpg",
+  "puzzleSize": [3, 4],
+  "mapSize": [2, 2],
+  "palette": 0,
+  "puzzles": [
+    {
+      "theme": "Countries",
+      "size": [3, 4],
+      "pairs": [
+        ["images/prompts/10-25-26/country-italy.jpg", "Italy"],
+        ["images/prompts/10-25-26/country-chile.jpg", "Chile"],
+        ["images/prompts/10-25-26/country-japan.jpg", "Japan"],
+        ["images/prompts/10-25-26/country-india.jpg", "India"],
+        ["images/prompts/10-25-26/country-australia.jpg", "Australia"],
+        ["images/prompts/10-25-26/country-brazil.jpg", "Brazil"],
+        ["images/prompts/10-25-26/country-united-kingdom.jpg", "United Kingdom"],
+        ["images/prompts/10-25-26/country-vietnam.jpg", "Vietnam"],
+        ["images/prompts/10-25-26/country-norway.jpg", "Norway"],
+        ["images/prompts/10-25-26/country-mexico.jpg", "Mexico"],
+        ["images/prompts/10-25-26/country-ireland.jpg", "Ireland"],
+        ["images/prompts/10-25-26/country-new-zealand.jpg", "New Zealand"]
+      ]
+    },
+    {
+      "theme": "Dawgs",
+      "size": [3, 3],
+      "pairs": [
+        ["images/prompts/10-25-26/dog-corgi.jpg", "Corgi"],
+        ["images/prompts/10-25-26/dog-basset-hound.jpg", "Basset Hound"],
+        ["images/prompts/10-25-26/dog-pug.jpg", "Pug"],
+        ["images/prompts/10-25-26/dog-golden-retriever.jpg", "Golden Retriever"],
+        ["images/prompts/10-25-26/dog-husky.jpg", "Husky"],
+        ["images/prompts/10-25-26/dog-dachshund.jpg", "Dachshund"],
+        ["images/prompts/10-25-26/dog-shiba-inu.jpg", "Shiba Inu"],
+        ["images/prompts/10-25-26/dog-beagle.jpg", "Beagle"],
+        ["images/prompts/10-25-26/dog-french-bulldog.jpg", "French Bulldog"]
+      ]
+    },
+    {
+      "theme": "Bangtan",
+      "size": [3, 3],
+      "pairs": [
+        ["images/prompts/10-25-26/bts-hyyh-pt1.jpg", "The Most Beautiful Moment in Life Pt.1"],
+        ["images/prompts/10-25-26/bts-proof.jpg", "Proof"],
+        ["images/prompts/10-25-26/bts-arirang.jpg", "Arirang"],
+        ["images/prompts/10-25-26/bts-rpwp.jpg", "Right Place, Wrong Person"],
+        ["images/prompts/10-25-26/bts-indigo.jpg", "Indigo"],
+        ["images/prompts/10-25-26/bts-super-tuna.jpg", "Super Tuna"],
+        ["images/prompts/10-25-26/bts-d-day.jpg", "D-Day"],
+        ["images/prompts/10-25-26/bts-jack-in-the-box.jpg", "Jack in the Box"],
+        ["images/prompts/10-25-26/bts-layover.jpg", "Layover"]
+      ]
+    },
+    {
+      "theme": "US Rivers",
+      "size": [3, 3],
+      "pairs": [
+        ["Brazos", "Texas"],
+        ["Sacramento", "California"],
+        ["Hudson", "New York"],
+        ["Willamette", "Oregon"],
+        ["St. Johns", "Florida"],
+        ["Atchafalaya", "Louisiana"],
+        ["Salmon", "Idaho"],
+        ["James", "Virginia"],
+        ["Kenai", "Alaska"]
+      ]
+    }
+  ]
+}
