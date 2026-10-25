@@ -1,0 +1,119 @@
+{
+  "title": "Back to Clormy",
+  "image": "images/back-to-clormy.jpg",
+  "puzzleSize": [9, 8],
+  "mapSize": [2, 3],
+  "palette": 0,
+  "puzzles": [
+    {
+      "theme": "Kat",
+      "size": [3, 3],
+      "pairs": [
+        ["images/prompts/back-to-clormy/cat-maine-coon.jpg", "Maine Coon"],
+        ["images/prompts/back-to-clormy/cat-siamese.jpg", "Siamese"],
+        ["images/prompts/back-to-clormy/cat-scottish-fold.jpg", "Scottish Fold"],
+        ["images/prompts/back-to-clormy/cat-sphynx.jpg", "Sphynx"],
+        ["images/prompts/back-to-clormy/cat-persian.jpg", "Persian"],
+        ["images/prompts/back-to-clormy/cat-ragdoll.jpg", "Ragdoll"],
+        ["images/prompts/back-to-clormy/cat-bengal.jpg", "Bengal"],
+        ["images/prompts/back-to-clormy/cat-british-shorthair.jpg", "British Shorthair"],
+        ["images/prompts/back-to-clormy/cat-russian-blue.jpg", "Russian Blue"]
+      ]
+    },
+    {
+      "theme": "Nicole Kidman",
+      "size": [3, 4],
+      "pairs": [
+        ["images/prompts/back-to-clormy/film-the-northman.jpg", "The Northman"],
+        ["images/prompts/back-to-clormy/film-aquaman.jpg", "Aquaman"],
+        ["images/prompts/back-to-clormy/film-sacred-deer.jpg", "The Killing of a Sacred Deer"],
+        ["images/prompts/back-to-clormy/film-golden-compass.jpg", "The Golden Compass"],
+        ["images/prompts/back-to-clormy/film-happy-feet.jpg", "Happy Feet"],
+        ["images/prompts/back-to-clormy/film-bewitched.jpg", "Bewitched"],
+        ["images/prompts/back-to-clormy/film-stepford-wives.jpg", "The Stepford Wives"],
+        ["images/prompts/back-to-clormy/film-practical-magic.jpg", "Practical Magic"],
+        ["images/prompts/back-to-clormy/film-eyes-wide-shut.jpg", "Eyes Wide Shut"],
+        ["images/prompts/back-to-clormy/film-moulin-rouge.jpg", "Moulin Rouge!"],
+        ["images/prompts/back-to-clormy/film-the-others.jpg", "The Others"],
+        ["images/prompts/back-to-clormy/film-bombshell.jpg", "Bombshell"]
+      ]
+    },
+    {
+      "theme": "Past and Present Wonders of the World",
+      "size": [3, 3],
+      "pairs": [
+        ["Great Pyramid of Giza", "Egypt"],
+        ["Hanging Gardens of Babylon", "Iraq"],
+        ["Colossus of Rhodes", "Greece"],
+        ["Temple of Artemis", "Turkey"],
+        ["Great Wall", "China"],
+        ["Petra", "Jordan"],
+        ["Christ the Redeemer", "Brazil"],
+        ["Machu Picchu", "Peru"],
+        ["Taj Mahal", "India"]
+      ]
+    },
+    {
+      "theme": "AI",
+      "size": [3, 4],
+      "pairs": [
+        ["2001: A Space Odyssey", "HAL 9000"],
+        ["Iron Man", "JARVIS"],
+        ["The Terminator", "Skynet"],
+        ["Her", "Samantha"],
+        ["Ex Machina", "Ava"],
+        ["Alien", "MOTHER"],
+        ["Portal", "GLaDOS"],
+        ["Halo", "Cortana"],
+        ["System Shock", "SHODAN"],
+        ["Knight Rider (TV)", "KITT"],
+        ["Neuromancer (book)", "Wintermute"],
+        ["I Have No Mouth, and I Must Scream (book)", "AM"]
+      ]
+    },
+    {
+      "theme": "Poke-Mania",
+      "size": [4, 4],
+      "pairs": [
+        ["images/prompts/back-to-clormy/poke-jigglypuff.jpg", "Jigglypuff"],
+        ["images/prompts/back-to-clormy/poke-meowth.jpg", "Meowth"],
+        ["images/prompts/back-to-clormy/poke-psyduck.jpg", "Psyduck"],
+        ["images/prompts/back-to-clormy/poke-snorlax.jpg", "Snorlax"],
+        ["images/prompts/back-to-clormy/poke-eevee.jpg", "Eevee"],
+        ["images/prompts/back-to-clormy/poke-gengar.jpg", "Gengar"],
+        ["images/prompts/back-to-clormy/poke-magikarp.jpg", "Magikarp"],
+        ["images/prompts/back-to-clormy/poke-gyarados.jpg", "Gyarados"],
+        ["images/prompts/back-to-clormy/poke-mewtwo.jpg", "Mewtwo"],
+        ["images/prompts/back-to-clormy/poke-mew.jpg", "Mew"],
+        ["images/prompts/back-to-clormy/poke-onix.jpg", "Onix"],
+        ["images/prompts/back-to-clormy/poke-slowpoke.jpg", "Slowpoke"],
+        ["images/prompts/back-to-clormy/poke-lapras.jpg", "Lapras"],
+        ["images/prompts/back-to-clormy/poke-ditto.jpg", "Ditto"],
+        ["images/prompts/back-to-clormy/poke-machamp.jpg", "Machamp"],
+        ["images/prompts/back-to-clormy/poke-dragonite.jpg", "Dragonite"]
+      ]
+    },
+    {
+      "theme": "Nappetizer",
+      "size": [4, 4],
+      "pairs": [
+        ["siesta", "Spanish"],
+        ["sieste", "French"],
+        ["pisolino", "Italian"],
+        ["soneca", "Portuguese"],
+        ["Nickerchen", "German"],
+        ["dutje", "Dutch"],
+        ["tupplur", "Swedish"],
+        ["drzemka", "Polish"],
+        ["şekerleme", "Turkish"],
+        ["υπνάκος (ypnákos)", "Greek"],
+        ["قيلولة (qaylūla)", "Arabic"],
+        ["昼寝 (hirune)", "Japanese"],
+        ["午睡 (wǔshuì)", "Chinese"],
+        ["낮잠 (natjam)", "Korean"],
+        ["ngủ trưa", "Vietnamese"],
+        ["idlip", "Tagalog"]
+      ]
+    }
+  ]
+}
