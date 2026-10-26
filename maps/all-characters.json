@@ -1,0 +1,86 @@
+{
+  "title": "It's All Characters Today",
+  "image": "images/all-characters.jpg",
+  "puzzleSize": [3, 4],
+  "mapSize": [2, 2],
+  "palette": 0,
+  "puzzles": [
+    {
+      "theme": "Avatarverse",
+      "size": [3, 3],
+      "pairs": [
+        ["images/prompts/all-characters/avatar-korra.jpg", "Korra"],
+        ["images/prompts/all-characters/avatar-aang.jpg", "Aang"],
+        ["images/prompts/all-characters/avatar-katara.jpg", "Katara"],
+        ["images/prompts/all-characters/avatar-sokka.jpg", "Sokka"],
+        ["images/prompts/all-characters/avatar-toph.jpg", "Toph"],
+        ["images/prompts/all-characters/avatar-zuko.jpg", "Zuko"],
+        ["images/prompts/all-characters/avatar-mako.jpg", "Mako"],
+        ["images/prompts/all-characters/avatar-pavi.jpg", "Pavi"],
+        ["images/prompts/all-characters/avatar-nisha.jpg", "Nisha"]
+      ]
+    },
+    {
+      "theme": "Marvel Comics",
+      "size": [4, 4],
+      "pairs": [
+        ["images/prompts/all-characters/marvel-mole-man.jpg", "Mole Man"],
+        ["images/prompts/all-characters/marvel-doctor-doom.jpg", "Doctor Doom"],
+        ["images/prompts/all-characters/marvel-nightcrawler.jpg", "Nightcrawler"],
+        ["images/prompts/all-characters/marvel-beast.jpg", "Beast"],
+        ["images/prompts/all-characters/marvel-ghost-rider.jpg", "Ghost Rider"],
+        ["images/prompts/all-characters/marvel-jocasta.jpg", "Jocasta"],
+        ["images/prompts/all-characters/marvel-paladin.jpg", "Paladin"],
+        ["images/prompts/all-characters/marvel-luke-cage.jpg", "Luke Cage"],
+        ["images/prompts/all-characters/marvel-the-beyonder.jpg", "The Beyonder"],
+        ["images/prompts/all-characters/marvel-iron-fist.jpg", "Iron Fist"],
+        ["images/prompts/all-characters/marvel-mister-sinister.jpg", "Mister Sinister"],
+        ["images/prompts/all-characters/marvel-callisto.jpg", "Callisto"],
+        ["images/prompts/all-characters/marvel-elektra.jpg", "Elektra"],
+        ["images/prompts/all-characters/marvel-storm.jpg", "Storm"],
+        ["images/prompts/all-characters/marvel-mephisto.jpg", "Mephisto"],
+        ["images/prompts/all-characters/marvel-speed.jpg", "Speed"]
+      ]
+    },
+    {
+      "theme": "The 90's",
+      "size": [4, 4],
+      "pairs": [
+        ["images/prompts/all-characters/nineties-ed-edd-n-eddy.jpg", "Ed, Edd n Eddy"],
+        ["images/prompts/all-characters/nineties-reggie-rocket.jpg", "Reggie Rocket"],
+        ["images/prompts/all-characters/nineties-max-goof.jpg", "Max Goof"],
+        ["images/prompts/all-characters/nineties-francis.jpg", "Francis"],
+        ["images/prompts/all-characters/nineties-franklin.jpg", "Franklin Turtle"],
+        ["images/prompts/all-characters/nineties-binky-barnes.jpg", "Binky Barnes"],
+        ["images/prompts/all-characters/nineties-donnie-thornberry.jpg", "Donnie Thornberry"],
+        ["images/prompts/all-characters/nineties-susie-carmichael.jpg", "Susie Carmichael"],
+        ["images/prompts/all-characters/nineties-arnold-shortman.jpg", "Arnold Shortman"],
+        ["images/prompts/all-characters/nineties-dexter.jpg", "Dexter"],
+        ["images/prompts/all-characters/nineties-daria.jpg", "Daria Morgendorffer"],
+        ["images/prompts/all-characters/nineties-dw-read.jpg", "D.W. Read"],
+        ["images/prompts/all-characters/nineties-sailor-moon.jpg", "Sailor Moon"],
+        ["images/prompts/all-characters/nineties-anastasia.jpg", "Anastasia"],
+        ["images/prompts/all-characters/nineties-catdog.jpg", "CatDog"],
+        ["images/prompts/all-characters/nineties-olie.jpg", "Olie"]
+      ]
+    },
+    {
+      "theme": "DC",
+      "size": [3, 4],
+      "pairs": [
+        ["images/prompts/all-characters/dc-lex-luthor.jpg", "Lex Luthor"],
+        ["images/prompts/all-characters/dc-mister-terrific.jpg", "Mister Terrific"],
+        ["images/prompts/all-characters/dc-john-stewart.jpg", "John Stewart"],
+        ["images/prompts/all-characters/dc-hawkgirl.jpg", "Hawkgirl"],
+        ["images/prompts/all-characters/dc-jimmy-olsen.jpg", "Jimmy Olsen"],
+        ["images/prompts/all-characters/dc-gorilla-grodd.jpg", "Gorilla Grodd"],
+        ["images/prompts/all-characters/dc-wonder-woman.jpg", "Wonder Woman"],
+        ["images/prompts/all-characters/dc-brainiac.jpg", "Brainiac"],
+        ["images/prompts/all-characters/dc-sinestro.jpg", "Sinestro"],
+        ["images/prompts/all-characters/dc-clayface.jpg", "Clayface"],
+        ["images/prompts/all-characters/dc-the-engineer.jpg", "The Engineer"],
+        ["images/prompts/all-characters/dc-blue-beetle.jpg", "Blue Beetle"]
+      ]
+    }
+  ]
+}
