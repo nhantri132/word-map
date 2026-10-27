@@ -1,0 +1,82 @@
+{
+  "title": "10/27/26",
+  "image": "images/10-27-26.jpg",
+  "puzzleSize": [3, 2],
+  "mapSize": [2, 2],
+  "palette": 0,
+  "puzzles": [
+    {
+      "theme": "Part of the Band",
+      "size": [3, 3],
+      "pairs": [
+        ["images/prompts/10-27-26/band-flute.jpg", "Flute"],
+        ["images/prompts/10-27-26/band-saxophone.jpg", "Saxophone"],
+        ["images/prompts/10-27-26/band-clarinet.jpg", "Clarinet"],
+        ["images/prompts/10-27-26/band-oboe.jpg", "Oboe"],
+        ["images/prompts/10-27-26/band-bassoon.jpg", "Bassoon"],
+        ["images/prompts/10-27-26/band-french-horn.jpg", "French Horn"],
+        ["images/prompts/10-27-26/band-tuba.jpg", "Tuba"],
+        ["images/prompts/10-27-26/band-trumpet.jpg", "Trumpet"],
+        ["images/prompts/10-27-26/band-trombone.jpg", "Trombone"]
+      ]
+    },
+    {
+      "theme": "Masters of Horror",
+      "size": [3, 4],
+      "pairs": [
+        ["images/prompts/10-27-26/horror-james-wan.jpg", "James Wan"],
+        ["images/prompts/10-27-26/horror-robert-eggers.jpg", "Robert Eggers"],
+        ["images/prompts/10-27-26/horror-jordan-peele.jpg", "Jordan Peele"],
+        ["images/prompts/10-27-26/horror-ari-aster.jpg", "Ari Aster"],
+        ["images/prompts/10-27-26/horror-david-cronenberg.jpg", "David Cronenberg"],
+        ["images/prompts/10-27-26/horror-jennifer-kent.jpg", "Jennifer Kent"],
+        ["images/prompts/10-27-26/horror-julia-ducournau.jpg", "Julia Ducournau"],
+        ["images/prompts/10-27-26/horror-takashi-miike.jpg", "Takashi Miike"],
+        ["images/prompts/10-27-26/horror-jane-schoenbrun.jpg", "Jane Schoenbrun"],
+        ["images/prompts/10-27-26/horror-mike-flanagan.jpg", "Mike Flanagan"],
+        ["images/prompts/10-27-26/horror-john-carpenter.jpg", "John Carpenter"],
+        ["images/prompts/10-27-26/horror-philippou.jpg", "The Philippous"]
+      ]
+    },
+    {
+      "theme": "It's Not Pilates",
+      "size": [4, 4],
+      "pairs": [
+        ["images/prompts/10-27-26/yoga-warrior-ii.jpg", "Warrior II"],
+        ["images/prompts/10-27-26/yoga-warrior-iii.jpg", "Warrior III"],
+        ["images/prompts/10-27-26/yoga-tree.jpg", "Tree"],
+        ["images/prompts/10-27-26/yoga-chair.jpg", "Chair"],
+        ["images/prompts/10-27-26/yoga-eagle.jpg", "Eagle"],
+        ["images/prompts/10-27-26/yoga-headstand.jpg", "Headstand"],
+        ["images/prompts/10-27-26/yoga-upward-dog.jpg", "Upward Dog"],
+        ["images/prompts/10-27-26/yoga-childs-pose.jpg", "Child's Pose"],
+        ["images/prompts/10-27-26/yoga-cat.jpg", "Cat"],
+        ["images/prompts/10-27-26/yoga-frog.jpg", "Frog"],
+        ["images/prompts/10-27-26/yoga-fish.jpg", "Fish"],
+        ["images/prompts/10-27-26/yoga-plank.jpg", "Plank"],
+        ["images/prompts/10-27-26/yoga-butterfly.jpg", "Butterfly"],
+        ["images/prompts/10-27-26/yoga-spinal-twist.jpg", "Spinal Twist"],
+        ["images/prompts/10-27-26/yoga-revolved-triangle.jpg", "Revolved Triangle"],
+        ["images/prompts/10-27-26/yoga-seated-forward-bend.jpg", "Seated Forward Bend"]
+      ]
+    },
+    {
+      "theme": "Vietnamese 101",
+      "size": [3, 4],
+      "pairs": [
+        ["Xin chào", "Hello"],
+        ["Cảm ơn", "Thank you"],
+        ["Nước", "Water"],
+        ["Cơm", "Rice"],
+        ["Mẹ", "Mom"],
+        ["Con chó", "Dog"],
+        ["Không", "No"],
+        ["Nhà", "Home"],
+        ["Ăn", "Eat"],
+        ["Ngủ", "Sleep"],
+        ["Ngon", "Delicious"],
+        ["Yêu", "Love"]
+      ]
+    }
+  ]
+}
