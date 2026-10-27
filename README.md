@@ -1,4 +1,4 @@
-# Word Map
+# Match Map
 
 A matching puzzle for phones and tablets. Drag each answer onto its prompt. Every correct match paints one pixel; each finished puzzle grid is one tile of a larger hidden picture. Finish every grid and the map zooms out, the gaps close, and the picture fades in.
 
@@ -18,11 +18,11 @@ To test on your computer first, run `python3 -m http.server` in this folder and 
 ```
 index.html  style.css  app.js
 maps/index.json      ← list of maps shown on the home screen
-maps/heart.json      ← one file per Word Map
+maps/heart.json      ← one file per Match Map
 images/heart.png     ← the picture a map reveals
 ```
 
-## Making a Word Map
+## Making a Match Map
 
 1. Drop an image in `images/`.
 2. Create `maps/your-map.json`:
@@ -49,7 +49,7 @@ images/heart.png     ← the picture a map reveals
 | Field | Meaning |
 |---|---|
 | `puzzleSize` | `[columns, rows]` of prompt squares in each puzzle grid. Every pair is one pixel. It also sets the shape of each puzzle's block on the map. |
-| `mapSize` | `[columns, rows]` of puzzle grids in the Word Map. |
+| `mapSize` | `[columns, rows]` of puzzle grids in the Match Map. |
 | `puzzles` | Exactly `columns × rows` of the map, listed left→right, top→bottom. Each needs exactly `columns × rows` pairs of its puzzle. |
 | `size` *(per puzzle, optional)* | Give one puzzle its own grid, e.g. `"size": [2, 2]` or `[3, 3]`. It still covers the same block of the map; its pixels are just bigger or smaller. Leave it out to use `puzzleSize`. |
 | `pairs` | `["prompt", "answer"]`, or `{ "prompt": "...", "answer": "..." }`. |
@@ -120,7 +120,7 @@ Picture detail and the amount of content are the same number. One pixel = one pr
 
 Paste something like this into Claude, filling in the brackets:
 
-> Write puzzles for my Word Map game as JSON. I need **[N] puzzles**, each with exactly **[16] pairs**. Themes: **[list them, or "pick varied themes around X"]**. Each pair is `["prompt", "answer"]`.
+> Write puzzles for my Match Map game as JSON. I need **[N] puzzles**, each with exactly **[16] pairs**. Themes: **[list them, or "pick varied themes around X"]**. Each pair is `["prompt", "answer"]`.
 > Rules: answers are one word (two at most) and unique within a puzzle; prompts under 10 words; every prompt has exactly one answer that fits among the others in its puzzle; mix difficulty; no answer appears in its own prompt.
 > Output only the `"puzzles": [...]` array, in this shape: `{ "theme": "...", "pairs": [["prompt","answer"], ...] }`.
 

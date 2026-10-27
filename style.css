@@ -64,7 +64,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .card.bad { display: block; color: var(--accent); }
 .hint { color: var(--muted); font-size: 14px; text-align: center; margin: 22px 0 0; }
 
-/* ---------- word map ---------- */
+/* ---------- match map ---------- */
 .mapwrap { overflow: hidden; border-radius: 14px; margin-top: 4px; transition: border-radius 1s; }
 .map {
   position: relative; display: grid; gap: 6px;

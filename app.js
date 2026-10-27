@@ -1,5 +1,5 @@
 'use strict';
-/* Word Map — a matching puzzle game whose answers paint a hidden picture.
+/* Match Map — a matching puzzle game whose answers paint a hidden picture.
    No build step, no dependencies. Content lives in maps/*.json, images in images/. */
 
 const STORE = 'wordmap.v1.';
@@ -52,7 +52,7 @@ const Haptics = (() => {
     wrong:   () => play([40, 60, 40], 2),                        // a strike: double buzz
     fail:    () => play([300, 100, 300], 4),                     // out of strikes
     puzzle:  () => play([90, 70, 90, 70, 260], 3),               // large: puzzle grid done
-    map:     () => play([120, 60, 120, 60, 120, 60, 500], 5),    // largest: whole Word Map
+    map:     () => play([120, 60, 120, 60, 120, 60, 500], 5),    // largest: whole Match Map
   };
 })();
 
@@ -119,7 +119,7 @@ async function getIndex() {
 }
 async function getMap(id) {
   const m = (await getIndex()).find(m => m.id === id);
-  if (!m) throw new Error(`There is no Word Map called “${id}”.`);
+  if (!m) throw new Error(`There is no Match Map called “${id}”.`);
   if (m.error) throw new Error(m.error);
   return m;
 }
@@ -327,7 +327,7 @@ async function homeView() {
       ${m.errors.length ? `<p class="warn">${m.errors.length} problem${m.errors.length > 1 ? 's' : ''} in this map</p>` : ''}</div></a></li>`;
   };
   app.innerHTML = `<main>
-    <header class="top"><h1 class="logo">Word<span>Map</span></h1>
+    <header class="top"><h1 class="logo">Match<span>Map</span></h1>
       <button class="chip" id="hap"></button></header>
     <ul class="cards">${maps.slice().reverse().map(card).join('')}</ul>
     <p class="hint">Match each answer to its prompt. Every match paints one pixel of a hidden picture.</p>
@@ -343,7 +343,7 @@ async function homeView() {
   }
 }
 
-/* ---------------------------------------------------------------- word map */
+/* ---------------------------------------------------------------- match map */
 async function mapView(id, { peek = false } = {}) {
   const map = await getMap(id);
   const pixels = await getPixels(map);
@@ -399,7 +399,7 @@ async function mapView(id, { peek = false } = {}) {
     if (map.revealOriginal) mapEl.classList.add('picture');
     requestAnimationFrame(() => requestAnimationFrame(() => { wrap.classList.remove('instant'); mapEl.classList.remove('instant'); }));
   }
-  foot.innerHTML = `<h3>${peek ? 'The finished picture' : 'Word Map complete'}</h3>` + (map.revealOriginal
+  foot.innerHTML = `<h3>${peek ? 'The finished picture' : 'Match Map complete'}</h3>` + (map.revealOriginal
     ? `<div class="seg"><button data-v="px">Pixels</button><button data-v="pic" class="on">Picture</button></div>` : '');
   foot.querySelector('.seg')?.addEventListener('click', e => {
     const b = e.target.closest('button'); if (!b) return;
@@ -525,7 +525,7 @@ async function puzzleView(id, pi) {
     tools.hidden = true;
     donebar.hidden = false;
     donebar.innerHTML = last
-      ? `<p>That was the last piece.</p><a class="btn" href="#/m/${encodeURIComponent(id)}">Reveal the Word Map</a>`
+      ? `<p>That was the last piece.</p><a class="btn" href="#/m/${encodeURIComponent(id)}">Reveal the Match Map</a>`
       : `<p>Puzzle complete!</p><a class="btn" href="#/m/${encodeURIComponent(id)}">Back to the map</a>`;
     donebar.insertAdjacentHTML('beforeend', '<small class="donehint">Tap any square to see its prompt.</small>');
   };
