@@ -1,0 +1,72 @@
+{
+  "title": "10/28/26",
+  "image": "images/10-28-26.jpg",
+  "puzzleSize": [3, 2],
+  "mapSize": [2, 2],
+  "palette": 0,
+  "puzzles": [
+    {
+      "theme": "Richest in the World",
+      "size": [3, 3],
+      "pairs": [
+        ["images/prompts/10-28-26/rich-elon-musk.jpg", "Elon Musk"],
+        ["images/prompts/10-28-26/rich-jeff-bezos.jpg", "Jeff Bezos"],
+        ["images/prompts/10-28-26/rich-larry-page.jpg", "Larry Page"],
+        ["images/prompts/10-28-26/rich-michael-dell.jpg", "Michael Dell"],
+        ["images/prompts/10-28-26/rich-sergey-brin.jpg", "Sergey Brin"],
+        ["images/prompts/10-28-26/rich-mark-zuckerberg.jpg", "Mark Zuckerberg"],
+        ["images/prompts/10-28-26/rich-jensen-huang.jpg", "Jensen Huang"],
+        ["images/prompts/10-28-26/rich-larry-ellison.jpg", "Larry Ellison"],
+        ["images/prompts/10-28-26/rich-steve-ballmer.jpg", "Steve Ballmer"]
+      ]
+    },
+    {
+      "theme": "Invincible",
+      "size": [3, 3],
+      "pairs": [
+        ["images/prompts/10-28-26/invincible-invincible.jpg", "Invincible"],
+        ["images/prompts/10-28-26/invincible-atom-eve.jpg", "Atom Eve"],
+        ["images/prompts/10-28-26/invincible-omni-man.jpg", "Omni-Man"],
+        ["images/prompts/10-28-26/invincible-thragg.jpg", "Thragg"],
+        ["images/prompts/10-28-26/invincible-robot.jpg", "Robot"],
+        ["images/prompts/10-28-26/invincible-monster-girl.jpg", "Monster Girl"],
+        ["images/prompts/10-28-26/invincible-dinosaurus.jpg", "Dinosaurus"],
+        ["images/prompts/10-28-26/invincible-rex-splode.jpg", "Rex Splode"],
+        ["images/prompts/10-28-26/invincible-allen.jpg", "Allen"]
+      ]
+    },
+    {
+      "theme": "Rage",
+      "size": [3, 4],
+      "pairs": [
+        ["images/prompts/10-28-26/rage-lol.jpg", "LOL"],
+        ["images/prompts/10-28-26/rage-rage-guy.jpg", "Rage Guy"],
+        ["images/prompts/10-28-26/rage-trollface.jpg", "Trollface"],
+        ["images/prompts/10-28-26/rage-so-cute.jpg", "So Cute"],
+        ["images/prompts/10-28-26/rage-yao-ming.jpg", "Bitch Please"],
+        ["images/prompts/10-28-26/rage-me-gusta.jpg", "Me Gusta"],
+        ["images/prompts/10-28-26/rage-y-u-no.jpg", "Y U No"],
+        ["images/prompts/10-28-26/rage-are-you-kidding-me.jpg", "Are You Kidding Me?"],
+        ["images/prompts/10-28-26/rage-forever-alone.jpg", "Forever Alone"],
+        ["images/prompts/10-28-26/rage-challenge-accepted.jpg", "Challenge Accepted"],
+        ["images/prompts/10-28-26/rage-poker-face.jpg", "Poker Face"],
+        ["images/prompts/10-28-26/rage-okay.jpg", "Okay"]
+      ]
+    },
+    {
+      "theme": "Fantasy",
+      "size": [3, 3],
+      "pairs": [
+        ["images/prompts/10-28-26/fantasy-josh-allen.jpg", "Josh Allen"],
+        ["images/prompts/10-28-26/fantasy-quinshon-judkins.jpg", "Quinshon Judkins"],
+        ["images/prompts/10-28-26/fantasy-dandre-swift.jpg", "D'Andre Swift"],
+        ["images/prompts/10-28-26/fantasy-george-pickens.jpg", "George Pickens"],
+        ["images/prompts/10-28-26/fantasy-courtland-sutton.jpg", "Courtland Sutton"],
+        ["images/prompts/10-28-26/fantasy-dallas-goedert.jpg", "Dallas Goedert"],
+        ["images/prompts/10-28-26/fantasy-tre-tucker.jpg", "Tre Tucker"],
+        ["images/prompts/10-28-26/fantasy-hunter-henry.jpg", "Hunter Henry"],
+        ["images/prompts/10-28-26/fantasy-tetairoa-mcmillan.jpg", "Tetairoa McMillan"]
+      ]
+    }
+  ]
+}
