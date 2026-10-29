@@ -1,0 +1,81 @@
+{
+  "title": "10/29/26",
+  "image": "images/10-29-26.jpg",
+  "puzzleSize": [3, 2],
+  "mapSize": [2, 2],
+  "palette": 0,
+  "puzzles": [
+    {
+      "theme": "Game Worlds",
+      "size": [3, 4],
+      "pairs": [
+        ["images/prompts/10-29-26/worlds-mass-effect.jpg", "Mass Effect"],
+        ["images/prompts/10-29-26/worlds-call-of-duty.jpg", "Call of Duty"],
+        ["images/prompts/10-29-26/worlds-dragon-age.jpg", "Dragon Age"],
+        ["images/prompts/10-29-26/worlds-disco-elysium.jpg", "Disco Elysium"],
+        ["images/prompts/10-29-26/worlds-the-walking-dead.jpg", "The Walking Dead"],
+        ["images/prompts/10-29-26/worlds-batman.jpg", "Batman"],
+        ["images/prompts/10-29-26/worlds-ratchet-and-clank.jpg", "Ratchet & Clank"],
+        ["images/prompts/10-29-26/worlds-spider-man.jpg", "Spider-Man"],
+        ["images/prompts/10-29-26/worlds-silent-hill-f.jpg", "Silent Hill f"],
+        ["images/prompts/10-29-26/worlds-still-wakes-the-deep.jpg", "Still Wakes the Deep"],
+        ["images/prompts/10-29-26/worlds-overwatch.jpg", "Overwatch"],
+        ["images/prompts/10-29-26/worlds-blake-manor.jpg", "The Séance of Blake Manor"]
+      ]
+    },
+    {
+      "theme": "Real World",
+      "size": [3, 4],
+      "pairs": [
+        ["images/prompts/10-29-26/realworld-kyoto.jpg", "Kyoto"],
+        ["images/prompts/10-29-26/realworld-tokyo.jpg", "Tokyo"],
+        ["images/prompts/10-29-26/realworld-osaka.jpg", "Osaka"],
+        ["images/prompts/10-29-26/realworld-paris.jpg", "Paris"],
+        ["images/prompts/10-29-26/realworld-london.jpg", "London"],
+        ["images/prompts/10-29-26/realworld-dublin.jpg", "Dublin"],
+        ["images/prompts/10-29-26/realworld-new-york-city.jpg", "New York City"],
+        ["images/prompts/10-29-26/realworld-chicago.jpg", "Chicago"],
+        ["images/prompts/10-29-26/realworld-houston.jpg", "Houston"],
+        ["images/prompts/10-29-26/realworld-west-palm-beach.jpg", "West Palm Beach"],
+        ["images/prompts/10-29-26/realworld-seoul.jpg", "Seoul"],
+        ["images/prompts/10-29-26/realworld-busan.jpg", "Busan"]
+      ]
+    },
+    {
+      "theme": "Spanish 101",
+      "size": [3, 4],
+      "pairs": [
+        ["Hola", "Hello"],
+        ["Mariposa", "Butterfly"],
+        ["Agua", "Water"],
+        ["Arroz", "Rice"],
+        ["Biblioteca", "Library"],
+        ["Perro", "Dog"],
+        ["Gato", "Cat"],
+        ["Casa", "Home"],
+        ["Comer", "Eat"],
+        ["Dormir", "Sleep"],
+        ["Delicioso", "Delicious"],
+        ["Amor", "Love"]
+      ]
+    },
+    {
+      "theme": "Manga",
+      "size": [3, 4],
+      "pairs": [
+        ["images/prompts/10-29-26/manga-parasyte.jpg", "Parasyte"],
+        ["images/prompts/10-29-26/manga-chainsaw-man.jpg", "Chainsaw Man"],
+        ["images/prompts/10-29-26/manga-one-piece.jpg", "One Piece"],
+        ["images/prompts/10-29-26/manga-death-note.jpg", "Death Note"],
+        ["images/prompts/10-29-26/manga-one-punch-man.jpg", "One Punch Man"],
+        ["images/prompts/10-29-26/manga-mob-psycho-100.jpg", "Mob Psycho 100"],
+        ["images/prompts/10-29-26/manga-dandadan.jpg", "Dandadan"],
+        ["images/prompts/10-29-26/manga-uzumaki.jpg", "Uzumaki"],
+        ["images/prompts/10-29-26/manga-tomie.jpg", "Tomie"],
+        ["images/prompts/10-29-26/manga-attack-on-titan.jpg", "Attack on Titan"],
+        ["images/prompts/10-29-26/manga-bleach.jpg", "Bleach"],
+        ["images/prompts/10-29-26/manga-ouran.jpg", "Ouran High School Host Club"]
+      ]
+    }
+  ]
+}
