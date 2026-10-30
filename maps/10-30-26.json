@@ -1,0 +1,93 @@
+{
+  "title": "10/30/26",
+  "image": "images/10-30-26.jpg",
+  "puzzleSize": [3, 3],
+  "mapSize": [2, 2],
+  "palette": 0,
+  "puzzles": [
+    {
+      "theme": "RIP Patrick Stewart",
+      "size": [4, 4],
+      "pairs": [
+        ["images/prompts/10-30-26/stewart-doctor-strange.jpg", "Doctor Strange"],
+        ["images/prompts/10-30-26/stewart-star-trek.jpg", "Star Trek"],
+        ["images/prompts/10-30-26/stewart-the-emoji-movie.jpg", "The Emoji Movie"],
+        ["images/prompts/10-30-26/stewart-logan.jpg", "Logan"],
+        ["images/prompts/10-30-26/stewart-green-room.jpg", "Green Room"],
+        ["images/prompts/10-30-26/stewart-x-men.jpg", "X-Men"],
+        ["images/prompts/10-30-26/stewart-castlevania.jpg", "Castlevania"],
+        ["images/prompts/10-30-26/stewart-tmnt.jpg", "TMNT"],
+        ["images/prompts/10-30-26/stewart-oblivion.jpg", "Oblivion"],
+        ["images/prompts/10-30-26/stewart-chicken-little.jpg", "Chicken Little"],
+        ["images/prompts/10-30-26/stewart-jimmy-neutron.jpg", "Jimmy Neutron"],
+        ["images/prompts/10-30-26/stewart-a-christmas-carol.jpg", "A Christmas Carol"],
+        ["images/prompts/10-30-26/stewart-the-prince-of-egypt.jpg", "The Prince of Egypt"],
+        ["images/prompts/10-30-26/stewart-the-pagemaster.jpg", "The Pagemaster"],
+        ["images/prompts/10-30-26/stewart-robin-hood.jpg", "Robin Hood"],
+        ["images/prompts/10-30-26/stewart-dune.jpg", "Dune"]
+      ]
+    },
+    {
+      "theme": "Korean 101",
+      "size": [4, 4],
+      "pairs": [
+        ["안녕하세요 (annyeonghaseyo)", "Hello"],
+        ["감사합니다 (gamsahamnida)", "Thank you"],
+        ["물 (mul)", "Water"],
+        ["밥 (bap)", "Rice"],
+        ["엄마 (eomma)", "Mom"],
+        ["아빠 (appa)", "Dad"],
+        ["강아지 (gangaji)", "Puppy"],
+        ["고양이 (goyangi)", "Cat"],
+        ["집 (jip)", "Home"],
+        ["먹다 (meokda)", "Eat"],
+        ["자다 (jada)", "Sleep"],
+        ["맛있어요 (masisseoyo)", "Delicious"],
+        ["사랑 (sarang)", "Love"],
+        ["친구 (chingu)", "Friend"],
+        ["네 (ne)", "Yes"],
+        ["아니요 (aniyo)", "No"]
+      ]
+    },
+    {
+      "theme": "Memory Lane",
+      "size": [3, 4],
+      "pairs": [
+        ["images/prompts/10-30-26/memory-2009.jpg", "2009"],
+        ["images/prompts/10-30-26/memory-2010.jpg", "2010"],
+        ["images/prompts/10-30-26/memory-2011.jpg", "2011"],
+        ["images/prompts/10-30-26/memory-2012.jpg", "2012"],
+        ["images/prompts/10-30-26/memory-2013.jpg", "2013"],
+        ["images/prompts/10-30-26/memory-2014.jpg", "2014"],
+        ["images/prompts/10-30-26/memory-2016.jpg", "2016"],
+        ["images/prompts/10-30-26/memory-2017.jpg", "2017"],
+        ["images/prompts/10-30-26/memory-2019.jpg", "2019"],
+        ["images/prompts/10-30-26/memory-2021.jpg", "2021"],
+        ["images/prompts/10-30-26/memory-2022.jpg", "2022"],
+        ["images/prompts/10-30-26/memory-2023.jpg", "2023"]
+      ]
+    },
+    {
+      "theme": "Combat Design",
+      "size": [4, 4],
+      "pairs": [
+        ["images/prompts/10-30-26/combat-elden-ring.jpg", "Elden Ring"],
+        ["images/prompts/10-30-26/combat-nioh.jpg", "Nioh"],
+        ["images/prompts/10-30-26/combat-doom.jpg", "Doom"],
+        ["images/prompts/10-30-26/combat-bloodborne.jpg", "Bloodborne"],
+        ["images/prompts/10-30-26/combat-onimusha.jpg", "Onimusha"],
+        ["images/prompts/10-30-26/combat-sekiro.jpg", "Sekiro"],
+        ["images/prompts/10-30-26/combat-guilty-gear.jpg", "Guilty Gear"],
+        ["images/prompts/10-30-26/combat-devil-may-cry.jpg", "Devil May Cry"],
+        ["images/prompts/10-30-26/combat-bayonetta.jpg", "Bayonetta"],
+        ["images/prompts/10-30-26/combat-arkham.jpg", "Arkham"],
+        ["images/prompts/10-30-26/combat-tekken.jpg", "Tekken"],
+        ["images/prompts/10-30-26/combat-lies-of-p.jpg", "Lies of P"],
+        ["images/prompts/10-30-26/combat-spider-man.jpg", "Spider-Man"],
+        ["images/prompts/10-30-26/combat-god-of-war.jpg", "God of War"],
+        ["images/prompts/10-30-26/combat-overwatch.jpg", "Overwatch"],
+        ["images/prompts/10-30-26/combat-resident-evil-4.jpg", "Resident Evil 4"]
+      ]
+    }
+  ]
+}
