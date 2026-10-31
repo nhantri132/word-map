@@ -1,0 +1,82 @@
+{
+  "title": "Halloween 2026",
+  "image": "images/halloween-2026.jpg",
+  "puzzleSize": [2, 3],
+  "mapSize": [2, 2],
+  "palette": 0,
+  "puzzles": [
+    {
+      "theme": "The Roaring 20s",
+      "size": [3, 4],
+      "pairs": [
+        ["The bee's knees", "Excellent"],
+        ["Jalopy", "Old car"],
+        ["Bootlegger", "Alcohol smuggler"],
+        ["Speakeasy", "Secret bar"],
+        ["Flapper", "Rebellious young woman"],
+        ["Ossified", "Drunk"],
+        ["Big cheese", "Important person"],
+        ["Dough", "Money"],
+        ["Gams", "Legs"],
+        ["Sheik", "Ladies' man"],
+        ["Bank's closed", "No kissing"],
+        ["Giggle water", "Booze"]
+      ]
+    },
+    {
+      "theme": "French 101",
+      "size": [3, 4],
+      "pairs": [
+        ["Bonjour", "Hello"],
+        ["Merci", "Thank you"],
+        ["Fromage", "Cheese"],
+        ["Pain", "Bread"],
+        ["Chien", "Dog"],
+        ["Chat", "Cat"],
+        ["Maison", "House"],
+        ["Pamplemousse", "Grapefruit"],
+        ["Papillon", "Butterfly"],
+        ["Bibliothèque", "Library"],
+        ["Citrouille", "Pumpkin"],
+        ["Fantôme", "Ghost"]
+      ]
+    },
+    {
+      "theme": "Horror Villains",
+      "size": [3, 3],
+      "pairs": [
+        ["images/prompts/halloween-2026/villain-pinhead.jpg", "Pinhead"],
+        ["images/prompts/halloween-2026/villain-sam.jpg", "Sam"],
+        ["images/prompts/halloween-2026/villain-samara.jpg", "Samara"],
+        ["images/prompts/halloween-2026/villain-leprechaun.jpg", "Leprechaun"],
+        ["images/prompts/halloween-2026/villain-ghostface.jpg", "Ghostface"],
+        ["images/prompts/halloween-2026/villain-freddy-krueger.jpg", "Freddy Krueger"],
+        ["images/prompts/halloween-2026/villain-chucky.jpg", "Chucky"],
+        ["images/prompts/halloween-2026/villain-pennywise.jpg", "Pennywise"],
+        ["images/prompts/halloween-2026/villain-jason-voorhees.jpg", "Jason Voorhees"]
+      ]
+    },
+    {
+      "theme": "Horror Movies",
+      "size": [4, 4],
+      "pairs": [
+        ["images/prompts/halloween-2026/movie-scream.jpg", "Scream"],
+        ["images/prompts/halloween-2026/movie-saw.jpg", "Saw"],
+        ["images/prompts/halloween-2026/movie-silence-of-the-lambs.jpg", "The Silence of the Lambs"],
+        ["images/prompts/halloween-2026/movie-black-christmas.jpg", "Black Christmas"],
+        ["images/prompts/halloween-2026/movie-jeepers-creepers.jpg", "Jeepers Creepers"],
+        ["images/prompts/halloween-2026/movie-candyman.jpg", "Candyman"],
+        ["images/prompts/halloween-2026/movie-halloween.jpg", "Halloween"],
+        ["images/prompts/halloween-2026/movie-the-sixth-sense.jpg", "The Sixth Sense"],
+        ["images/prompts/halloween-2026/movie-us.jpg", "Us"],
+        ["images/prompts/halloween-2026/movie-carrie.jpg", "Carrie"],
+        ["images/prompts/halloween-2026/movie-terrifier.jpg", "Terrifier"],
+        ["images/prompts/halloween-2026/movie-cabin-fever.jpg", "Cabin Fever"],
+        ["images/prompts/halloween-2026/movie-fnaf.jpg", "Five Nights at Freddy's"],
+        ["images/prompts/halloween-2026/movie-texas-chainsaw-massacre.jpg", "The Texas Chainsaw Massacre"],
+        ["images/prompts/halloween-2026/movie-the-meg.jpg", "The Meg"],
+        ["images/prompts/halloween-2026/movie-when-a-stranger-calls.jpg", "When a Stranger Calls"]
+      ]
+    }
+  ]
+}
