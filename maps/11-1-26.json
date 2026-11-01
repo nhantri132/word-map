@@ -1,0 +1,90 @@
+{
+  "title": "11/1/26",
+  "image": "images/11-1-26.jpg",
+  "puzzleSize": [4, 3],
+  "mapSize": [2, 2],
+  "palette": 0,
+  "puzzles": [
+    {
+      "theme": "It's Beginning to Look a Lot like Christmas",
+      "size": [4, 4],
+      "pairs": [
+        ["All I Want for Christmas Is You", "Mariah Carey"],
+        ["Mistletoe", "Justin Bieber"],
+        ["Last Christmas", "Wham!"],
+        ["Jingle Bell Rock", "Bobby Helms"],
+        ["Rockin' Around the Christmas Tree", "Brenda Lee"],
+        ["White Christmas", "Bing Crosby"],
+        ["Feliz Navidad", "José Feliciano"],
+        ["Santa Baby", "Eartha Kitt"],
+        ["Blue Christmas", "Elvis Presley"],
+        ["Holly Jolly Christmas", "Burl Ives"],
+        ["It's the Most Wonderful Time of the Year", "Andy Williams"],
+        ["Underneath the Tree", "Kelly Clarkson"],
+        ["Santa Tell Me", "Ariana Grande"],
+        ["Christmas Tree Farm", "Taylor Swift"],
+        ["Happy Xmas (War Is Over)", "John Lennon"],
+        ["Do They Know It's Christmas?", "Band Aid"]
+      ]
+    },
+    {
+      "theme": "Magic is Real",
+      "size": [3, 3],
+      "pairs": [
+        ["images/prompts/11-1-26/magic-david-copperfield.jpg", "David Copperfield"],
+        ["images/prompts/11-1-26/magic-harry-houdini.jpg", "Harry Houdini"],
+        ["images/prompts/11-1-26/magic-penn-and-teller.jpg", "Penn & Teller"],
+        ["images/prompts/11-1-26/magic-siegfried-and-roy.jpg", "Siegfried & Roy"],
+        ["images/prompts/11-1-26/magic-dai-vernon.jpg", "Dai Vernon"],
+        ["images/prompts/11-1-26/magic-juan-tamariz.jpg", "Juan Tamariz"],
+        ["images/prompts/11-1-26/magic-david-blaine.jpg", "David Blaine"],
+        ["images/prompts/11-1-26/magic-criss-angel.jpg", "Criss Angel"],
+        ["images/prompts/11-1-26/magic-derren-brown.jpg", "Derren Brown"]
+      ]
+    },
+    {
+      "theme": "Japanese 101",
+      "size": [4, 4],
+      "pairs": [
+        ["こんにちは (konnichiwa)", "Hello"],
+        ["ありがとう (arigatou)", "Thank you"],
+        ["さようなら (sayounara)", "Goodbye"],
+        ["水 (mizu)", "Water"],
+        ["ご飯 (gohan)", "Rice"],
+        ["寿司 (sushi)", "Sushi"],
+        ["犬 (inu)", "Dog"],
+        ["猫 (neko)", "Cat"],
+        ["家 (ie)", "House"],
+        ["食べる (taberu)", "Eat"],
+        ["寝る (neru)", "Sleep"],
+        ["美味しい (oishii)", "Delicious"],
+        ["愛 (ai)", "Love"],
+        ["友達 (tomodachi)", "Friend"],
+        ["はい (hai)", "Yes"],
+        ["いいえ (iie)", "No"]
+      ]
+    },
+    {
+      "theme": "Models",
+      "size": [4, 4],
+      "pairs": [
+        ["images/prompts/11-1-26/cars-hyundai.jpg", "Hyundai"],
+        ["images/prompts/11-1-26/cars-honda.jpg", "Honda"],
+        ["images/prompts/11-1-26/cars-mercedes.jpg", "Mercedes"],
+        ["images/prompts/11-1-26/cars-acura.jpg", "Acura"],
+        ["images/prompts/11-1-26/cars-suzuki.jpg", "Suzuki"],
+        ["images/prompts/11-1-26/cars-toyota.jpg", "Toyota"],
+        ["images/prompts/11-1-26/cars-bmw.jpg", "BMW"],
+        ["images/prompts/11-1-26/cars-lamborghini.jpg", "Lamborghini"],
+        ["images/prompts/11-1-26/cars-mitsubishi.jpg", "Mitsubishi"],
+        ["images/prompts/11-1-26/cars-mazda.jpg", "Mazda"],
+        ["images/prompts/11-1-26/cars-lexus.jpg", "Lexus"],
+        ["images/prompts/11-1-26/cars-infiniti.jpg", "Infiniti"],
+        ["images/prompts/11-1-26/cars-audi.jpg", "Audi"],
+        ["images/prompts/11-1-26/cars-volkswagen.jpg", "Volkswagen"],
+        ["images/prompts/11-1-26/cars-dodge.jpg", "Dodge"],
+        ["images/prompts/11-1-26/cars-chevrolet.jpg", "Chevrolet"]
+      ]
+    }
+  ]
+}
