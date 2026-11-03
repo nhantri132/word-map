@@ -1,0 +1,82 @@
+{
+  "title": "11/3/26",
+  "image": "images/11-3-26.jpg",
+  "puzzleSize": [3, 2],
+  "mapSize": [2, 2],
+  "palette": 0,
+  "puzzles": [
+    {
+      "theme": "Vote!",
+      "size": [3, 3],
+      "pairs": [
+        ["Wrote the Declaration of Sentiments", "Elizabeth Cady Stanton"],
+        ["Arrested for voting, 1872", "Susan B. Anthony"],
+        ["\"Ain't I a Woman?\"", "Sojourner Truth"],
+        ["Led the 1913 suffrage parade", "Alice Paul"],
+        ["Refused to march at the back", "Ida B. Wells"],
+        ["Spoke at Seneca Falls", "Frederick Douglass"],
+        ["\"Sick and tired of being sick and tired\"", "Fannie Lou Hamer"],
+        ["Beaten at Edmund Pettus Bridge", "John Lewis"],
+        ["Led the Selma march", "Martin Luther King Jr."]
+      ]
+    },
+    {
+      "theme": "New Metal",
+      "size": [4, 4],
+      "pairs": [
+        ["Freak on a Leash", "Korn"],
+        ["In the End", "Linkin Park"],
+        ["Chop Suey!", "System of a Down"],
+        ["Down with the Sickness", "Disturbed"],
+        ["Bodies", "Drowning Pool"],
+        ["Last Resort", "Papa Roach"],
+        ["Break Stuff", "Limp Bizkit"],
+        ["Change (In the House of Flies)", "Deftones"],
+        ["Duality", "Slipknot"],
+        ["Bring Me to Life", "Evanescence"],
+        ["Click Click Boom", "Saliva"],
+        ["It's Been Awhile", "Staind"],
+        ["Butterfly", "Crazy Town"],
+        ["Youth of the Nation", "P.O.D."],
+        ["Pardon Me", "Incubus"],
+        ["Push It", "Static-X"]
+      ]
+    },
+    {
+      "theme": "Models",
+      "size": [3, 4],
+      "pairs": [
+        ["Wildlife conservation", "Robert Irwin"],
+        ["Nature documentaries", "David Attenborough"],
+        ["Girls' education", "Malala Yousafzai"],
+        ["Free books for kids", "Dolly Parton"],
+        ["Feeding disaster zones", "José Andrés"],
+        ["Free encyclopedia", "Jimmy Wales"],
+        ["Invented the web", "Tim Berners-Lee"],
+        ["Autism advocacy", "Temple Grandin"],
+        ["Free online school", "Sal Khan"],
+        ["AIDS foundation", "Elton John"],
+        ["Science for kids", "Bill Nye"],
+        ["Mental health in sports", "Simone Biles"]
+      ]
+    },
+    {
+      "theme": "Artists",
+      "size": [3, 4],
+      "pairs": [
+        ["images/prompts/11-3-26/martial-bruce-lee.jpg", "Bruce Lee"],
+        ["images/prompts/11-3-26/martial-jackie-chan.jpg", "Jackie Chan"],
+        ["images/prompts/11-3-26/martial-jet-li.jpg", "Jet Li"],
+        ["images/prompts/11-3-26/martial-donnie-yen.jpg", "Donnie Yen"],
+        ["images/prompts/11-3-26/martial-michelle-yeoh.jpg", "Michelle Yeoh"],
+        ["images/prompts/11-3-26/martial-iko-uwais.jpg", "Iko Uwais"],
+        ["images/prompts/11-3-26/martial-joe-taslim.jpg", "Joe Taslim"],
+        ["images/prompts/11-3-26/martial-yayan-ruhian.jpg", "Yayan Ruhian"],
+        ["images/prompts/11-3-26/martial-brian-le.jpg", "Brian Le"],
+        ["images/prompts/11-3-26/martial-ziyi-zhang.jpg", "Ziyi Zhang"],
+        ["images/prompts/11-3-26/martial-zoe-bell.jpg", "Zoe Bell"],
+        ["images/prompts/11-3-26/martial-cynthia-rothrock.jpg", "Cynthia Rothrock"]
+      ]
+    }
+  ]
+}
