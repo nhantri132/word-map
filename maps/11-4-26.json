@@ -1,0 +1,79 @@
+{
+  "title": "11/4/26",
+  "image": "images/11-4-26.jpg",
+  "puzzleSize": [4, 3],
+  "mapSize": [2, 2],
+  "palette": 0,
+  "puzzles": [
+    {
+      "theme": "Space City",
+      "size": [3, 3],
+      "pairs": [
+        ["Menil Collection", "Montrose"],
+        ["Hong Kong City Mall", "Chinatown"],
+        ["The Galleria", "Uptown"],
+        ["Hermann Park & the Zoo", "Museum District"],
+        ["19th Street shops", "The Heights"],
+        ["Shops at Kirby & University", "Rice Village"],
+        ["Emancipation Park", "Third Ward"],
+        ["Bayou Bend mansion", "River Oaks"],
+        ["Space Center Houston", "Clear Lake"]
+      ]
+    },
+    {
+      "theme": "Screenshots",
+      "size": [4, 4],
+      "pairs": [
+        ["images/prompts/11-4-26/shot-elden-ring.jpg", "Elden Ring"],
+        ["images/prompts/11-4-26/shot-undertale.jpg", "Undertale"],
+        ["images/prompts/11-4-26/shot-cyberpunk-2077.jpg", "Cyberpunk 2077"],
+        ["images/prompts/11-4-26/shot-detroit-become-human.jpg", "Detroit: Become Human"],
+        ["images/prompts/11-4-26/shot-gta-vice-city.jpg", "GTA Vice City"],
+        ["images/prompts/11-4-26/shot-celeste.jpg", "Celeste"],
+        ["images/prompts/11-4-26/shot-terraria.jpg", "Terraria"],
+        ["images/prompts/11-4-26/shot-hades.jpg", "Hades"],
+        ["images/prompts/11-4-26/shot-super-mario-odyssey.jpg", "Super Mario Odyssey"],
+        ["images/prompts/11-4-26/shot-league-of-legends.jpg", "League of Legends"],
+        ["images/prompts/11-4-26/shot-doki-doki-literature-club.jpg", "Doki Doki Literature Club!"],
+        ["images/prompts/11-4-26/shot-half-life-2.jpg", "Half-Life 2"],
+        ["images/prompts/11-4-26/shot-firewatch.jpg", "Firewatch"],
+        ["images/prompts/11-4-26/shot-halo-reach.jpg", "Halo: Reach"],
+        ["images/prompts/11-4-26/shot-tekken-3.jpg", "Tekken 3"],
+        ["images/prompts/11-4-26/shot-marvel-vs-capcom-2.jpg", "Marvel vs. Capcom 2"]
+      ]
+    },
+    {
+      "theme": "Models",
+      "size": [3, 3],
+      "pairs": [
+        ["Point where edges meet", "Vertex"],
+        ["Flat face made of 3+ vertices", "Polygon"],
+        ["Flattening a model to paint it", "UV unwrapping"],
+        ["Image wrapped onto a surface", "Texture"],
+        ["Skeleton that makes a model move", "Rig"],
+        ["Binding the mesh to the skeleton", "Skinning"],
+        ["Rounding a mesh by adding detail", "Subdivision"],
+        ["Turning a 3D scene into an image", "Rendering"],
+        ["Stand-in for detail without extra polygons", "Normal map"]
+      ]
+    },
+    {
+      "theme": "Consoles",
+      "size": [3, 4],
+      "pairs": [
+        ["images/prompts/11-4-26/console-playstation.jpg", "PlayStation 1"],
+        ["images/prompts/11-4-26/console-nintendo-64.jpg", "Nintendo 64"],
+        ["images/prompts/11-4-26/console-atari-5200.jpg", "Atari 5200"],
+        ["images/prompts/11-4-26/console-sega-saturn.jpg", "Sega Saturn"],
+        ["images/prompts/11-4-26/console-dreamcast.jpg", "Dreamcast"],
+        ["images/prompts/11-4-26/console-wii-u.jpg", "Wii U"],
+        ["images/prompts/11-4-26/console-nex-playground.jpg", "Nex Playground"],
+        ["images/prompts/11-4-26/console-playstation-5.jpg", "PlayStation 5"],
+        ["images/prompts/11-4-26/console-xbox-one.jpg", "Xbox One"],
+        ["images/prompts/11-4-26/console-gamecube.jpg", "GameCube"],
+        ["images/prompts/11-4-26/console-playstation-2.jpg", "PlayStation 2"],
+        ["images/prompts/11-4-26/console-xbox-series-s.jpg", "Xbox Series S"]
+      ]
+    }
+  ]
+}
