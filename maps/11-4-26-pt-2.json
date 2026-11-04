@@ -1,0 +1,75 @@
+{
+  "title": "11/4/26 pt 2",
+  "image": "images/11-4-26-pt-2.jpg",
+  "puzzleSize": [3, 2],
+  "mapSize": [2, 2],
+  "palette": 0,
+  "puzzles": [
+    {
+      "theme": "Hope",
+      "size": [3, 4],
+      "pairs": [
+        ["esperanza", "Spanish"],
+        ["speranza", "Italian"],
+        ["espoir", "French"],
+        ["Hoffnung", "German"],
+        ["hoop", "Dutch"],
+        ["nadzieja", "Polish"],
+        ["надежда (nadezhda)", "Russian"],
+        ["ελπίδα (elpída)", "Greek"],
+        ["希望 (kibō)", "Japanese"],
+        ["희망 (huimang)", "Korean"],
+        ["أمل (amal)", "Arabic"],
+        ["hy vọng", "Vietnamese"]
+      ]
+    },
+    {
+      "theme": "Blue",
+      "size": [3, 4],
+      "pairs": [
+        ["images/prompts/11-4-26-pt-2/blue-james-talarico.jpg", "James Talarico"],
+        ["images/prompts/11-4-26-pt-2/blue-gina-hinojosa.jpg", "Gina Hinojosa"],
+        ["images/prompts/11-4-26-pt-2/blue-troy-jackson.jpg", "Troy Jackson"],
+        ["images/prompts/11-4-26-pt-2/blue-roy-cooper.jpg", "Roy Cooper"],
+        ["images/prompts/11-4-26-pt-2/blue-annie-andrews.jpg", "Annie Andrews"],
+        ["images/prompts/11-4-26-pt-2/blue-josh-turek.jpg", "Josh Turek"],
+        ["images/prompts/11-4-26-pt-2/blue-chris-pappas.jpg", "Chris Pappas"],
+        ["images/prompts/11-4-26-pt-2/blue-keisha-lance-bottoms.jpg", "Keisha Lance Bottoms"],
+        ["images/prompts/11-4-26-pt-2/blue-amy-acton.jpg", "Amy Acton"],
+        ["images/prompts/11-4-26-pt-2/blue-katie-hobbs.jpg", "Katie Hobbs"],
+        ["images/prompts/11-4-26-pt-2/blue-jocelyn-benson.jpg", "Jocelyn Benson"],
+        ["images/prompts/11-4-26-pt-2/blue-abdul-el-sayed.jpg", "Abdul El-Sayed"]
+      ]
+    },
+    {
+      "theme": "Texas",
+      "size": [3, 3],
+      "pairs": [
+        ["Texas Hold 'Em", "Beyoncé"],
+        ["All My Ex's Live in Texas", "George Strait"],
+        ["God Blessed Texas", "Little Texas"],
+        ["The Yellow Rose of Texas", "Mitch Miller"],
+        ["Texas Flood", "Stevie Ray Vaughan"],
+        ["Luckenbach, Texas", "Waylon Jennings"],
+        ["Texas", "BigXthaPlug"],
+        ["Miles and Miles of Texas", "Asleep at the Wheel"],
+        ["Texas Sun", "Khruangbin & Leon Bridges"]
+      ]
+    },
+    {
+      "theme": "Celebration",
+      "size": [3, 3],
+      "pairs": [
+        ["Champagne", "France"],
+        ["Prosecco", "Italy"],
+        ["Cava", "Spain"],
+        ["Port", "Portugal"],
+        ["Tokaji", "Hungary"],
+        ["Mosel Riesling", "Germany"],
+        ["Mendoza Malbec", "Argentina"],
+        ["Barossa Shiraz", "Australia"],
+        ["Napa Cabernet", "USA"]
+      ]
+    }
+  ]
+}
