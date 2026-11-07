@@ -1,0 +1,86 @@
+{
+  "title": "11/7/26",
+  "image": "images/11-7-26.jpg",
+  "puzzleSize": [3, 4],
+  "mapSize": [2, 2],
+  "palette": 0,
+  "puzzles": [
+    {
+      "theme": "Myth",
+      "size": [4, 4],
+      "pairs": [
+        ["images/prompts/11-7-26/myth-mothman.jpg", "Mothman"],
+        ["images/prompts/11-7-26/myth-jersey-devil.jpg", "Jersey Devil"],
+        ["images/prompts/11-7-26/myth-griffin.jpg", "Griffin"],
+        ["images/prompts/11-7-26/myth-kitsune.jpg", "Kitsune"],
+        ["images/prompts/11-7-26/myth-djinn.jpg", "Djinn"],
+        ["images/prompts/11-7-26/myth-kraken.jpg", "Kraken"],
+        ["images/prompts/11-7-26/myth-phoenix.jpg", "Phoenix"],
+        ["images/prompts/11-7-26/myth-banshee.jpg", "Banshee"],
+        ["images/prompts/11-7-26/myth-werewolf.jpg", "Werewolf"],
+        ["images/prompts/11-7-26/myth-kappa.jpg", "Kappa"],
+        ["images/prompts/11-7-26/myth-tanuki.jpg", "Tanuki"],
+        ["images/prompts/11-7-26/myth-bigfoot.jpg", "Bigfoot"],
+        ["images/prompts/11-7-26/myth-wendigo.jpg", "Wendigo"],
+        ["images/prompts/11-7-26/myth-cipactli.jpg", "Cipactli"],
+        ["images/prompts/11-7-26/myth-quetzalcoatl.jpg", "Quetzalcoatl"],
+        ["images/prompts/11-7-26/myth-medusa.jpg", "Medusa"]
+      ]
+    },
+    {
+      "theme": "Government",
+      "size": [3, 4],
+      "pairs": [
+        ["Signs or vetoes bills", "President"],
+        ["Confirms judges and ratifies treaties", "Senate"],
+        ["Starts all tax bills and impeaches", "House of Representatives"],
+        ["Final say on what's constitutional", "Supreme Court"],
+        ["Prosecutes federal crimes", "Department of Justice"],
+        ["Investigates federal crimes", "FBI"],
+        ["Breaks ties in the Senate", "Vice President"],
+        ["Prints money and collects taxes", "Treasury"],
+        ["Runs foreign diplomacy", "State Department"],
+        ["Sets interest rates", "Federal Reserve"],
+        ["Runs the military", "Department of Defense"],
+        ["Protects the president", "Secret Service"]
+      ]
+    },
+    {
+      "theme": "Politics...?",
+      "size": [3, 3],
+      "pairs": [
+        ["images/prompts/11-7-26/streamers-hasan-piker.jpg", "Hasan Piker"],
+        ["images/prompts/11-7-26/streamers-atrioc.jpg", "Atrioc"],
+        ["images/prompts/11-7-26/streamers-ian-kochinski.jpg", "Ian Kochinski"],
+        ["images/prompts/11-7-26/streamers-kyle-kulinski.jpg", "Kyle Kulinski"],
+        ["images/prompts/11-7-26/streamers-sam-seder.jpg", "Sam Seder"],
+        ["images/prompts/11-7-26/streamers-natalie-wynn.jpg", "Natalie Wynn"],
+        ["images/prompts/11-7-26/streamers-adam-mockler.jpg", "Adam Mockler"],
+        ["images/prompts/11-7-26/streamers-lonerbox.jpg", "LonerBox"],
+        ["images/prompts/11-7-26/streamers-brian-tyler-cohen.jpg", "Brian Tyler Cohen"]
+      ]
+    },
+    {
+      "theme": "ARMY",
+      "size": [4, 4],
+      "pairs": [
+        ["images/prompts/11-7-26/army-no-more-dream.jpg", "No More Dream"],
+        ["images/prompts/11-7-26/army-hooligan.jpg", "Hooligan"],
+        ["images/prompts/11-7-26/army-dope.jpg", "Dope"],
+        ["images/prompts/11-7-26/army-fire.jpg", "Fire"],
+        ["images/prompts/11-7-26/army-blood-sweat-tears.jpg", "Blood Sweat & Tears"],
+        ["images/prompts/11-7-26/army-dna.jpg", "DNA"],
+        ["images/prompts/11-7-26/army-idol.jpg", "Idol"],
+        ["images/prompts/11-7-26/army-airplane-pt-2.jpg", "Airplane pt.2"],
+        ["images/prompts/11-7-26/army-boy-with-luv.jpg", "Boy With Luv"],
+        ["images/prompts/11-7-26/army-on.jpg", "ON"],
+        ["images/prompts/11-7-26/army-dynamite.jpg", "Dynamite"],
+        ["images/prompts/11-7-26/army-black-swan.jpg", "Black Swan"],
+        ["images/prompts/11-7-26/army-2-0.jpg", "2.0"],
+        ["images/prompts/11-7-26/army-fake-love.jpg", "Fake Love"],
+        ["images/prompts/11-7-26/army-mic-drop.jpg", "MIC Drop"],
+        ["images/prompts/11-7-26/army-swim.jpg", "SWIM"]
+      ]
+    }
+  ]
+}
