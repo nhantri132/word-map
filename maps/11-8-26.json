@@ -1,0 +1,93 @@
+{
+  "title": "11/8/26",
+  "image": "images/11-8-26.jpg",
+  "puzzleSize": [4, 3],
+  "mapSize": [2, 2],
+  "palette": 0,
+  "puzzles": [
+    {
+      "theme": "Final Boss",
+      "size": [4, 4],
+      "pairs": [
+        ["images/prompts/11-8-26/boss-disco-elysium.jpg", "Disco Elysium"],
+        ["images/prompts/11-8-26/boss-mass-effect.jpg", "Mass Effect"],
+        ["images/prompts/11-8-26/boss-dragon-age-origins.jpg", "Dragon Age: Origins"],
+        ["images/prompts/11-8-26/boss-dragon-age-inquisition.jpg", "Dragon Age: Inquisition"],
+        ["images/prompts/11-8-26/boss-spider-man.jpg", "Spider-Man"],
+        ["images/prompts/11-8-26/boss-wolverine.jpg", "Wolverine"],
+        ["images/prompts/11-8-26/boss-persona-5.jpg", "Persona 5"],
+        ["images/prompts/11-8-26/boss-dead-space.jpg", "Dead Space"],
+        ["images/prompts/11-8-26/boss-super-mario-odyssey.jpg", "Super Mario Odyssey"],
+        ["images/prompts/11-8-26/boss-elden-ring.jpg", "Elden Ring"],
+        ["images/prompts/11-8-26/boss-modern-warfare-2.jpg", "Modern Warfare 2"],
+        ["images/prompts/11-8-26/boss-resident-evil-requiem.jpg", "Resident Evil Requiem"],
+        ["images/prompts/11-8-26/boss-resident-evil-4.jpg", "Resident Evil 4"],
+        ["images/prompts/11-8-26/boss-wolfenstein.jpg", "Wolfenstein: The New Colossus"],
+        ["images/prompts/11-8-26/boss-rift-apart.jpg", "Ratchet & Clank: Rift Apart"],
+        ["images/prompts/11-8-26/boss-jedi-survivor.jpg", "Star Wars Jedi: Survivor"]
+      ]
+    },
+    {
+      "theme": "SNL",
+      "size": [4, 4],
+      "pairs": [
+        ["images/prompts/11-8-26/snl-kate-mckinnon.jpg", "Kate McKinnon"],
+        ["images/prompts/11-8-26/snl-aidy-bryant.jpg", "Aidy Bryant"],
+        ["images/prompts/11-8-26/snl-kenan-thompson.jpg", "Kenan Thompson"],
+        ["images/prompts/11-8-26/snl-lorne-michaels.jpg", "Lorne Michaels"],
+        ["images/prompts/11-8-26/snl-colin-jost.jpg", "Colin Jost"],
+        ["images/prompts/11-8-26/snl-cecily-strong.jpg", "Cecily Strong"],
+        ["images/prompts/11-8-26/snl-tina-fey.jpg", "Tina Fey"],
+        ["images/prompts/11-8-26/snl-michael-che.jpg", "Michael Che"],
+        ["images/prompts/11-8-26/snl-mikey-day.jpg", "Mikey Day"],
+        ["images/prompts/11-8-26/snl-sarah-sherman.jpg", "Sarah Sherman"],
+        ["images/prompts/11-8-26/snl-beck-bennett.jpg", "Beck Bennett"],
+        ["images/prompts/11-8-26/snl-bowen-yang.jpg", "Bowen Yang"],
+        ["images/prompts/11-8-26/snl-rachel-dratch.jpg", "Rachel Dratch"],
+        ["images/prompts/11-8-26/snl-norm-macdonald.jpg", "Norm Macdonald"],
+        ["images/prompts/11-8-26/snl-chris-farley.jpg", "Chris Farley"],
+        ["images/prompts/11-8-26/snl-gilda-radner.jpg", "Gilda Radner"]
+      ]
+    },
+    {
+      "theme": "The Classics",
+      "size": [4, 4],
+      "pairs": [
+        ["images/prompts/11-8-26/comics-richard-pryor.jpg", "Richard Pryor"],
+        ["images/prompts/11-8-26/comics-george-carlin.jpg", "George Carlin"],
+        ["images/prompts/11-8-26/comics-lenny-bruce.jpg", "Lenny Bruce"],
+        ["images/prompts/11-8-26/comics-joan-rivers.jpg", "Joan Rivers"],
+        ["images/prompts/11-8-26/comics-mort-sahl.jpg", "Mort Sahl"],
+        ["images/prompts/11-8-26/comics-robin-williams.jpg", "Robin Williams"],
+        ["images/prompts/11-8-26/comics-bill-hicks.jpg", "Bill Hicks"],
+        ["images/prompts/11-8-26/comics-andy-kaufman.jpg", "Andy Kaufman"],
+        ["images/prompts/11-8-26/comics-wanda-sykes.jpg", "Wanda Sykes"],
+        ["images/prompts/11-8-26/comics-steven-wright.jpg", "Steven Wright"],
+        ["images/prompts/11-8-26/comics-billy-connolly.jpg", "Billy Connolly"],
+        ["images/prompts/11-8-26/comics-albert-brooks.jpg", "Albert Brooks"],
+        ["images/prompts/11-8-26/comics-mitch-hedberg.jpg", "Mitch Hedberg"],
+        ["images/prompts/11-8-26/comics-don-rickles.jpg", "Don Rickles"],
+        ["images/prompts/11-8-26/comics-redd-foxx.jpg", "Redd Foxx"],
+        ["images/prompts/11-8-26/comics-phyllis-diller.jpg", "Phyllis Diller"]
+      ]
+    },
+    {
+      "theme": "Flags",
+      "size": [3, 4],
+      "pairs": [
+        ["images/prompts/11-8-26/flags-argentina.jpg", "Argentina"],
+        ["images/prompts/11-8-26/flags-belgium.jpg", "Belgium"],
+        ["images/prompts/11-8-26/flags-chile.jpg", "Chile"],
+        ["images/prompts/11-8-26/flags-china.jpg", "China"],
+        ["images/prompts/11-8-26/flags-dominican-republic.jpg", "Dominican Republic"],
+        ["images/prompts/11-8-26/flags-iceland.jpg", "Iceland"],
+        ["images/prompts/11-8-26/flags-ireland.jpg", "Ireland"],
+        ["images/prompts/11-8-26/flags-malaysia.jpg", "Malaysia"],
+        ["images/prompts/11-8-26/flags-north-korea.jpg", "North Korea"],
+        ["images/prompts/11-8-26/flags-seychelles.jpg", "Seychelles"],
+        ["images/prompts/11-8-26/flags-spain.jpg", "Spain"],
+        ["images/prompts/11-8-26/flags-vietnam.jpg", "Vietnam"]
+      ]
+    }
+  ]
+}
