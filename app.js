@@ -147,6 +147,8 @@ function normalizeMap(raw, file) {
     title: raw.title || id,
     subtitle: raw.subtitle || '',
     image: raw.image,
+    video: raw.video || '',            // optional: the reveal plays this; "image" should be its first frame
+    videoSound: !!raw.videoSound,     // the video has sound worth hearing: show a Sound button
     palette: raw.palette ?? 8,
     background: raw.background || '#f6efe2',
     revealOriginal: raw.revealOriginal !== false,
@@ -435,12 +437,26 @@ async function mapView(id, { peek = false } = {}) {
     ${map.errors.length ? `<div class="warnbox"><b>This map needs fixing:</b><ul>${map.errors.map(e => `<li>${esc(e)}</li>`).join('')}</ul></div>` : ''}
     <div class="mapwrap"><div class="map" style="--mc:${map.mc};--mr:${map.mr};--pc:${map.pc};--pr:${map.pr}">
       ${map.puzzles.map(sector).join('')}
-      ${map.revealOriginal ? `<img class="orig" src="${esc(map.image)}" alt="">` : ''}
+      ${!map.revealOriginal ? '' : map.video
+        ? `<video class="orig" src="${esc(map.video)}" poster="${esc(map.image)}" muted loop playsinline preload="auto" disablepictureinpicture></video>`
+        : `<img class="orig" src="${esc(map.image)}" alt="">`}
     </div></div>
     <div class="mapfoot" id="foot">${complete ? '' : 'Tap a section to solve it. Finish them all to reveal the picture.'}</div>
   </main>`;
 
   const mapEl = $('.map'), wrap = $('.mapwrap'), foot = $('#foot');
+  // Show or hide the original. A video reveal fades in on its first frame (which the pixels
+  // were taken from), then comes to life once the fade has finished.
+  const vid = mapEl.querySelector('video.orig');
+  let vt;
+  const showPic = (on, delay = 0) => {
+    mapEl.classList.toggle('picture', on);
+    if (!vid) return;
+    clearTimeout(vt);
+    if (on) vt = setTimeout(() => { if (!signal.aborted) vid.play()?.catch(() => {}); }, delay);
+    else { vid.pause(); try { vid.currentTime = 0; } catch {} }
+  };
+  signal.addEventListener('abort', () => { clearTimeout(vt); vid?.pause(); });
   $('#reset')?.addEventListener('click', () => {
     if (confirm(`Reset all progress on “${map.title}”?`)) { progress.clear(id); route(); }
   }, { signal });
@@ -459,17 +475,23 @@ async function mapView(id, { peek = false } = {}) {
     wrap.classList.add('merge'); mapEl.classList.add('merge');
     await sleep(1400);
     if (signal.aborted) return;
-    if (map.revealOriginal) mapEl.classList.add('picture');
+    if (map.revealOriginal) showPic(true, 2400);
   } else {
     wrap.classList.add('merge', 'instant'); mapEl.classList.add('merge', 'instant');
-    if (map.revealOriginal) mapEl.classList.add('picture');
+    if (map.revealOriginal) showPic(true, 400);
     requestAnimationFrame(() => requestAnimationFrame(() => { wrap.classList.remove('instant'); mapEl.classList.remove('instant'); }));
   }
   foot.innerHTML = `<h3>${peek ? 'The finished picture' : 'Match Map complete'}</h3>` + (map.revealOriginal
-    ? `<div class="seg"><button data-v="px">Pixels</button><button data-v="pic" class="on">Picture</button></div>` : '');
+    ? `<div class="seg"><button data-v="px">Pixels</button><button data-v="pic" class="on">${vid ? 'Video' : 'Picture'}</button></div>` +
+      (vid && map.videoSound ? ` <button class="chip" id="snd">Sound off</button>` : '') : '');
+  foot.querySelector('#snd')?.addEventListener('click', e => {
+    vid.muted = !vid.muted;
+    if (!vid.muted && mapEl.classList.contains('picture')) vid.play()?.catch(() => {});
+    e.currentTarget.textContent = vid.muted ? 'Sound off' : 'Sound on';
+  }, { signal });
   foot.querySelector('.seg')?.addEventListener('click', e => {
     const b = e.target.closest('button'); if (!b) return;
-    mapEl.classList.toggle('picture', b.dataset.v === 'pic');
+    showPic(b.dataset.v === 'pic', 1200);
     foot.querySelectorAll('.seg button').forEach(x => x.classList.toggle('on', x === b));
   }, { signal });
 }

@@ -107,6 +107,19 @@ Tips:
 - On iPhone/iPad, Low Power Mode stops videos looping in the squares (they show their first frame). Tapping still plays them.
 - Sound plays as media, so it normally isn't silenced by the ring/silent switch; it follows the volume buttons.
 
+
+## Video reveal
+
+The finished map can come to life: give the map a `"video"` as well as its `"image"`, where the image is the video's first frame. The pixels are taken from that frame, so the reveal fades in on exactly the picture you painted, then the video starts playing and loops.
+
+```json
+"image": "images/beach.jpg",
+"video": "images/beach.mp4",
+"videoSound": true
+```
+
+The video plays muted. Add `"videoSound": true` if it has sound worth hearing; a **Sound** button appears under the finished map. The Pixels / Video switch works as before. Use an H.264 `.mp4`, ideally under about 10 seconds and a few MB.
+
 ## Strikes and shuffle
 
 - **Strikes:** each wrong guess (a tile dropped or tapped onto the wrong square) is a strike. On the third, that grid's progress is wiped and you're sent back to the map; other grids are untouched. Strikes are saved, so leaving and coming back doesn't clear them. Dropping a tile between squares or back in the tray is free.
