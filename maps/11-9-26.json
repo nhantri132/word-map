@@ -1,0 +1,86 @@
+{
+  "title": "11/9/26",
+  "image": "images/11-9-26.jpg",
+  "puzzleSize": [3, 4],
+  "mapSize": [2, 2],
+  "palette": 0,
+  "puzzles": [
+    {
+      "theme": "Mt. Olympus",
+      "size": [3, 4],
+      "pairs": [
+        ["images/prompts/11-9-26/olympus/michael-phelps.jpg", "Michael Phelps"],
+        ["images/prompts/11-9-26/olympus/simone-biles.jpg", "Simone Biles"],
+        ["images/prompts/11-9-26/olympus/usain-bolt.jpg", "Usain Bolt"],
+        ["images/prompts/11-9-26/olympus/katie-ledecky.jpg", "Katie Ledecky"],
+        ["images/prompts/11-9-26/olympus/mikaela-shiffrin.jpg", "Mikaela Shiffrin"],
+        ["images/prompts/11-9-26/olympus/allyson-felix.jpg", "Allyson Felix"],
+        ["images/prompts/11-9-26/olympus/shaun-white.jpg", "Shaun White"],
+        ["images/prompts/11-9-26/olympus/shelly-ann-fraser-pryce.jpg", "Shelly-Ann Fraser-Pryce"],
+        ["images/prompts/11-9-26/olympus/kohei-uchimura.jpg", "Kohei Uchimura"],
+        ["images/prompts/11-9-26/olympus/yuzuru-hanyu.jpg", "Yuzuru Hanyu"],
+        ["images/prompts/11-9-26/olympus/chloe-kim.jpg", "Chloe Kim"],
+        ["images/prompts/11-9-26/olympus/valentina-vezzali.jpg", "Valentina Vezzali"]
+      ]
+    },
+    {
+      "theme": "Subtitle",
+      "size": [4, 4],
+      "pairs": [
+        ["images/prompts/11-9-26/subtitle/endgame.jpg", "Endgame"],
+        ["images/prompts/11-9-26/subtitle/at-worlds-end.jpg", "At World's End"],
+        ["images/prompts/11-9-26/subtitle/minus-zero.jpg", "Minus Zero"],
+        ["images/prompts/11-9-26/subtitle/judgment-day.jpg", "Judgment Day"],
+        ["images/prompts/11-9-26/subtitle/catching-fire.jpg", "Catching Fire"],
+        ["images/prompts/11-9-26/subtitle/rise-of-skywalker.jpg", "The Rise of Skywalker"],
+        ["images/prompts/11-9-26/subtitle/maverick.jpg", "Maverick"],
+        ["images/prompts/11-9-26/subtitle/the-way-of-water.jpg", "The Way of Water"],
+        ["images/prompts/11-9-26/subtitle/the-last-wish.jpg", "The Last Wish"],
+        ["images/prompts/11-9-26/subtitle/a-good-day-to.jpg", "A Good Day to"],
+        ["images/prompts/11-9-26/subtitle/the-secret-service.jpg", "The Secret Service"],
+        ["images/prompts/11-9-26/subtitle/the-bone-temple.jpg", "The Bone Temple"],
+        ["images/prompts/11-9-26/subtitle/first-class.jpg", "First Class"],
+        ["images/prompts/11-9-26/subtitle/parabellum.jpg", "Parabellum"],
+        ["images/prompts/11-9-26/subtitle/eclipse.jpg", "Eclipse"],
+        ["images/prompts/11-9-26/subtitle/days-of-future-past.jpg", "Days of Future Past"]
+      ]
+    },
+    {
+      "theme": "Chinese 101",
+      "size": [3, 3],
+      "pairs": [
+        ["你好 (nǐ hǎo)", "Hello"],
+        ["谢谢 (xièxie)", "Thank you"],
+        ["再见 (zàijiàn)", "Goodbye"],
+        ["水 (shuǐ)", "Water"],
+        ["米饭 (mǐfàn)", "Rice"],
+        ["狗 (gǒu)", "Dog"],
+        ["猫 (māo)", "Cat"],
+        ["好吃 (hǎochī)", "Delicious"],
+        ["朋友 (péngyou)", "Friend"]
+      ]
+    },
+    {
+      "theme": "Who's That Voice?",
+      "size": [4, 4],
+      "pairs": [
+        ["images/prompts/11-9-26/voice/troy-baker.jpg", "Troy Baker"],
+        ["images/prompts/11-9-26/voice/nolan-north.jpg", "Nolan North"],
+        ["images/prompts/11-9-26/voice/yuri-lowenthal.jpg", "Yuri Lowenthal"],
+        ["images/prompts/11-9-26/voice/mark-hamill.jpg", "Mark Hamill"],
+        ["images/prompts/11-9-26/voice/laura-bailey.jpg", "Laura Bailey"],
+        ["images/prompts/11-9-26/voice/jennifer-hale.jpg", "Jennifer Hale"],
+        ["images/prompts/11-9-26/voice/matt-mercer.jpg", "Matt Mercer"],
+        ["images/prompts/11-9-26/voice/chris-parson.jpg", "Chris Parson"],
+        ["images/prompts/11-9-26/voice/darin-de-paul.jpg", "Darin De Paul"],
+        ["images/prompts/11-9-26/voice/fred-tatasciore.jpg", "Fred Tatasciore"],
+        ["images/prompts/11-9-26/voice/robin-atkin-downes.jpg", "Robin Atkin Downes"],
+        ["images/prompts/11-9-26/voice/tara-strong.jpg", "Tara Strong"],
+        ["images/prompts/11-9-26/voice/steve-blum.jpg", "Steve Blum"],
+        ["images/prompts/11-9-26/voice/courtenay-taylor.jpg", "Courtenay Taylor"],
+        ["images/prompts/11-9-26/voice/stephen-oyoung.jpg", "Stephen Oyoung"],
+        ["images/prompts/11-9-26/voice/travis-willingham.jpg", "Travis Willingham"]
+      ]
+    }
+  ]
+}
