@@ -84,6 +84,29 @@ Text and image prompts can be mixed in the same grid. Tap an image prompt to see
 
 Keep prompt images small (around 400–600 px wide) so grids load quickly on a phone.
 
+## Video and sound prompts
+
+A prompt can also be a short video or a sound clip. The file extension decides what it is:
+
+```json
+["images/prompts/scene.mp4", "Jaws"],
+["images/prompts/coin.mp3", "Super Mario Bros."]
+```
+
+| Type | Extensions | How it plays |
+|---|---|---|
+| Image | `.jpg .png .gif .webp .avif .svg` | Shown in the square. Animated GIF/WebP loop on their own. Tap to enlarge. |
+| Video | `.mp4 .m4v .mov .webm` | Loops silently in the square. Tap to open it larger with sound and controls. |
+| Sound | `.mp3 .m4a .aac .wav .ogg .opus` | The square shows a speaker. Tap to play; tap again to replay from the start. Only one clip plays at a time. Matched squares replay their clip when flipped back. |
+
+The longer form works too: `{ "video": "...", "prompt": "caption", "answer": "..." }` or `{ "audio": "...", "answer": "..." }`.
+
+Tips:
+- Keep clips short (sound 2–8 s, video 3–6 s) and small (under ~200 KB). Every video in a grid loops at once.
+- Use H.264 `.mp4` for video and `.mp3` for sound; they play on every phone and browser.
+- On iPhone/iPad, Low Power Mode stops videos looping in the squares (they show their first frame). Tapping still plays them.
+- Sound plays as media, so it normally isn't silenced by the ring/silent switch; it follows the volume buttons.
+
 ## Strikes and shuffle
 
 - **Strikes:** each wrong guess (a tile dropped or tapped onto the wrong square) is a strike. On the third, that grid's progress is wiped and you're sent back to the map; other grids are untouched. Strikes are saved, so leaving and coming back doesn't clear them. Dropping a tile between squares or back in the tray is free.

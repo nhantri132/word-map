@@ -11,15 +11,56 @@ const rgb = c => `rgb(${c[0]},${c[1]},${c[2]})`;
 const inkFor = c => (0.299 * c[0] + 0.587 * c[1] + 0.114 * c[2]) > 150 ? '#1b1830' : '#fffaf0';
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 const IMG_RE = /\.(jpe?g|png|gif|webp|avif|svg)(\?.*)?$/i;
+const AUD_RE = /\.(mp3|m4a|aac|wav|ogg|oga|opus)(\?.*)?$/i;
+const VID_RE = /\.(mp4|m4v|mov|webm)(\?.*)?$/i;
 const cssUrl = u => `url("${String(u).replace(/["\\]/g, '\\$&')}")`;
-// What an unsolved square shows: text, or an image (with an optional caption).
-const promptHTML = q => q.image
-  ? `<span class="pimg" style="background-image:${esc(cssUrl(q.image))}"></span>${q.prompt ? `<span class="cap">${esc(q.prompt)}</span>` : ''}`
+const hasMedia = q => !!(q.image || q.video || q.audio);
+const SPEAKER = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/><path class="w1" d="M16 9.5a3.5 3.5 0 0 1 0 5"/><path class="w2" d="M18.5 7a7 7 0 0 1 0 10"/></svg>';
+// The picture part of a square: a still image, a muted looping video, or a speaker for a sound clip.
+// "#t=0.1" makes iPhone/iPad show the first frame even when autoplay is blocked (Low Power Mode).
+const mediaHTML = q => q.video
+  ? `<video class="pimg pvid" src="${esc(q.video)}#t=0.1" muted loop playsinline autoplay preload="auto" disablepictureinpicture></video>`
+  : q.audio
+    ? `<span class="pimg paud" data-src="${esc(q.audio)}" aria-label="Sound clip">${SPEAKER}</span>`
+    : `<span class="pimg" style="background-image:${esc(cssUrl(q.image))}"></span>`;
+// What an unsolved square shows: text, or media (with an optional caption).
+const promptHTML = q => hasMedia(q)
+  ? `${mediaHTML(q)}${q.prompt ? `<span class="cap">${esc(q.prompt)}</span>` : ''}`
   : `<span class="txt prompt"><span>${esc(q.prompt)}</span></span>`;
-// The enlarged view when you tap a prompt.
-const promptSheet = q => q.image
-  ? `<img class="bigimg" src="${esc(q.image)}" alt="">${q.prompt ? `<p>${esc(q.prompt)}</p>` : ''}`
-  : `<p>${esc(q.prompt)}</p>`;
+// The enlarged view when you tap a prompt. Videos play here with sound and controls.
+const promptSheet = q => q.video
+  ? `<video class="bigimg" src="${esc(q.video)}" loop playsinline controls preload="auto"></video>${q.prompt ? `<p>${esc(q.prompt)}</p>` : ''}`
+  : q.image
+    ? `<img class="bigimg" src="${esc(q.image)}" alt="">${q.prompt ? `<p>${esc(q.prompt)}</p>` : ''}`
+    : `<p>${esc(q.prompt)}</p>`;
+
+/* ---------------------------------------------------------------- sound clips */
+// One clip plays at a time. Tapping a sound square (re)starts its clip from the beginning.
+// Uses <audio> elements (not Web Audio), which iPhone/iPad treat as media playback.
+const Clip = (() => {
+  const pool = new Map();
+  let cur = null, curSq = null;
+  const get = src => {
+    if (!pool.has(src)) { const a = new Audio(); a.preload = 'auto'; a.src = src; pool.set(src, a); }
+    return pool.get(src);
+  };
+  const stop = () => {
+    if (cur) { cur.pause(); try { cur.currentTime = 0; } catch {} }
+    curSq?.classList.remove('playing');
+    cur = curSq = null;
+  };
+  const play = (src, sq) => {
+    stop();
+    const a = get(src);
+    cur = a; curSq = sq || null;
+    curSq?.classList.add('playing');
+    a.onended = () => { if (cur === a) stop(); };
+    try { a.currentTime = 0; } catch {}
+    const pr = a.play();
+    if (pr) pr.catch(() => { if (cur === a) stop(); });
+  };
+  return { play, stop, preload: srcs => srcs.forEach(get) };
+})();
 
 /* ---------------------------------------------------------------- haptics */
 const Haptics = (() => {
@@ -83,15 +124,20 @@ function normalizeMap(raw, file) {
     const [c, r] = Array.isArray(p.size) && p.size.length === 2 ? p.size : [pc, pr];
     const N = c * r;
     const pairs = (p.pairs || []).map(x => {
-      const q = Array.isArray(x) ? { prompt: x[0], answer: x[1] } : { prompt: x.prompt, answer: x.answer, image: x.image };
-      // A prompt that's just an image path (e.g. "images/prompts/cat.jpg") becomes an image prompt.
-      if (!q.image && typeof q.prompt === 'string' && IMG_RE.test(q.prompt.trim())) { q.image = q.prompt.trim(); q.prompt = ''; }
+      const q = Array.isArray(x) ? { prompt: x[0], answer: x[1] } : { prompt: x.prompt, answer: x.answer, image: x.image, audio: x.audio, video: x.video };
+      // A prompt that's just a file path becomes a media prompt, by extension:
+      // "images/prompts/cat.jpg" → image, ".mp4" → video, ".mp3" → sound clip.
+      if (!hasMedia(q) && typeof q.prompt === 'string') {
+        const t = q.prompt.trim();
+        const kind = IMG_RE.test(t) ? 'image' : VID_RE.test(t) ? 'video' : AUD_RE.test(t) ? 'audio' : null;
+        if (kind) { q[kind] = t; q.prompt = ''; }
+      }
       q.prompt = q.prompt || '';
       return q;
     });
     const theme = p.theme || `Puzzle ${pi + 1}`;
     if (pairs.length !== N) errors.push(`Puzzle ${pi + 1} (“${theme}”) has ${pairs.length} pairs but a ${c}×${r} grid needs ${N}.`);
-    pairs.forEach((q, i) => { if ((!q.prompt && !q.image) || !q.answer) errors.push(`Puzzle ${pi + 1}, pair ${i + 1} is missing its prompt or answer.`); });
+    pairs.forEach((q, i) => { if ((!q.prompt && !hasMedia(q)) || !q.answer) errors.push(`Puzzle ${pi + 1}, pair ${i + 1} is missing its prompt or answer.`); });
     return { theme, pairs, c, r, N };
   });
   if (puzzles.length !== mc * mr) errors.push(`There are ${puzzles.length} puzzles, but a ${mc}×${mr} map needs ${mc * mr}.`);
@@ -268,8 +314,13 @@ function showSheet(html) {
   const o = document.createElement('div');
   o.className = 'overlay';
   o.innerHTML = `<div class="sheet">${html}<small>Tap anywhere to close</small></div>`;
-  o.addEventListener('click', () => o.remove());
+  // Taps on a video's controls shouldn't close the sheet.
+  o.addEventListener('click', e => { if (!e.target.closest('video')) o.remove(); });
   document.body.appendChild(o);
+  // Start a video with sound inside the tap that opened it (iPhone/iPad only allow that);
+  // if sound is refused, play muted rather than not at all.
+  const v = o.querySelector('video');
+  if (v) v.play()?.catch(() => { v.muted = true; v.play()?.catch(() => {}); });
 }
 
 let viewAbort = null;
@@ -278,6 +329,7 @@ function newView() {
   viewAbort = new AbortController();
   document.querySelectorAll('.overlay, .ghost').forEach(n => n.remove());
   window.scrollTo(0, 0);
+  Clip.stop();
   return viewAbort.signal;
 }
 
@@ -448,12 +500,14 @@ async function puzzleView(id, pi) {
   if (fresh) save();              // keep this starting order until the grid is solved or reset
   const openPairs = [...Array(N).keys()].filter(pos => !solved.has(pos)).map(pos => layout[pos]);
   const order = seededShuffle(openPairs, `${id}:${pi}`);
+  const hasSound = pz.pairs.some(q => q.audio);
+  Clip.preload(pz.pairs.filter(q => q.audio).map(q => q.audio));
 
   app.innerHTML = `<main>
     <header class="bar"><a class="back" href="#/m/${encodeURIComponent(id)}" aria-label="Back to map">‹</a>
       <div class="ttl"><h2>${esc(pz.theme)}</h2><small id="count"></small></div></header>
     <div class="boardwrap"><div class="board" style="--cols:${pz.c};--rows:${pz.r}">
-      ${[...Array(N).keys()].map(pos => `<button class="sq${pairAt(pos).image ? ' hasimg' : ''}" data-i="${pos}">${promptHTML(pairAt(pos))}</button>`).join('')}
+      ${[...Array(N).keys()].map(pos => `<button class="sq${hasMedia(pairAt(pos)) ? ' hasimg' : ''}" data-i="${pos}">${promptHTML(pairAt(pos))}</button>`).join('')}
     </div></div>
     <div class="tools" id="tools">
       ${maxStrikes ? `<div class="strikes" id="strikes"></div>` : '<span></span>'}
@@ -461,7 +515,7 @@ async function puzzleView(id, pi) {
     </div>
     <div class="tray" id="tray">${order.map(j =>
       `<button class="tile" data-a="${esc(pz.pairs[j].answer)}">${esc(pz.pairs[j].answer)}</button>`).join('')}
-      <p class="trayhint">Drag an answer onto its prompt, or tap one then tap the square. Tap a prompt to read it in full; tap a match to flip it back.</p></div>
+      <p class="trayhint">Drag an answer onto its prompt, or tap one then tap the square. Tap a prompt to ${hasSound ? 'hear it or ' : ''}see it in full; tap a match to flip it back.</p></div>
     <div class="donebar" id="donebar" hidden></div>
   </main>`;
 
@@ -499,14 +553,15 @@ async function puzzleView(id, pi) {
     setTimeout(() => {
       sq.classList.toggle('showp', toPrompt);
       const q = pairAt(i), done = board.classList.contains('complete');
-      if (toPrompt && q.image) {
-        // Image prompt: show the picture, labelled with the answer on a finished grid.
-        sq.innerHTML = `<span class="pimg" style="background-image:${esc(cssUrl(q.image))}"></span>` +
-          `<span class="cap">${esc(done ? q.answer : (q.prompt || q.answer))}</span>`;
+      if (toPrompt && hasMedia(q)) {
+        // Media prompt: show it, labelled with the answer on a finished grid. Sound clips replay.
+        sq.innerHTML = mediaHTML(q) + `<span class="cap">${esc(done ? q.answer : (q.prompt || q.answer))}</span>`;
+        if (q.audio) Clip.play(q.audio, sq);
       } else if (toPrompt && done) {
         // Finished grid: answers are hidden under the picture, so show both.
         sq.innerHTML = `<span class="txt"><span>${esc(q.prompt)}<b class="ans">${esc(q.answer)}</b></span></span>`;
       } else {
+        if (q.audio) Clip.stop();
         sq.innerHTML = `<span class="txt"><span>${esc(toPrompt ? q.prompt : q.answer)}</span></span>`;
       }
       fitText(sq, 15, 7);
@@ -618,7 +673,7 @@ async function puzzleView(id, pi) {
       sq.classList.add('flip');
       setTimeout(() => {
         sq.innerHTML = promptHTML(pairAt(pos));
-        sq.classList.toggle('hasimg', !!pairAt(pos).image);
+        sq.classList.toggle('hasimg', hasMedia(pairAt(pos)));
         fitText(sq);
       }, 170 + delay);
       setTimeout(() => { sq.classList.remove('flip'); sq.style.animationDelay = ''; }, 380 + delay);
@@ -628,8 +683,10 @@ async function puzzleView(id, pi) {
   board.addEventListener('click', e => {
     const sq = e.target.closest('.sq');
     if (locked || !sq || sq.classList.contains('solved')) return;
+    const q = pairAt(+sq.dataset.i);
     if (selected) attempt(selected, sq, null);
-    else showSheet(promptSheet(pairAt(+sq.dataset.i)));
+    else if (q.audio) Clip.play(q.audio, sq);   // sound clips play in place; tap again to replay
+    else showSheet(promptSheet(q));
   }, { signal });
 
   /* --- dragging --- */
