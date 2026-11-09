@@ -269,6 +269,20 @@ const progress = {
   set(id, p) { localStorage.setItem(STORE + 'p.' + id, JSON.stringify(p)); },
   clear(id) { localStorage.removeItem(STORE + 'p.' + id); },
 };
+// Saved progress for a map, minus any grid whose size changed since it was saved
+// (e.g. a puzzle swapped for a bigger one) — those start fresh instead of showing stale squares.
+function progressFor(map) {
+  const p = progress.get(map.id);
+  let changed = false;
+  map.puzzles.forEach((pz, pi) => {
+    const raw = p[pi];
+    if (!raw) return;
+    const s = Array.isArray(raw) ? raw : (raw.s || []);
+    if ((raw.l && raw.l.length !== pz.N) || s.some(i => i >= pz.N)) { delete p[pi]; changed = true; }
+  });
+  if (changed) progress.set(map.id, p);
+  return p;
+}
 // A grid's saved state: s = solved positions, l = layout (position → pair index), k = strikes used.
 // (Older saves stored just an array of solved positions.)
 function gridState(map, p, pi) {
@@ -370,7 +384,7 @@ async function homeView() {
   newView();
   const card = m => {
     if (m.error) return `<li class="card bad"><b>${esc(m.file)}</b><p>${esc(m.error)}</p></li>`;
-    const p = progress.get(m.id);
+    const p = progressFor(m);
     const done = m.puzzles.filter((_, i) => puzzleDone(m, p, i)).length;
     const status = done === m.puzzles.length ? 'Complete' : `${done} of ${m.puzzles.length} puzzles`;
     return `<li><a class="card" href="#/m/${encodeURIComponent(m.id)}">
@@ -391,7 +405,7 @@ async function homeView() {
   for (const m of maps) {
     if (m.error) continue;
     const cv = app.querySelector(`canvas[data-id="${CSS.escape(m.id)}"]`);
-    getPixels(m).then(px => drawThumb(cv, m, px, progress.get(m.id))).catch(() => {});
+    getPixels(m).then(px => drawThumb(cv, m, px, progressFor(m))).catch(() => {});
   }
 }
 
@@ -400,7 +414,7 @@ async function mapView(id, { peek = false } = {}) {
   const map = await getMap(id);
   const pixels = await getPixels(map);
   const signal = newView();
-  const p = peek ? allSolved(map) : progress.get(id);
+  const p = peek ? allSolved(map) : progressFor(map);
   const done = map.puzzles.filter((_, i) => puzzleDone(map, p, i)).length;
   const complete = done === map.puzzles.length;
 
@@ -484,7 +498,7 @@ async function puzzleView(id, pi) {
   if (!pz) throw new Error(`Puzzle ${pi + 1} doesn't exist in “${map.title}”.`);
   const pixels = await getPixels(map);
   const signal = newView();
-  const p = progress.get(id);
+  const p = progressFor(map);
   const N = pz.N;
   const fresh = !p[pi];           // never opened, or reset after a strike-out
   const st = gridState(map, p, pi);

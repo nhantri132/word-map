@@ -46,18 +46,21 @@
       ]
     },
     {
-      "theme": "Chinese 101",
-      "size": [3, 3],
+      "theme": "The Year of Capcom",
+      "size": [3, 4],
       "pairs": [
-        ["你好 (nǐ hǎo)", "Hello"],
-        ["谢谢 (xièxie)", "Thank you"],
-        ["再见 (zàijiàn)", "Goodbye"],
-        ["水 (shuǐ)", "Water"],
-        ["米饭 (mǐfàn)", "Rice"],
-        ["狗 (gǒu)", "Dog"],
-        ["猫 (māo)", "Cat"],
-        ["好吃 (hǎochī)", "Delicious"],
-        ["朋友 (péngyou)", "Friend"]
+        ["images/prompts/11-9-26/capcom/mega-man-dual-override.mp4", "Mega Man: Dual Override"],
+        ["images/prompts/11-9-26/capcom/resident-evil-requiem.mp4", "Resident Evil Requiem"],
+        ["images/prompts/11-9-26/capcom/pragmata.mp4", "Pragmata"],
+        ["images/prompts/11-9-26/capcom/onimusha-way-of-the-sword.mp4", "Onimusha: Way of the Sword"],
+        ["images/prompts/11-9-26/capcom/street-fighter-6.mp4", "Street Fighter 6"],
+        ["images/prompts/11-9-26/capcom/monster-hunter-wilds.mp4", "Monster Hunter Wilds"],
+        ["images/prompts/11-9-26/capcom/kunitsu-gami.mp4", "Kunitsu-Gami: Path of the Goddess"],
+        ["images/prompts/11-9-26/capcom/dead-rising.mp4", "Dead Rising"],
+        ["images/prompts/11-9-26/capcom/dragons-dogma-2.mp4", "Dragon's Dogma 2"],
+        ["images/prompts/11-9-26/capcom/monster-hunter-stories-3.mp4", "Monster Hunter Stories 3"],
+        ["images/prompts/11-9-26/capcom/dino-crisis.mp4", "Dino Crisis"],
+        ["images/prompts/11-9-26/capcom/devil-may-cry-5.mp4", "Devil May Cry 5"]
       ]
     },
     {
