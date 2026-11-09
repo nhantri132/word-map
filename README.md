@@ -171,3 +171,7 @@ Then paste the result into your map file. Check facts on trivia sets; mistakes h
 ## Progress
 
 Progress saves on each device in the browser. If you and your wife play on separate phones, each phone has its own progress; sharing one map between phones would need a small online database (e.g. Firebase), which is a reasonable next step if you want it. Clearing browser data erases progress. **Reset** on a map's screen starts it over.
+
+## Updating the code
+
+`index.html` loads `app.js` and `style.css` with a `?v=` version. Bump it whenever either file changes, so phones and iPads pick up the new code instead of a cached copy. (Map files are always fetched fresh.)
