@@ -18,8 +18,12 @@ const hasMedia = q => !!(q.image || q.video || q.audio);
 const SPEAKER = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/><path class="w1" d="M16 9.5a3.5 3.5 0 0 1 0 5"/><path class="w2" d="M18.5 7a7 7 0 0 1 0 10"/></svg>';
 // The picture part of a square: a still image, a muted looping video, or a speaker for a sound clip.
 // "#t=0.1" makes iPhone/iPad show the first frame even when autoplay is blocked (Low Power Mode).
+// Every video has a poster: a .jpg of its first frame next to it (clip.mp4 → clip.jpg). The poster is
+// painted behind the video, so the square still shows the right picture if the video can't play.
+const posterOf = src => String(src).replace(/\.(mp4|m4v|mov|webm)(\?.*)?$/i, '.jpg');
+const VIDEO_ATTRS = 'muted loop playsinline webkit-playsinline autoplay preload="auto" disablepictureinpicture';
 const mediaHTML = q => q.video
-  ? `<video class="pimg pvid" src="${esc(q.video)}#t=0.1" muted loop playsinline autoplay preload="auto" disablepictureinpicture></video>`
+  ? `<span class="pimg pvid" style="background-image:${esc(cssUrl(posterOf(q.video)))}"><video src="${esc(q.video)}" poster="${esc(posterOf(q.video))}" ${VIDEO_ATTRS}></video></span>`
   : q.audio
     ? `<span class="pimg paud" data-src="${esc(q.audio)}" aria-label="Sound clip">${SPEAKER}</span>`
     : `<span class="pimg" style="background-image:${esc(cssUrl(q.image))}"></span>`;
@@ -29,7 +33,7 @@ const promptHTML = q => hasMedia(q)
   : `<span class="txt prompt"><span>${esc(q.prompt)}</span></span>`;
 // The enlarged view when you tap a prompt. Videos play here with sound and controls.
 const promptSheet = q => q.video
-  ? `<video class="bigimg" src="${esc(q.video)}" loop playsinline controls preload="auto"></video>${q.prompt ? `<p>${esc(q.prompt)}</p>` : ''}`
+  ? `<video class="bigimg" src="${esc(q.video)}" poster="${esc(posterOf(q.video))}" loop playsinline webkit-playsinline controls preload="auto"></video>${q.prompt ? `<p>${esc(q.prompt)}</p>` : ''}`
   : q.image
     ? `<img class="bigimg" src="${esc(q.image)}" alt="">${q.prompt ? `<p>${esc(q.prompt)}</p>` : ''}`
     : `<p>${esc(q.prompt)}</p>`;
@@ -378,6 +382,39 @@ async function route() {
   }
 }
 window.addEventListener('hashchange', route);
+
+/* ---------------------------------------------------------------- video upkeep
+   iPhone/iPad Safari is fussy about looping videos added after the page loads: it wants the
+   muted *property* set (not just the attribute) and an explicit play() call. Every looping
+   square video gets that as soon as it appears. If a video can't load, its square keeps its
+   poster and gets a small warning mark, so a broken file is easy to spot. */
+function kickVideo(v) {
+  if (v.dataset.kicked) return;
+  v.dataset.kicked = '1';
+  v.addEventListener('error', () => {
+    const code = v.error ? v.error.code : '?';
+    console.warn('Video failed', v.currentSrc || v.getAttribute('src'), 'code', code);
+    const sq = v.closest('.sq');
+    if (sq) { sq.setAttribute('data-verr', code); v.style.visibility = 'hidden'; }   // its poster shows through
+  });
+  if (!v.hasAttribute('autoplay')) return;   // the map reveal and the enlarged view start themselves
+  v.muted = true; v.defaultMuted = true;
+  const go = () => { const p = v.play(); if (p) p.catch(() => {}); };
+  go();
+  v.addEventListener('loadeddata', go, { once: true });
+}
+new MutationObserver(muts => {
+  for (const m of muts) for (const n of m.addedNodes) {
+    if (n.nodeType !== 1) continue;
+    if (n.tagName === 'VIDEO') kickVideo(n);
+    else n.querySelectorAll?.('video').forEach(kickVideo);
+  }
+}).observe(document.body, { childList: true, subtree: true });
+// Looping videos pause when the app goes to the background; start them again on return.
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'visible')
+    document.querySelectorAll('.sq video[autoplay]').forEach(v => { const p = v.play(); if (p) p.catch(() => {}); });
+});
 route();
 
 /* ---------------------------------------------------------------- home */
@@ -438,7 +475,7 @@ async function mapView(id, { peek = false } = {}) {
     <div class="mapwrap"><div class="map" style="--mc:${map.mc};--mr:${map.mr};--pc:${map.pc};--pr:${map.pr}">
       ${map.puzzles.map(sector).join('')}
       ${!map.revealOriginal ? '' : map.video
-        ? `<video class="orig" src="${esc(map.video)}" poster="${esc(map.image)}" muted loop playsinline preload="auto" disablepictureinpicture></video>`
+        ? `<video class="orig" src="${esc(map.video)}" poster="${esc(map.image)}" muted loop playsinline webkit-playsinline preload="auto" disablepictureinpicture></video>`
         : `<img class="orig" src="${esc(map.image)}" alt="">`}
     </div></div>
     <div class="mapfoot" id="foot">${complete ? '' : 'Tap a section to solve it. Finish them all to reveal the picture.'}</div>
