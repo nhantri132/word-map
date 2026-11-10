@@ -269,3 +269,8 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .sq.playing .paud path.w2 { animation: wave 0.9s ease-in-out .15s infinite; }
 @keyframes wave { 50% { opacity: .2; } }
 .sheet video.bigimg { aspect-ratio: auto; }
+.sq .anum {
+  position: absolute; top: 6px; left: 8px; z-index: 2;
+  font: 700 clamp(12px, 3.2vw, 18px)/1 var(--font, system-ui), sans-serif; color: var(--tile); opacity: .9;
+}
+.sq.playing .anum { color: var(--accent); }

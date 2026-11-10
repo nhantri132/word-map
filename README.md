@@ -97,7 +97,7 @@ A prompt can also be a short video or a sound clip. The file extension decides w
 |---|---|---|
 | Image | `.jpg .png .gif .webp .avif .svg` | Shown in the square. Animated GIF/WebP loop on their own. Tap to enlarge. |
 | Video | `.mp4 .m4v .mov .webm` | Loops silently in the square. Tap to open it larger with sound and controls. |
-| Sound | `.mp3 .m4a .aac .wav .ogg .opus` | The square shows a speaker. Tap to play; tap again to replay from the start. Only one clip plays at a time. Matched squares replay their clip when flipped back. |
+| Sound | `.mp3 .m4a .aac .wav .ogg .opus` | The square shows a speaker. Tap to play; tap again to replay from the start. Only one clip plays at a time. Sound squares are numbered 1, 2, 3… so you can keep track of which clip is which; the number stays with its clip when you shuffle. Matched squares replay their clip when flipped back. |
 
 The longer form works too: `{ "video": "...", "prompt": "caption", "answer": "..." }` or `{ "audio": "...", "answer": "..." }`.
 

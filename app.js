@@ -25,7 +25,7 @@ const VIDEO_ATTRS = 'muted loop playsinline webkit-playsinline autoplay preload=
 const mediaHTML = q => q.video
   ? `<span class="pimg pvid" style="background-image:${esc(cssUrl(posterOf(q.video)))}"><video src="${esc(q.video)}" poster="${esc(posterOf(q.video))}" ${VIDEO_ATTRS}></video></span>`
   : q.audio
-    ? `<span class="pimg paud" data-src="${esc(q.audio)}" aria-label="Sound clip">${SPEAKER}</span>`
+    ? `<span class="pimg paud" data-src="${esc(q.audio)}" aria-label="Sound clip${q.num ? ' ' + q.num : ''}">${SPEAKER}</span>${q.num ? `<span class="anum">${q.num}</span>` : ''}`
     : `<span class="pimg" style="background-image:${esc(cssUrl(q.image))}"></span>`;
 // What an unsolved square shows: text, or media (with an optional caption).
 const promptHTML = q => hasMedia(q)
@@ -298,6 +298,7 @@ function gridState(map, p, pi) {
     s: (raw && raw.s) ? raw.s.slice() : [],
     l: (raw && raw.l && raw.l.length === N) ? raw.l.slice() : ident,
     k: (raw && raw.k) || 0,
+    n: (raw && raw.n && raw.n.length === N) ? raw.n.slice() : null,   // the starting layout (numbers sound squares)
   };
 }
 const solvedIn = (p, pi) => new Set(Array.isArray(p[pi]) ? p[pi] : ((p[pi] && p[pi].s) || []));
@@ -569,7 +570,12 @@ async function puzzleView(id, pi) {
   const maxStrikes = map.strikes;
   let locked = false;
   const pairAt = pos => pz.pairs[layout[pos]];
-  const save = () => { p[pi] = { s: [...solved], l: layout, k: strikes }; progress.set(id, p); };
+  // Sound squares all look alike, so each gets a number: 1, 2, 3… in reading order of the grid as it
+  // first appeared. The number belongs to the clip, so it moves with it when the grid is shuffled.
+  const startLayout = st.n || layout.slice();
+  let clipCount = 0;
+  startLayout.forEach(j => { const q = pz.pairs[j]; q.num = q.audio ? ++clipCount : 0; });
+  const save = () => { p[pi] = { s: [...solved], l: layout, k: strikes, n: startLayout }; progress.set(id, p); };
   if (fresh) save();              // keep this starting order until the grid is solved or reset
   const openPairs = [...Array(N).keys()].filter(pos => !solved.has(pos)).map(pos => layout[pos]);
   const order = seededShuffle(openPairs, `${id}:${pi}`);
