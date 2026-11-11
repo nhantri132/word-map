@@ -1,0 +1,83 @@
+{
+  "title": "11/11/26",
+  "image": "images/11-11-26.jpg",
+  "puzzleSize": [4, 3],
+  "mapSize": [2, 2],
+  "palette": 0,
+  "puzzles": [
+    {
+      "theme": "Vietnamese Pronunciation 101",
+      "size": [3, 3],
+      "pairs": [
+        ["images/prompts/11-11-26/viet/hello.mp3", "Hello"],
+        ["images/prompts/11-11-26/viet/thank-you.mp3", "Thank you"],
+        ["images/prompts/11-11-26/viet/sorry.mp3", "Sorry"],
+        ["images/prompts/11-11-26/viet/name.mp3", "Name"],
+        ["images/prompts/11-11-26/viet/water.mp3", "Water"],
+        ["images/prompts/11-11-26/viet/work.mp3", "Work"],
+        ["images/prompts/11-11-26/viet/this.mp3", "This"],
+        ["images/prompts/11-11-26/viet/house.mp3", "House"],
+        ["images/prompts/11-11-26/viet/like.mp3", "Like"]
+      ]
+    },
+    {
+      "theme": "Origins",
+      "size": [4, 4],
+      "pairs": [
+        ["images/prompts/11-11-26/origins/goodfellas.mp4", "Goodfellas"],
+        ["images/prompts/11-11-26/origins/community.mp4", "Community"],
+        ["images/prompts/11-11-26/origins/little-rascals.mp4", "The Little Rascals"],
+        ["images/prompts/11-11-26/origins/first-date.mp4", "First Date"],
+        ["images/prompts/11-11-26/origins/pulp-fiction.mp4", "Pulp Fiction"],
+        ["images/prompts/11-11-26/origins/black-ish.mp4", "black-ish"],
+        ["images/prompts/11-11-26/origins/family-feud.mp4", "Family Feud"],
+        ["images/prompts/11-11-26/origins/caddyshack.mp4", "Caddyshack"],
+        ["images/prompts/11-11-26/origins/parks-and-rec.mp4", "Parks and Rec"],
+        ["images/prompts/11-11-26/origins/the-interview.mp4", "The Interview"],
+        ["images/prompts/11-11-26/origins/snl.mp4", "SNL"],
+        ["images/prompts/11-11-26/origins/check-it-out.mp4", "Check It Out!"],
+        ["images/prompts/11-11-26/origins/at-eternitys-gate.mp4", "At Eternity's Gate"],
+        ["images/prompts/11-11-26/origins/citizen-kane.mp4", "Citizen Kane"],
+        ["images/prompts/11-11-26/origins/star-trek.mp4", "Star Trek"],
+        ["images/prompts/11-11-26/origins/black-snake-moan.mp4", "Black Snake Moan"]
+      ]
+    },
+    {
+      "theme": "2026 Tomatoes",
+      "size": [3, 3],
+      "pairs": [
+        ["images/prompts/11-11-26/rt/the-odyssey.jpg", "94%"],
+        ["images/prompts/11-11-26/rt/godzilla-minus-zero.jpg", "90%"],
+        ["images/prompts/11-11-26/rt/heart-of-the-beast.jpg", "84%"],
+        ["images/prompts/11-11-26/rt/devil-wears-prada-2.jpg", "78%"],
+        ["images/prompts/11-11-26/rt/mandalorian-and-grogu.jpg", "60%"],
+        ["images/prompts/11-11-26/rt/street-fighter.jpg", "42%"],
+        ["images/prompts/11-11-26/rt/michael.jpg", "38%"],
+        ["images/prompts/11-11-26/rt/moana.jpg", "33%"],
+        ["images/prompts/11-11-26/rt/scary-movie.jpg", "23%"]
+      ]
+    },
+    {
+      "theme": "Beginning of the BEST",
+      "size": [4, 4],
+      "pairs": [
+        ["images/prompts/11-11-26/best/when-the-partys-over.mp3", "when the party's over"],
+        ["images/prompts/11-11-26/best/bat-country.mp3", "Bat Country"],
+        ["images/prompts/11-11-26/best/serendipity.mp3", "Serendipity"],
+        ["images/prompts/11-11-26/best/welcome-to-the-black-parade.mp3", "Welcome to the Black Parade"],
+        ["images/prompts/11-11-26/best/xo-tour-llif3.mp3", "XO Tour Llif3"],
+        ["images/prompts/11-11-26/best/dna.mp3", "DNA."],
+        ["images/prompts/11-11-26/best/goosebumps.mp3", "goosebumps"],
+        ["images/prompts/11-11-26/best/boogie.mp3", "BOOGIE"],
+        ["images/prompts/11-11-26/best/mr-blue-sky.mp3", "Mr. Blue Sky"],
+        ["images/prompts/11-11-26/best/sunday-candy.mp3", "Sunday Candy"],
+        ["images/prompts/11-11-26/best/baby-blue.mp3", "Baby Blue"],
+        ["images/prompts/11-11-26/best/1train.mp3", "1Train"],
+        ["images/prompts/11-11-26/best/legend.mp3", "Legend"],
+        ["images/prompts/11-11-26/best/wicked-games.mp3", "Wicked Games"],
+        ["images/prompts/11-11-26/best/yonkers.mp3", "Yonkers"],
+        ["images/prompts/11-11-26/best/runaway.mp3", "Runaway"]
+      ]
+    }
+  ]
+}
