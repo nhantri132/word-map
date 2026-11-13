@@ -1,0 +1,79 @@
+{
+  "title": "11/13/26",
+  "image": "images/11-13-26.jpg",
+  "puzzleSize": [3, 4],
+  "mapSize": [2, 2],
+  "palette": 0,
+  "puzzles": [
+    {
+      "theme": "Spyware",
+      "size": [4, 4],
+      "pairs": [
+        ["images/prompts/11-13-26/spies/james-bond.jpg", "James Bond"],
+        ["images/prompts/11-13-26/spies/jason-bourne.jpg", "Jason Bourne"],
+        ["images/prompts/11-13-26/spies/ethan-hunt.jpg", "Ethan Hunt"],
+        ["images/prompts/11-13-26/spies/george-smiley.jpg", "George Smiley"],
+        ["images/prompts/11-13-26/spies/natasha-romanoff.jpg", "Natasha Romanoff"],
+        ["images/prompts/11-13-26/spies/jack-ryan.jpg", "Jack Ryan"],
+        ["images/prompts/11-13-26/spies/sydney-bristow.jpg", "Sydney Bristow"],
+        ["images/prompts/11-13-26/spies/austin-powers.jpg", "Austin Powers"],
+        ["images/prompts/11-13-26/spies/leliana.jpg", "Leliana"],
+        ["images/prompts/11-13-26/spies/luthen-rael.jpg", "Luthen Rael"],
+        ["images/prompts/11-13-26/spies/spy.jpg", "Spy"],
+        ["images/prompts/11-13-26/spies/loid-forger.jpg", "Loid Forger"],
+        ["images/prompts/11-13-26/spies/carmen-and-juni.jpg", "Carmen & Juni"],
+        ["images/prompts/11-13-26/spies/solid-snake.jpg", "Solid Snake"],
+        ["images/prompts/11-13-26/spies/sam-fisher.jpg", "Sam Fisher"],
+        ["images/prompts/11-13-26/spies/amanda-waller.jpg", "Amanda Waller"]
+      ]
+    },
+    {
+      "theme": "GTA",
+      "size": [3, 3],
+      "pairs": [
+        ["images/prompts/11-13-26/gta/gta-1.jpg", "1997"],
+        ["images/prompts/11-13-26/gta/gta-2.jpg", "1999"],
+        ["images/prompts/11-13-26/gta/gta-3.jpg", "2001"],
+        ["images/prompts/11-13-26/gta/vice-city.jpg", "2002"],
+        ["images/prompts/11-13-26/gta/san-andreas.jpg", "2004"],
+        ["images/prompts/11-13-26/gta/liberty-city-stories.jpg", "2005"],
+        ["images/prompts/11-13-26/gta/gta-4.jpg", "2008"],
+        ["images/prompts/11-13-26/gta/gta-5.jpg", "2013"],
+        ["images/prompts/11-13-26/gta/gta-6.jpg", "2026"]
+      ]
+    },
+    {
+      "theme": "Big Walk",
+      "size": [3, 3],
+      "pairs": [
+        ["Yellowstone", "Wyoming"],
+        ["Grand Canyon", "Arizona"],
+        ["Yosemite", "California"],
+        ["Zion", "Utah"],
+        ["Acadia", "Maine"],
+        ["Everglades", "Florida"],
+        ["Denali", "Alaska"],
+        ["Crater Lake", "Oregon"],
+        ["Big Bend", "Texas"]
+      ]
+    },
+    {
+      "theme": "Mamacita",
+      "size": [3, 4],
+      "pairs": [
+        ["Despacito", "Slowly"],
+        ["Bailando", "Dancing"],
+        ["Gasolina", "Gasoline"],
+        ["Mi Gente", "My People"],
+        ["Bésame Mucho", "Kiss Me a Lot"],
+        ["Oye Cómo Va", "Listen How It Goes"],
+        ["Feliz Navidad", "Merry Christmas"],
+        ["Como la Flor", "Like the Flower"],
+        ["Vivir Mi Vida", "Live My Life"],
+        ["Échame la Culpa", "Blame It on Me"],
+        ["Tití Me Preguntó", "Auntie Asked Me"],
+        ["DtMF (Debí Tirar Más Fotos)", "I Should've Taken More Photos"]
+      ]
+    }
+  ]
+}
