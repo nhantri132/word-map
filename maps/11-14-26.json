@@ -1,0 +1,84 @@
+{
+  "title": "11/14/26",
+  "image": "images/11-14-26.jpg",
+  "video": "images/11-14-26.mp4",
+  "puzzleSize": [3, 4],
+  "mapSize": [2, 2],
+  "palette": 0,
+  "puzzles": [
+    {
+      "theme": "MCU Villains",
+      "size": [4, 4],
+      "pairs": [
+        ["images/prompts/11-14-26/villains/ultron.mp4", "Ultron"],
+        ["images/prompts/11-14-26/villains/apocalypse.mp4", "Apocalypse"],
+        ["images/prompts/11-14-26/villains/kingpin.mp4", "Kingpin"],
+        ["images/prompts/11-14-26/villains/silver-surfer.mp4", "Silver Surfer"],
+        ["images/prompts/11-14-26/villains/mephisto.mp4", "Mephisto"],
+        ["images/prompts/11-14-26/villains/the-void.mp4", "The Void"],
+        ["images/prompts/11-14-26/villains/death.mp4", "Death"],
+        ["images/prompts/11-14-26/villains/cassandra-nova.mp4", "Cassandra Nova"],
+        ["images/prompts/11-14-26/villains/dar-benn.mp4", "Dar-Benn"],
+        ["images/prompts/11-14-26/villains/red-skull.mp4", "Red Skull"],
+        ["images/prompts/11-14-26/villains/namor.mp4", "Namor"],
+        ["images/prompts/11-14-26/villains/titania.mp4", "Titania"],
+        ["images/prompts/11-14-26/villains/wenwu.mp4", "Wenwu"],
+        ["images/prompts/11-14-26/villains/arishem.mp4", "Arishem"],
+        ["images/prompts/11-14-26/villains/echo.mp4", "Echo"],
+        ["images/prompts/11-14-26/villains/doctor-doom.mp4", "Doctor Doom"]
+      ]
+    },
+    {
+      "theme": "Cartoon Network",
+      "size": [4, 4],
+      "pairs": [
+        ["images/prompts/11-14-26/cn/over-the-garden-wall.mp4", "Over the Garden Wall"],
+        ["images/prompts/11-14-26/cn/fionna-and-cake.mp4", "Fionna and Cake"],
+        ["images/prompts/11-14-26/cn/billy-and-mandy.mp4", "The Grim Adventures of Billy & Mandy"],
+        ["images/prompts/11-14-26/cn/dexters-laboratory.mp4", "Dexter's Laboratory"],
+        ["images/prompts/11-14-26/cn/ed-edd-n-eddy.mp4", "Ed, Edd n Eddy"],
+        ["images/prompts/11-14-26/cn/courage.mp4", "Courage the Cowardly Dog"],
+        ["images/prompts/11-14-26/cn/powerpuff-girls.mp4", "The Powerpuff Girls"],
+        ["images/prompts/11-14-26/cn/teen-titans-go.mp4", "Teen Titans Go!"],
+        ["images/prompts/11-14-26/cn/regular-show.mp4", "Regular Show"],
+        ["images/prompts/11-14-26/cn/adventure-time.mp4", "Adventure Time"],
+        ["images/prompts/11-14-26/cn/we-bare-bears.mp4", "We Bare Bears"],
+        ["images/prompts/11-14-26/cn/steven-universe.mp4", "Steven Universe"],
+        ["images/prompts/11-14-26/cn/scooby-doo.mp4", "Scooby-Doo"],
+        ["images/prompts/11-14-26/cn/kids-next-door.mp4", "Kids Next Door"],
+        ["images/prompts/11-14-26/cn/fosters.mp4", "Foster's Home for Imaginary Friends"],
+        ["images/prompts/11-14-26/cn/gumball.mp4", "The Amazing World of Gumball"]
+      ]
+    },
+    {
+      "theme": "Sleeper Picks",
+      "size": [3, 3],
+      "pairs": [
+        ["images/prompts/11-14-26/nfl/buffalo-bills.mp4", "Buffalo Bills"],
+        ["images/prompts/11-14-26/nfl/houston-texans.mp4", "Houston Texans"],
+        ["images/prompts/11-14-26/nfl/dallas-cowboys.mp4", "Dallas Cowboys"],
+        ["images/prompts/11-14-26/nfl/cleveland-browns.mp4", "Cleveland Browns"],
+        ["images/prompts/11-14-26/nfl/new-england-patriots.mp4", "New England Patriots"],
+        ["images/prompts/11-14-26/nfl/pittsburgh-steelers.mp4", "Pittsburgh Steelers"],
+        ["images/prompts/11-14-26/nfl/tennessee-titans.mp4", "Tennessee Titans"],
+        ["images/prompts/11-14-26/nfl/green-bay-packers.mp4", "Green Bay Packers"],
+        ["images/prompts/11-14-26/nfl/cincinnati-bengals.mp4", "Cincinnati Bengals"]
+      ]
+    },
+    {
+      "theme": "When's the Drop",
+      "size": [3, 3],
+      "pairs": [
+        ["images/prompts/11-14-26/drop/athleta.jpg", "Athleta"],
+        ["images/prompts/11-14-26/drop/lululemon.jpg", "lululemon"],
+        ["images/prompts/11-14-26/drop/paragon.jpg", "Paragon"],
+        ["images/prompts/11-14-26/drop/buffbunny.jpg", "Buffbunny"],
+        ["images/prompts/11-14-26/drop/youngla.jpg", "YoungLA"],
+        ["images/prompts/11-14-26/drop/alo.jpg", "Alo"],
+        ["images/prompts/11-14-26/drop/vuori.jpg", "Vuori"],
+        ["images/prompts/11-14-26/drop/beyond-yoga.jpg", "Beyond Yoga"],
+        ["images/prompts/11-14-26/drop/splits59.jpg", "Splits59"]
+      ]
+    }
+  ]
+}
