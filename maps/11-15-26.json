@@ -1,0 +1,86 @@
+{
+  "title": "11/15/26",
+  "image": "images/11-15-26.jpg",
+  "puzzleSize": [3, 4],
+  "mapSize": [2, 2],
+  "palette": 0,
+  "puzzles": [
+    {
+      "theme": "Dave n Busters",
+      "size": [3, 4],
+      "pairs": [
+        ["images/prompts/11-15-26/arcade/pac-man.jpg", "Pac-Man"],
+        ["images/prompts/11-15-26/arcade/space-invaders.jpg", "Space Invaders"],
+        ["images/prompts/11-15-26/arcade/pong.jpg", "Pong"],
+        ["images/prompts/11-15-26/arcade/asteroids.jpg", "Asteroids"],
+        ["images/prompts/11-15-26/arcade/donkey-kong.jpg", "Donkey Kong"],
+        ["images/prompts/11-15-26/arcade/frogger.jpg", "Frogger"],
+        ["images/prompts/11-15-26/arcade/street-fighter.jpg", "Street Fighter"],
+        ["images/prompts/11-15-26/arcade/mortal-kombat.jpg", "Mortal Kombat"],
+        ["images/prompts/11-15-26/arcade/daytona-usa.jpg", "Daytona USA"],
+        ["images/prompts/11-15-26/arcade/ddr.jpg", "Dance Dance Revolution"],
+        ["images/prompts/11-15-26/arcade/ghosts-n-goblins.jpg", "Ghosts 'n Goblins"],
+        ["images/prompts/11-15-26/arcade/galaga.jpg", "Galaga"]
+      ]
+    },
+    {
+      "theme": "Overwhelmingly Positive",
+      "size": [4, 4],
+      "pairs": [
+        ["images/prompts/11-15-26/steam/signalis.mp4", "Signalis"],
+        ["images/prompts/11-15-26/steam/risk-of-rain-2.mp4", "Risk of Rain 2"],
+        ["images/prompts/11-15-26/steam/stardew-valley.mp4", "Stardew Valley"],
+        ["images/prompts/11-15-26/steam/phasmophobia.mp4", "Phasmophobia"],
+        ["images/prompts/11-15-26/steam/binding-of-isaac.mp4", "The Binding of Isaac"],
+        ["images/prompts/11-15-26/steam/half-life-alyx.mp4", "Half-Life: Alyx"],
+        ["images/prompts/11-15-26/steam/beat-saber.mp4", "Beat Saber"],
+        ["images/prompts/11-15-26/steam/hollow-knight.mp4", "Hollow Knight"],
+        ["images/prompts/11-15-26/steam/sekiro.mp4", "Sekiro"],
+        ["images/prompts/11-15-26/steam/cuphead.mp4", "Cuphead"],
+        ["images/prompts/11-15-26/steam/subnautica.mp4", "Subnautica"],
+        ["images/prompts/11-15-26/steam/castle-crashers.mp4", "Castle Crashers"],
+        ["images/prompts/11-15-26/steam/powerwash-simulator.mp4", "PowerWash Simulator"],
+        ["images/prompts/11-15-26/steam/persona-5.mp4", "Persona 5"],
+        ["images/prompts/11-15-26/steam/slay-the-spire.mp4", "Slay the Spire"],
+        ["images/prompts/11-15-26/steam/celeste.mp4", "Celeste"]
+      ]
+    },
+    {
+      "theme": "Vietnamese 101",
+      "size": [3, 3],
+      "pairs": [
+        ["images/prompts/11-15-26/viet/chao.mp3", "Hello"],
+        ["images/prompts/11-15-26/viet/cam-on.mp3", "Thank you"],
+        ["images/prompts/11-15-26/viet/xin-loi.mp3", "Sorry"],
+        ["images/prompts/11-15-26/viet/anh.mp3", "I/you (older male)"],
+        ["images/prompts/11-15-26/viet/chi.mp3", "I/you (older female)"],
+        ["images/prompts/11-15-26/viet/em.mp3", "I/you (younger)"],
+        ["images/prompts/11-15-26/viet/ten.mp3", "Name"],
+        ["images/prompts/11-15-26/viet/la.mp3", "Is/am/are"],
+        ["images/prompts/11-15-26/viet/gi.mp3", "What"]
+      ]
+    },
+    {
+      "theme": "Solo",
+      "size": [4, 4],
+      "pairs": [
+        ["images/prompts/11-15-26/solo/electric-guitar.mp3", "Electric Guitar"],
+        ["images/prompts/11-15-26/solo/saxophone.mp3", "Saxophone"],
+        ["images/prompts/11-15-26/solo/drums.mp3", "Drums"],
+        ["images/prompts/11-15-26/solo/bass-guitar.mp3", "Bass Guitar"],
+        ["images/prompts/11-15-26/solo/violin.mp3", "Violin"],
+        ["images/prompts/11-15-26/solo/cello.mp3", "Cello"],
+        ["images/prompts/11-15-26/solo/upright-bass.mp3", "Upright Bass"],
+        ["images/prompts/11-15-26/solo/piano.mp3", "Piano"],
+        ["images/prompts/11-15-26/solo/flute.mp3", "Flute"],
+        ["images/prompts/11-15-26/solo/clarinet.mp3", "Clarinet"],
+        ["images/prompts/11-15-26/solo/harmonica.mp3", "Harmonica"],
+        ["images/prompts/11-15-26/solo/bongos.mp3", "Bongos"],
+        ["images/prompts/11-15-26/solo/glockenspiel.mp3", "Glockenspiel"],
+        ["images/prompts/11-15-26/solo/harp.mp3", "Harp"],
+        ["images/prompts/11-15-26/solo/banjo.mp3", "Banjo"],
+        ["images/prompts/11-15-26/solo/steel-drum.mp3", "Steel Drum"]
+      ]
+    }
+  ]
+}
