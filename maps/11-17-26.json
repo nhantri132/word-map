@@ -1,0 +1,90 @@
+{
+  "title": "11/17/26",
+  "image": "images/11-17-26.jpg",
+  "puzzleSize": [4, 3],
+  "mapSize": [2, 2],
+  "palette": 0,
+  "puzzles": [
+    {
+      "theme": "Content",
+      "size": [4, 4],
+      "pairs": [
+        ["images/prompts/11-17-26/yt/nigahiga.jpg", "nigahiga"],
+        ["images/prompts/11-17-26/yt/thewinekone.jpg", "TheWineKone"],
+        ["images/prompts/11-17-26/yt/freddiew.jpg", "freddiew"],
+        ["images/prompts/11-17-26/yt/jenna-marbles.jpg", "JennaMarbles"],
+        ["images/prompts/11-17-26/yt/smosh.jpg", "Smosh"],
+        ["images/prompts/11-17-26/yt/lonelygirl15.jpg", "lonelygirl15"],
+        ["images/prompts/11-17-26/yt/ijustine.jpg", "iJustine"],
+        ["images/prompts/11-17-26/yt/philip-defranco.jpg", "sxephil"],
+        ["images/prompts/11-17-26/yt/angry-video-game-nerd.jpg", "Cinemassacre"],
+        ["images/prompts/11-17-26/yt/fred.jpg", "Fred"],
+        ["images/prompts/11-17-26/yt/ray-william-johnson.jpg", "RayWilliamJohnson"],
+        ["images/prompts/11-17-26/yt/kevjumba.jpg", "KevJumba"],
+        ["images/prompts/11-17-26/yt/shane-dawson.jpg", "ShaneDawsonTV"],
+        ["images/prompts/11-17-26/yt/tay-zonday.jpg", "TayZonday"],
+        ["images/prompts/11-17-26/yt/michelle-phan.jpg", "MichellePhan"],
+        ["images/prompts/11-17-26/yt/laci-green.jpg", "lacigreen"]
+      ]
+    },
+    {
+      "theme": "Not the Big 2",
+      "size": [3, 3],
+      "pairs": [
+        ["images/prompts/11-17-26/comics/saga.jpg", "Saga"],
+        ["images/prompts/11-17-26/comics/sex-criminals.jpg", "Sex Criminals"],
+        ["images/prompts/11-17-26/comics/deadly-class.jpg", "Deadly Class"],
+        ["images/prompts/11-17-26/comics/spawn.jpg", "Spawn"],
+        ["images/prompts/11-17-26/comics/hellboy.jpg", "Hellboy"],
+        ["images/prompts/11-17-26/comics/scott-pilgrim.jpg", "Scott Pilgrim"],
+        ["images/prompts/11-17-26/comics/invincible.jpg", "Invincible"],
+        ["images/prompts/11-17-26/comics/the-walking-dead.jpg", "The Walking Dead"],
+        ["images/prompts/11-17-26/comics/bone.jpg", "Bone"]
+      ]
+    },
+    {
+      "theme": "Not a Phase",
+      "size": [4, 4],
+      "pairs": [
+        ["images/prompts/11-17-26/emo/my-chemical-romance.jpg", "My Chemical Romance"],
+        ["images/prompts/11-17-26/emo/taking-back-sunday.jpg", "Taking Back Sunday"],
+        ["images/prompts/11-17-26/emo/evanescence.jpg", "Evanescence"],
+        ["images/prompts/11-17-26/emo/fall-out-boy.jpg", "Fall Out Boy"],
+        ["images/prompts/11-17-26/emo/paramore.jpg", "Paramore"],
+        ["images/prompts/11-17-26/emo/pierce-the-veil.jpg", "Pierce the Veil"],
+        ["images/prompts/11-17-26/emo/all-american-rejects.jpg", "The All-American Rejects"],
+        ["images/prompts/11-17-26/emo/the-used.jpg", "The Used"],
+        ["images/prompts/11-17-26/emo/good-charlotte.jpg", "Good Charlotte"],
+        ["images/prompts/11-17-26/emo/avenged-sevenfold.jpg", "Avenged Sevenfold"],
+        ["images/prompts/11-17-26/emo/panic-at-the-disco.jpg", "Panic! at the Disco"],
+        ["images/prompts/11-17-26/emo/simple-plan.jpg", "Simple Plan"],
+        ["images/prompts/11-17-26/emo/avril-lavigne.jpg", "Avril Lavigne"],
+        ["images/prompts/11-17-26/emo/blink-182.jpg", "blink-182"],
+        ["images/prompts/11-17-26/emo/bring-me-the-horizon.jpg", "Bring Me the Horizon"],
+        ["images/prompts/11-17-26/emo/3oh3.jpg", "3OH!3"]
+      ]
+    },
+    {
+      "theme": "Omg Shoes",
+      "size": [4, 4],
+      "pairs": [
+        ["images/prompts/11-17-26/shoes/christian-louboutin.jpg", "Christian Louboutin"],
+        ["images/prompts/11-17-26/shoes/maison-margiela.jpg", "Maison Margiela"],
+        ["images/prompts/11-17-26/shoes/miu-miu.jpg", "Miu Miu"],
+        ["images/prompts/11-17-26/shoes/chanel.jpg", "Chanel"],
+        ["images/prompts/11-17-26/shoes/the-row.jpg", "The Row"],
+        ["images/prompts/11-17-26/shoes/saint-laurent.jpg", "Saint Laurent"],
+        ["images/prompts/11-17-26/shoes/hermes.jpg", "Hermès"],
+        ["images/prompts/11-17-26/shoes/manolo-blahnik.jpg", "Manolo Blahnik"],
+        ["images/prompts/11-17-26/shoes/adidas.jpg", "adidas"],
+        ["images/prompts/11-17-26/shoes/converse.jpg", "Converse"],
+        ["images/prompts/11-17-26/shoes/jordan.jpg", "Jordan"],
+        ["images/prompts/11-17-26/shoes/new-balance.jpg", "New Balance"],
+        ["images/prompts/11-17-26/shoes/onitsuka-tiger.jpg", "Onitsuka Tiger"],
+        ["images/prompts/11-17-26/shoes/vans.jpg", "Vans"],
+        ["images/prompts/11-17-26/shoes/puma.jpg", "Puma"],
+        ["images/prompts/11-17-26/shoes/sergio-rossi.jpg", "Sergio Rossi"]
+      ]
+    }
+  ]
+}
