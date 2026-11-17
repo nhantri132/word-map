@@ -1,0 +1,93 @@
+{
+  "title": "11/18/26",
+  "image": "images/11-18-26.jpg",
+  "puzzleSize": [4, 3],
+  "mapSize": [2, 2],
+  "palette": 0,
+  "puzzles": [
+    {
+      "theme": "Famous Words",
+      "size": [4, 4],
+      "pairs": [
+        ["“Quoth the Raven, ‘Nevermore.’”", "The Raven"],
+        ["“It is the beating of his hideous heart!”", "The Tell-Tale Heart"],
+        ["“Wherefore art thou Romeo?”", "Romeo and Juliet"],
+        ["“To be, or not to be”", "Hamlet"],
+        ["“Out, damned spot!”", "Macbeth"],
+        ["“Et tu, Brute?”", "Julius Caesar"],
+        ["“My kingdom for a horse!”", "Richard III"],
+        ["“It was the best of times, it was the worst of times”", "A Tale of Two Cities"],
+        ["“It is a truth universally acknowledged…”", "Pride and Prejudice"],
+        ["“Call me Ishmael.”", "Moby-Dick"],
+        ["“So we beat on, boats against the current”", "The Great Gatsby"],
+        ["“Bah! Humbug!”", "A Christmas Carol"],
+        ["“Reader, I married him.”", "Jane Eyre"],
+        ["“We’re all mad here.”", "Alice in Wonderland"],
+        ["“Listen to them, the children of the night.”", "Dracula"],
+        ["“Happy families are all alike”", "Anna Karenina"]
+      ]
+    },
+    {
+      "theme": "Dog Breed",
+      "size": [4, 4],
+      "pairs": [
+        ["images/prompts/11-18-26/dogs/afghan-hound.jpg", "Afghan Hound"],
+        ["images/prompts/11-18-26/dogs/american-bulldog.jpg", "American Bulldog"],
+        ["images/prompts/11-18-26/dogs/australian-shepherd.jpg", "Australian Shepherd"],
+        ["images/prompts/11-18-26/dogs/bearded-collie.jpg", "Bearded Collie"],
+        ["images/prompts/11-18-26/dogs/cairn-terrier.jpg", "Cairn Terrier"],
+        ["images/prompts/11-18-26/dogs/dachshund.jpg", "Dachshund"],
+        ["images/prompts/11-18-26/dogs/english-cocker-spaniel.jpg", "English Cocker Spaniel"],
+        ["images/prompts/11-18-26/dogs/french-bulldog.jpg", "French Bulldog"],
+        ["images/prompts/11-18-26/dogs/giant-schnauzer.jpg", "Giant Schnauzer"],
+        ["images/prompts/11-18-26/dogs/hokkaido.jpg", "Hokkaido"],
+        ["images/prompts/11-18-26/dogs/japanese-spitz.jpg", "Japanese Spitz"],
+        ["images/prompts/11-18-26/dogs/komondor.jpg", "Komondor"],
+        ["images/prompts/11-18-26/dogs/pekingese.jpg", "Pekingese"],
+        ["images/prompts/11-18-26/dogs/pembroke-welsh-corgi.jpg", "Pembroke Welsh Corgi"],
+        ["images/prompts/11-18-26/dogs/russian-toy.jpg", "Russian Toy"],
+        ["images/prompts/11-18-26/dogs/yorkshire-terrier.jpg", "Yorkshire Terrier"]
+      ]
+    },
+    {
+      "theme": "Iconic Looks",
+      "size": [3, 4],
+      "pairs": [
+        ["images/prompts/11-18-26/looks/donatella-versace.jpg", "Donatella Versace"],
+        ["images/prompts/11-18-26/looks/christina-stambolian.jpg", "Christina Stambolian"],
+        ["images/prompts/11-18-26/looks/tom-ford.jpg", "Tom Ford"],
+        ["images/prompts/11-18-26/looks/j-crew.jpg", "J.Crew"],
+        ["images/prompts/11-18-26/looks/tommy-hilfiger.jpg", "Tommy Hilfiger"],
+        ["images/prompts/11-18-26/looks/dolce-gabbana.jpg", "Dolce & Gabbana"],
+        ["images/prompts/11-18-26/looks/bob-mackie.jpg", "Bob Mackie"],
+        ["images/prompts/11-18-26/looks/marjan-pejoski.jpg", "Marjan Pejoski"],
+        ["images/prompts/11-18-26/looks/adam-selman.jpg", "Adam Selman"],
+        ["images/prompts/11-18-26/looks/mugler.jpg", "Mugler"],
+        ["images/prompts/11-18-26/looks/gianni-versace.jpg", "Gianni Versace"],
+        ["images/prompts/11-18-26/looks/roberto-cavalli.jpg", "Roberto Cavalli"]
+      ]
+    },
+    {
+      "theme": "Intros",
+      "size": [4, 4],
+      "pairs": [
+        ["images/prompts/11-18-26/intros/loki.mp3", "Loki"],
+        ["images/prompts/11-18-26/intros/dexter.mp3", "Dexter"],
+        ["images/prompts/11-18-26/intros/game-of-thrones.mp3", "Game of Thrones"],
+        ["images/prompts/11-18-26/intros/greys-anatomy.mp3", "Grey’s Anatomy"],
+        ["images/prompts/11-18-26/intros/gilmore-girls.mp3", "Gilmore Girls"],
+        ["images/prompts/11-18-26/intros/golden-girls.mp3", "The Golden Girls"],
+        ["images/prompts/11-18-26/intros/big-bang-theory.mp3", "The Big Bang Theory"],
+        ["images/prompts/11-18-26/intros/mash.mp3", "M*A*S*H"],
+        ["images/prompts/11-18-26/intros/gilligans-island.mp3", "Gilligan’s Island"],
+        ["images/prompts/11-18-26/intros/brady-bunch.mp3", "The Brady Bunch"],
+        ["images/prompts/11-18-26/intros/x-files.mp3", "The X-Files"],
+        ["images/prompts/11-18-26/intros/twilight-zone.mp3", "The Twilight Zone"],
+        ["images/prompts/11-18-26/intros/succession.mp3", "Succession"],
+        ["images/prompts/11-18-26/intros/malcolm.mp3", "Malcolm in the Middle"],
+        ["images/prompts/11-18-26/intros/mary-tyler-moore.mp3", "The Mary Tyler Moore Show"],
+        ["images/prompts/11-18-26/intros/star-trek.mp3", "Star Trek"]
+      ]
+    }
+  ]
+}
