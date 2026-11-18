@@ -28,25 +28,25 @@
       ]
     },
     {
-      "theme": "Dog Breed",
+      "theme": "Haus",
       "size": [4, 4],
       "pairs": [
-        ["images/prompts/11-18-26/dogs/afghan-hound.jpg", "Afghan Hound"],
-        ["images/prompts/11-18-26/dogs/american-bulldog.jpg", "American Bulldog"],
-        ["images/prompts/11-18-26/dogs/australian-shepherd.jpg", "Australian Shepherd"],
-        ["images/prompts/11-18-26/dogs/bearded-collie.jpg", "Bearded Collie"],
-        ["images/prompts/11-18-26/dogs/cairn-terrier.jpg", "Cairn Terrier"],
-        ["images/prompts/11-18-26/dogs/dachshund.jpg", "Dachshund"],
-        ["images/prompts/11-18-26/dogs/english-cocker-spaniel.jpg", "English Cocker Spaniel"],
-        ["images/prompts/11-18-26/dogs/french-bulldog.jpg", "French Bulldog"],
-        ["images/prompts/11-18-26/dogs/giant-schnauzer.jpg", "Giant Schnauzer"],
-        ["images/prompts/11-18-26/dogs/hokkaido.jpg", "Hokkaido"],
-        ["images/prompts/11-18-26/dogs/japanese-spitz.jpg", "Japanese Spitz"],
-        ["images/prompts/11-18-26/dogs/komondor.jpg", "Komondor"],
-        ["images/prompts/11-18-26/dogs/pekingese.jpg", "Pekingese"],
-        ["images/prompts/11-18-26/dogs/pembroke-welsh-corgi.jpg", "Pembroke Welsh Corgi"],
-        ["images/prompts/11-18-26/dogs/russian-toy.jpg", "Russian Toy"],
-        ["images/prompts/11-18-26/dogs/yorkshire-terrier.jpg", "Yorkshire Terrier"]
+        ["images/prompts/11-18-26/haus/guest-room.jpg", "Guest Room"],
+        ["images/prompts/11-18-26/haus/entry-hallway.jpg", "Entry Hallway"],
+        ["images/prompts/11-18-26/haus/rogers-room.jpg", "Roger’s Room"],
+        ["images/prompts/11-18-26/haus/garage.jpg", "Garage"],
+        ["images/prompts/11-18-26/haus/kitchen.jpg", "Kitchen"],
+        ["images/prompts/11-18-26/haus/dining-room.jpg", "Dining Room"],
+        ["images/prompts/11-18-26/haus/living-room.jpg", "Living Room"],
+        ["images/prompts/11-18-26/haus/laundry-room.jpg", "Laundry Room"],
+        ["images/prompts/11-18-26/haus/office-bathroom.jpg", "Office Bathroom"],
+        ["images/prompts/11-18-26/haus/tris-office.jpg", "Tri’s Office"],
+        ["images/prompts/11-18-26/haus/gym.jpg", "Gym"],
+        ["images/prompts/11-18-26/haus/laurens-office.jpg", "Lauren’s Office"],
+        ["images/prompts/11-18-26/haus/primary-bedroom.jpg", "Primary Bedroom"],
+        ["images/prompts/11-18-26/haus/primary-bathroom.jpg", "Primary Bathroom"],
+        ["images/prompts/11-18-26/haus/walk-in-closet.jpg", "Walk-In Closet"],
+        ["images/prompts/11-18-26/haus/backyard.jpg", "Backyard"]
       ]
     },
     {
