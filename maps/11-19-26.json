@@ -1,0 +1,90 @@
+{
+  "title": "11/19/26",
+  "image": "images/11-19-26.jpg",
+  "puzzleSize": [3, 4],
+  "mapSize": [2, 2],
+  "palette": 0,
+  "puzzles": [
+    {
+      "theme": "Geoff Keighley",
+      "size": [4, 4],
+      "pairs": [
+        ["images/prompts/11-19-26/games/007-first-light.jpg", "007 First Light"],
+        ["images/prompts/11-19-26/games/control-resonant.jpg", "Control Resonant"],
+        ["images/prompts/11-19-26/games/gta-vi.jpg", "Grand Theft Auto VI"],
+        ["images/prompts/11-19-26/games/phantom-blade-zero.jpg", "Phantom Blade Zero"],
+        ["images/prompts/11-19-26/games/resident-evil-requiem.jpg", "Resident Evil Requiem"],
+        ["images/prompts/11-19-26/games/zelda-ocarina-of-time.jpg", "The Legend of Zelda: Ocarina of Time"],
+        ["images/prompts/11-19-26/games/pragmata.jpg", "Pragmata"],
+        ["images/prompts/11-19-26/games/blood-of-dawnwalker.jpg", "The Blood of Dawnwalker"],
+        ["images/prompts/11-19-26/games/mouse-pi-for-hire.jpg", "Mouse: P.I. for Hire"],
+        ["images/prompts/11-19-26/games/ace-combat-8.jpg", "Ace Combat 8: Wings of Theve"],
+        ["images/prompts/11-19-26/games/mixtape.jpg", "Mixtape"],
+        ["images/prompts/11-19-26/games/star-wars-galactic-racer.jpg", "Star Wars: Galactic Racer"],
+        ["images/prompts/11-19-26/games/big-walk.jpg", "Big Walk"],
+        ["images/prompts/11-19-26/games/cairn.jpg", "Cairn"],
+        ["images/prompts/11-19-26/games/forever-ago.jpg", "Forever Ago"],
+        ["images/prompts/11-19-26/games/life-is-strange-reunion.jpg", "Life Is Strange: Reunion"]
+      ]
+    },
+    {
+      "theme": "Dog Breed",
+      "size": [4, 4],
+      "pairs": [
+        ["images/prompts/11-19-26/dogs/afghan-hound.jpg", "Afghan Hound"],
+        ["images/prompts/11-19-26/dogs/american-bulldog.jpg", "American Bulldog"],
+        ["images/prompts/11-19-26/dogs/australian-shepherd.jpg", "Australian Shepherd"],
+        ["images/prompts/11-19-26/dogs/bearded-collie.jpg", "Bearded Collie"],
+        ["images/prompts/11-19-26/dogs/cairn-terrier.jpg", "Cairn Terrier"],
+        ["images/prompts/11-19-26/dogs/dachshund.jpg", "Dachshund"],
+        ["images/prompts/11-19-26/dogs/english-cocker-spaniel.jpg", "English Cocker Spaniel"],
+        ["images/prompts/11-19-26/dogs/french-bulldog.jpg", "French Bulldog"],
+        ["images/prompts/11-19-26/dogs/giant-schnauzer.jpg", "Giant Schnauzer"],
+        ["images/prompts/11-19-26/dogs/hokkaido.jpg", "Hokkaido"],
+        ["images/prompts/11-19-26/dogs/japanese-spitz.jpg", "Japanese Spitz"],
+        ["images/prompts/11-19-26/dogs/komondor.jpg", "Komondor"],
+        ["images/prompts/11-19-26/dogs/pekingese.jpg", "Pekingese"],
+        ["images/prompts/11-19-26/dogs/pembroke-welsh-corgi.jpg", "Pembroke Welsh Corgi"],
+        ["images/prompts/11-19-26/dogs/russian-toy.jpg", "Russian Toy"],
+        ["images/prompts/11-19-26/dogs/yorkshire-terrier.jpg", "Yorkshire Terrier"]
+      ]
+    },
+    {
+      "theme": "Texans Starting Lineup",
+      "size": [3, 3],
+      "pairs": [
+        ["images/prompts/11-19-26/texans/cj-stroud.jpg", "C.J. Stroud"],
+        ["images/prompts/11-19-26/texans/david-montgomery.jpg", "David Montgomery"],
+        ["images/prompts/11-19-26/texans/nico-collins.jpg", "Nico Collins"],
+        ["images/prompts/11-19-26/texans/xavier-hutchinson.jpg", "Xavier Hutchinson"],
+        ["images/prompts/11-19-26/texans/tank-dell.jpg", "Tank Dell"],
+        ["images/prompts/11-19-26/texans/dalton-schultz.jpg", "Dalton Schultz"],
+        ["images/prompts/11-19-26/texans/aireontae-ersery.jpg", "Aireontae Ersery"],
+        ["images/prompts/11-19-26/texans/trent-brown.jpg", "Trent Brown"],
+        ["images/prompts/11-19-26/texans/keylan-rutledge.jpg", "Keylan Rutledge"]
+      ]
+    },
+    {
+      "theme": "Intros",
+      "size": [4, 4],
+      "pairs": [
+        ["images/prompts/11-19-26/intros/attack-on-titan.mp3", "Attack on Titan"],
+        ["images/prompts/11-19-26/intros/chainsaw-man.mp3", "Chainsaw Man"],
+        ["images/prompts/11-19-26/intros/cowboy-bebop.mp3", "Cowboy Bebop"],
+        ["images/prompts/11-19-26/intros/yuri-on-ice.mp3", "Yuri!!! on Ice"],
+        ["images/prompts/11-19-26/intros/banana-fish.mp3", "Banana Fish"],
+        ["images/prompts/11-19-26/intros/saiki-k.mp3", "The Disastrous Life of Saiki K."],
+        ["images/prompts/11-19-26/intros/aggretsuko.mp3", "Aggretsuko"],
+        ["images/prompts/11-19-26/intros/evangelion.mp3", "Neon Genesis Evangelion"],
+        ["images/prompts/11-19-26/intros/yu-yu-hakusho.mp3", "Yu Yu Hakusho"],
+        ["images/prompts/11-19-26/intros/fullmetal-alchemist.mp3", "Fullmetal Alchemist: Brotherhood"],
+        ["images/prompts/11-19-26/intros/death-note.mp3", "Death Note"],
+        ["images/prompts/11-19-26/intros/ouran.mp3", "Ouran High School Host Club"],
+        ["images/prompts/11-19-26/intros/space-dandy.mp3", "Space Dandy"],
+        ["images/prompts/11-19-26/intros/one-punch-man.mp3", "One Punch Man"],
+        ["images/prompts/11-19-26/intros/mob-psycho.mp3", "Mob Psycho 100"],
+        ["images/prompts/11-19-26/intros/death-parade.mp3", "Death Parade"]
+      ]
+    }
+  ]
+}
