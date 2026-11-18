@@ -51,19 +51,16 @@
     },
     {
       "theme": "Iconic Looks",
-      "size": [3, 4],
+      "size": [3, 3],
       "pairs": [
         ["images/prompts/11-18-26/looks/donatella-versace.jpg", "Donatella Versace"],
         ["images/prompts/11-18-26/looks/christina-stambolian.jpg", "Christina Stambolian"],
         ["images/prompts/11-18-26/looks/tom-ford.jpg", "Tom Ford"],
-        ["images/prompts/11-18-26/looks/j-crew.jpg", "J.Crew"],
-        ["images/prompts/11-18-26/looks/tommy-hilfiger.jpg", "Tommy Hilfiger"],
         ["images/prompts/11-18-26/looks/dolce-gabbana.jpg", "Dolce & Gabbana"],
         ["images/prompts/11-18-26/looks/bob-mackie.jpg", "Bob Mackie"],
         ["images/prompts/11-18-26/looks/marjan-pejoski.jpg", "Marjan Pejoski"],
         ["images/prompts/11-18-26/looks/adam-selman.jpg", "Adam Selman"],
         ["images/prompts/11-18-26/looks/mugler.jpg", "Mugler"],
-        ["images/prompts/11-18-26/looks/gianni-versace.jpg", "Gianni Versace"],
         ["images/prompts/11-18-26/looks/roberto-cavalli.jpg", "Roberto Cavalli"]
       ]
     },
