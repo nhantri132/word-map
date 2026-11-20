@@ -1,0 +1,72 @@
+{
+  "title": "11/20/26",
+  "image": "images/11-20-26.jpg",
+  "puzzleSize": [3, 3],
+  "mapSize": [2, 2],
+  "palette": 0,
+  "puzzles": [
+    {
+      "theme": "The Best Disney",
+      "size": [3, 4],
+      "pairs": [
+        ["images/prompts/11-20-26/disney/big-thunder-mountain.jpg", "Big Thunder Mountain Railroad"],
+        ["images/prompts/11-20-26/disney/downhill-double-dipper.jpg", "Downhill Double Dipper"],
+        ["images/prompts/11-20-26/disney/space-mountain.jpg", "Space Mountain"],
+        ["images/prompts/11-20-26/disney/seven-dwarfs-mine-train.jpg", "Seven Dwarfs Mine Train"],
+        ["images/prompts/11-20-26/disney/tron-lightcycle-run.jpg", "TRON Lightcycle / Run"],
+        ["images/prompts/11-20-26/disney/guardians-cosmic-rewind.jpg", "Guardians of the Galaxy: Cosmic Rewind"],
+        ["images/prompts/11-20-26/disney/mission-space.jpg", "Mission: SPACE"],
+        ["images/prompts/11-20-26/disney/avatar-flight-of-passage.jpg", "Avatar Flight of Passage"],
+        ["images/prompts/11-20-26/disney/crush-n-gusher.jpg", "Crush ’n’ Gusher"],
+        ["images/prompts/11-20-26/disney/gangplank-falls.jpg", "Gangplank Falls"],
+        ["images/prompts/11-20-26/disney/test-track.jpg", "Test Track"],
+        ["images/prompts/11-20-26/disney/expedition-everest.jpg", "Expedition Everest – Legend of the Forbidden Mountain"]
+      ]
+    },
+    {
+      "theme": "Favorite Rappers",
+      "size": [3, 3],
+      "pairs": [
+        ["images/prompts/11-20-26/rappers/black-thought.mp3", "Black Thought"],
+        ["images/prompts/11-20-26/rappers/daveed-diggs.mp3", "Daveed Diggs"],
+        ["images/prompts/11-20-26/rappers/earl-sweatshirt.mp3", "Earl Sweatshirt"],
+        ["images/prompts/11-20-26/rappers/el-p.mp3", "El-P"],
+        ["images/prompts/11-20-26/rappers/kanye-west.mp3", "Kanye West"],
+        ["images/prompts/11-20-26/rappers/kendrick-lamar.mp3", "Kendrick Lamar"],
+        ["images/prompts/11-20-26/rappers/mc-ride.mp3", "MC Ride"],
+        ["images/prompts/11-20-26/rappers/mf-doom.mp3", "MF DOOM"],
+        ["images/prompts/11-20-26/rappers/pusha-t.mp3", "Pusha T"]
+      ]
+    },
+    {
+      "theme": "FLORIDA GIRL",
+      "size": [3, 3],
+      "pairs": [
+        ["images/prompts/11-20-26/florida/pensacola.jpg", "Pensacola"],
+        ["images/prompts/11-20-26/florida/tampa.jpg", "Tampa"],
+        ["images/prompts/11-20-26/florida/jacksonville.jpg", "Jacksonville"],
+        ["images/prompts/11-20-26/florida/miami.jpg", "Miami"],
+        ["images/prompts/11-20-26/florida/orlando.jpg", "Orlando"],
+        ["images/prompts/11-20-26/florida/st-petersburg.jpg", "St. Petersburg"],
+        ["images/prompts/11-20-26/florida/tallahassee.jpg", "Tallahassee"],
+        ["images/prompts/11-20-26/florida/fort-lauderdale.jpg", "Fort Lauderdale"],
+        ["images/prompts/11-20-26/florida/port-st-lucie.jpg", "Port St. Lucie"]
+      ]
+    },
+    {
+      "theme": "Dungeon Masters",
+      "size": [3, 3],
+      "pairs": [
+        ["images/prompts/11-20-26/dms/todd-stashwick.jpg", "Todd Stashwick"],
+        ["images/prompts/11-20-26/dms/joe-manganiello.jpg", "Joe Manganiello"],
+        ["images/prompts/11-20-26/dms/matt-mercer.jpg", "Matt Mercer"],
+        ["images/prompts/11-20-26/dms/brennan-lee-mulligan.jpg", "Brennan Lee Mulligan"],
+        ["images/prompts/11-20-26/dms/aabria-iyengar.jpg", "Aabria Iyengar"],
+        ["images/prompts/11-20-26/dms/deborah-ann-woll.jpg", "Deborah Ann Woll"],
+        ["images/prompts/11-20-26/dms/gerard-way.jpg", "Gerard Way"],
+        ["images/prompts/11-20-26/dms/jasmine-bhullar.jpg", "Jasmine Bhullar"],
+        ["images/prompts/11-20-26/dms/anthony-burch.jpg", "Anthony Burch"]
+      ]
+    }
+  ]
+}
