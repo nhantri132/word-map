@@ -1,0 +1,182 @@
+{
+  "title": "11/23/26",
+  "image": "images/11-23-26.jpg",
+  "puzzleSize": [4, 3],
+  "mapSize": [3, 3],
+  "palette": 0,
+  "puzzles": [
+    {
+      "theme": "Fight Scenes",
+      "size": [3, 4],
+      "pairs": [
+        ["images/prompts/11-23-26/fights/oldboy.mp4", "Oldboy"],
+        ["images/prompts/11-23-26/fights/upgrade.mp4", "Upgrade"],
+        ["images/prompts/11-23-26/fights/batman-v-superman.mp4", "Batman v Superman"],
+        ["images/prompts/11-23-26/fights/real-steel.mp4", "Real Steel"],
+        ["images/prompts/11-23-26/fights/shang-chi.mp4", "Shang-Chi"],
+        ["images/prompts/11-23-26/fights/thunderbolts.mp4", "Thunderbolts"],
+        ["images/prompts/11-23-26/fights/love-hurts.mp4", "Love Hurts"],
+        ["images/prompts/11-23-26/fights/the-raid.mp4", "The Raid: Redemption"],
+        ["images/prompts/11-23-26/fights/headshot.mp4", "Headshot"],
+        ["images/prompts/11-23-26/fights/crouching-tiger.mp4", "Crouching Tiger, Hidden Dragon"],
+        ["images/prompts/11-23-26/fights/snake-eyes.mp4", "Snake Eyes"],
+        ["images/prompts/11-23-26/fights/kung-fu-hustle.mp4", "Kung Fu Hustle"]
+      ]
+    },
+    {
+      "theme": "Character Select",
+      "size": [3, 3],
+      "pairs": [
+        ["images/prompts/11-23-26/charsel/street-fighter-6.jpg", "Street Fighter 6"],
+        ["images/prompts/11-23-26/charsel/super-smash-bros.jpg", "Super Smash Bros."],
+        ["images/prompts/11-23-26/charsel/soulcalibur-ii.jpg", "Soulcalibur II"],
+        ["images/prompts/11-23-26/charsel/mortal-kombat-9.jpg", "Mortal Kombat 9"],
+        ["images/prompts/11-23-26/charsel/marvel-vs-capcom-2.jpg", "Marvel vs. Capcom 2"],
+        ["images/prompts/11-23-26/charsel/party-animals.jpg", "Party Animals"],
+        ["images/prompts/11-23-26/charsel/street-fighter-ii.jpg", "Street Fighter II"],
+        ["images/prompts/11-23-26/charsel/virtua-fighter-5.jpg", "Virtua Fighter 5"],
+        ["images/prompts/11-23-26/charsel/chivalry-2.jpg", "Chivalry 2"]
+      ]
+    },
+    {
+      "theme": "Overwatch",
+      "size": [4, 5],
+      "pairs": [
+        ["images/prompts/11-23-26/ow/bastion.jpg", "Bastion"],
+        ["images/prompts/11-23-26/ow/dva.jpg", "D.Va"],
+        ["images/prompts/11-23-26/ow/genji.jpg", "Genji"],
+        ["images/prompts/11-23-26/ow/hanzo.jpg", "Hanzo"],
+        ["images/prompts/11-23-26/ow/junkrat.jpg", "Junkrat"],
+        ["images/prompts/11-23-26/ow/lucio.jpg", "Lúcio"],
+        ["images/prompts/11-23-26/ow/cassidy.jpg", "Cassidy"],
+        ["images/prompts/11-23-26/ow/mercy.jpg", "Mercy"],
+        ["images/prompts/11-23-26/ow/mei.jpg", "Mei"],
+        ["images/prompts/11-23-26/ow/pharah.jpg", "Pharah"],
+        ["images/prompts/11-23-26/ow/reaper.jpg", "Reaper"],
+        ["images/prompts/11-23-26/ow/reinhardt.jpg", "Reinhardt"],
+        ["images/prompts/11-23-26/ow/roadhog.jpg", "Roadhog"],
+        ["images/prompts/11-23-26/ow/soldier-76.jpg", "Soldier: 76"],
+        ["images/prompts/11-23-26/ow/symmetra.jpg", "Symmetra"],
+        ["images/prompts/11-23-26/ow/torbjorn.jpg", "Torbjörn"],
+        ["images/prompts/11-23-26/ow/tracer.jpg", "Tracer"],
+        ["images/prompts/11-23-26/ow/widowmaker.jpg", "Widowmaker"],
+        ["images/prompts/11-23-26/ow/zenyatta.jpg", "Zenyatta"],
+        ["images/prompts/11-23-26/ow/winston.jpg", "Winston"]
+      ]
+    },
+    {
+      "theme": "Movie Intro",
+      "size": [3, 3],
+      "pairs": [
+        ["images/prompts/11-23-26/studio/lionsgate.mp3", "Lionsgate"],
+        ["images/prompts/11-23-26/studio/mgm.mp3", "MGM"],
+        ["images/prompts/11-23-26/studio/dreamworks.mp3", "DreamWorks"],
+        ["images/prompts/11-23-26/studio/disney.mp3", "Disney"],
+        ["images/prompts/11-23-26/studio/warner-bros.mp3", "Warner Bros."],
+        ["images/prompts/11-23-26/studio/paramount.mp3", "Paramount"],
+        ["images/prompts/11-23-26/studio/20th-century.mp3", "20th Century Fox"],
+        ["images/prompts/11-23-26/studio/columbia.mp3", "Columbia"],
+        ["images/prompts/11-23-26/studio/universal.mp3", "Universal"]
+      ]
+    },
+    {
+      "theme": "Vietnamese 101",
+      "size": [3, 4],
+      "pairs": [
+        ["Xin chào", "Hello"],
+        ["Cảm ơn", "Thank you"],
+        ["Nước", "Water"],
+        ["Cơm", "Rice"],
+        ["Mẹ", "Mom"],
+        ["Con chó", "Dog"],
+        ["Không", "No"],
+        ["Nhà", "Home"],
+        ["Ăn", "Eat"],
+        ["Ngủ", "Sleep"],
+        ["Ngon", "Delicious"],
+        ["Yêu", "Love"]
+      ]
+    },
+    {
+      "theme": "Arigato",
+      "size": [3, 3],
+      "pairs": [
+        ["images/prompts/11-23-26/jp/good-morning.mp3", "Good morning"],
+        ["images/prompts/11-23-26/jp/hello.mp3", "Hello"],
+        ["images/prompts/11-23-26/jp/good-evening.mp3", "Good evening"],
+        ["images/prompts/11-23-26/jp/thanks.mp3", "Thanks"],
+        ["images/prompts/11-23-26/jp/youre-welcome.mp3", "You’re welcome"],
+        ["images/prompts/11-23-26/jp/excuse-me.mp3", "Excuse me / Sorry"],
+        ["images/prompts/11-23-26/jp/please.mp3", "Please"],
+        ["images/prompts/11-23-26/jp/goodbye.mp3", "Goodbye"],
+        ["images/prompts/11-23-26/jp/yes.mp3", "Yes"]
+      ]
+    },
+    {
+      "theme": "Yoked",
+      "size": [4, 4],
+      "pairs": [
+        ["Biceps brachii", "Biceps"],
+        ["Triceps brachii", "Triceps"],
+        ["Pectoralis major", "Pecs"],
+        ["Latissimus dorsi", "Lats"],
+        ["Deltoid", "Shoulders"],
+        ["Trapezius", "Traps"],
+        ["Rectus abdominis", "Abs"],
+        ["External obliques", "Love handles"],
+        ["Gluteus maximus", "Butt"],
+        ["Quadriceps femoris", "Quads"],
+        ["Erector spinae", "Lower back"],
+        ["Gastrocnemius", "Calves"],
+        ["Masseter", "Jaw"],
+        ["Brachioradialis", "Forearm"],
+        ["Adductor longus", "Groin"],
+        ["Rhomboids", "Upper back"]
+      ]
+    },
+    {
+      "theme": "It\u2019s a Sign",
+      "size": [4, 4],
+      "pairs": [
+        ["images/prompts/11-23-26/signs/side-road-left.jpg", "Side Road (Left)"],
+        ["images/prompts/11-23-26/signs/hill.jpg", "Hill"],
+        ["images/prompts/11-23-26/signs/deer-crossing.jpg", "Deer Crossing"],
+        ["images/prompts/11-23-26/signs/slippery-when-wet.jpg", "Slippery When Wet"],
+        ["images/prompts/11-23-26/signs/signal-ahead.jpg", "Signal Ahead"],
+        ["images/prompts/11-23-26/signs/railroad-crossing-ahead.jpg", "Railroad Crossing Ahead"],
+        ["images/prompts/11-23-26/signs/workers-ahead.jpg", "Workers Ahead"],
+        ["images/prompts/11-23-26/signs/no-parking.jpg", "No Parking"],
+        ["images/prompts/11-23-26/signs/lodging.jpg", "Lodging"],
+        ["images/prompts/11-23-26/signs/gas.jpg", "Gas"],
+        ["images/prompts/11-23-26/signs/no-pedestrians.jpg", "No Pedestrians"],
+        ["images/prompts/11-23-26/signs/sharp-curve-right.jpg", "Sharp Curve to Right"],
+        ["images/prompts/11-23-26/signs/two-way-traffic.jpg", "Two Way Traffic"],
+        ["images/prompts/11-23-26/signs/no-left-turn.jpg", "No Left Turn"],
+        ["images/prompts/11-23-26/signs/tow-away-zone.jpg", "Tow-Away Zone"],
+        ["images/prompts/11-23-26/signs/interstate-route-marker.jpg", "Interstate Route Marker"]
+      ]
+    },
+    {
+      "theme": "FINISH HIM",
+      "size": [4, 4],
+      "pairs": [
+        ["Stone Cold Stunner", "Stone Cold Steve Austin"],
+        ["Rock Bottom", "The Rock"],
+        ["Pedigree", "Triple H"],
+        ["RKO", "Randy Orton"],
+        ["Sweet Chin Music", "Shawn Michaels"],
+        ["Attitude Adjustment", "John Cena"],
+        ["F5", "Brock Lesnar"],
+        ["Sharpshooter", "Bret Hart"],
+        ["Walls of Jericho", "Chris Jericho"],
+        ["619", "Rey Mysterio"],
+        ["Swanton Bomb", "Jeff Hardy"],
+        ["Curb Stomp", "Seth Rollins"],
+        ["Claymore", "Drew McIntyre"],
+        ["Riptide", "Rhea Ripley"],
+        ["Mandible Claw", "Mankind"],
+        ["Tombstone Piledriver", "The Undertaker"]
+      ]
+    }
+  ]
+}
