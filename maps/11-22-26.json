@@ -30,12 +30,12 @@
         ["Burglary", "Breaking in to commit a crime"],
         ["Embezzlement", "Stealing money you manage"],
         ["Perjury", "Lying under oath"],
-        ["Extortion", "Getting money through threats"],
+        ["Extortion", "Getting money by threats"],
         ["Forgery", "Faking a signature or document"],
         ["Grand theft auto", "Stealing a car"],
-        ["Trespassing", "Entering property without permission"],
-        ["Loitering", "Hanging around with no purpose"],
-        ["Bribery", "Paying someone to abuse their position"]
+        ["Trespassing", "Entering without permission"],
+        ["Loitering", "Hanging around aimlessly"],
+        ["Bribery", "Paying someone off"]
       ]
     },
     {
