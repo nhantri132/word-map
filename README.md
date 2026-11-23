@@ -84,6 +84,14 @@ Text and image prompts can be mixed in the same grid. Tap an image prompt to see
 
 Keep prompt images small (around 400–600 px wide) so grids load quickly on a phone.
 
+Tapping a picture opens it nearly full screen. If the square shows a cropped or padded version, add a larger picture as a third entry; it's loaded only when the square is tapped:
+
+```json
+["images/prompts/sf6.jpg", "Street Fighter 6", "images/prompts/sf6.full.jpg"]
+```
+
+(In the longer form, use `"full": "images/prompts/sf6.full.jpg"`.)
+
 ## Video and sound prompts
 
 A prompt can also be a short video or a sound clip. The file extension decides what it is:

@@ -253,6 +253,11 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .board.placing .sq.hasimg:not(.solved) .pimg { box-shadow: inset 0 0 0 3px var(--tile); }
 .board.complete .sq.showp .pimg, .board.complete .sq.showp .cap { opacity: 1; }
 .sheet .bigimg { display: block; width: 100%; max-height: 60vh; object-fit: contain; border-radius: 12px; margin-bottom: 12px; background: #000; }
+/* Tapped pictures and videos open nearly full screen. */
+.overlay.media { padding: 8px; }
+.sheet.media { max-width: 1100px; padding: 10px 10px 8px; text-align: center; }
+.sheet.media .bigimg { max-height: calc(100dvh - 80px); margin-bottom: 6px; }
+.sheet.media p { margin: 4px 0 8px; }
 
 /* ---------- video and sound prompts ---------- */
 .sq .pvid { background-size: cover; background-position: center; overflow: hidden; }

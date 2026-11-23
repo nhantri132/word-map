@@ -32,10 +32,11 @@ const promptHTML = q => hasMedia(q)
   ? `${mediaHTML(q)}${q.prompt ? `<span class="cap">${esc(q.prompt)}</span>` : ''}`
   : `<span class="txt prompt"><span>${esc(q.prompt)}</span></span>`;
 // The enlarged view when you tap a prompt. Videos play here with sound and controls.
+// An image pair may carry a third entry, a larger "full" picture shown only here.
 const promptSheet = q => q.video
   ? `<video class="bigimg" src="${esc(q.video)}" poster="${esc(posterOf(q.video))}" loop playsinline webkit-playsinline controls preload="auto"></video>${q.prompt ? `<p>${esc(q.prompt)}</p>` : ''}`
   : q.image
-    ? `<img class="bigimg" src="${esc(q.image)}" alt="">${q.prompt ? `<p>${esc(q.prompt)}</p>` : ''}`
+    ? `<img class="bigimg" src="${esc(q.full || q.image)}" alt="">${q.prompt ? `<p>${esc(q.prompt)}</p>` : ''}`
     : `<p>${esc(q.prompt)}</p>`;
 
 /* ---------------------------------------------------------------- sound clips */
@@ -128,7 +129,7 @@ function normalizeMap(raw, file) {
     const [c, r] = Array.isArray(p.size) && p.size.length === 2 ? p.size : [pc, pr];
     const N = c * r;
     const pairs = (p.pairs || []).map(x => {
-      const q = Array.isArray(x) ? { prompt: x[0], answer: x[1] } : { prompt: x.prompt, answer: x.answer, image: x.image, audio: x.audio, video: x.video };
+      const q = Array.isArray(x) ? { prompt: x[0], answer: x[1], full: x[2] } : { prompt: x.prompt, answer: x.answer, image: x.image, audio: x.audio, video: x.video, full: x.full };
       // A prompt that's just a file path becomes a media prompt, by extension:
       // "images/prompts/cat.jpg" → image, ".mp4" → video, ".mp3" → sound clip.
       if (!hasMedia(q) && typeof q.prompt === 'string') {
@@ -334,7 +335,9 @@ function fitText(sq, max, min = 9) {
 function showSheet(html) {
   const o = document.createElement('div');
   o.className = 'overlay';
-  o.innerHTML = `<div class="sheet">${html}<small>Tap anywhere to close</small></div>`;
+  const media = html.includes('class="bigimg"');
+  if (media) o.classList.add('media');
+  o.innerHTML = `<div class="sheet${media ? ' media' : ''}">${html}<small>Tap anywhere to close</small></div>`;
   // Taps on a video's controls shouldn't close the sheet.
   o.addEventListener('click', e => { if (!e.target.closest('video')) o.remove(); });
   document.body.appendChild(o);

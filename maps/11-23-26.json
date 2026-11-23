@@ -27,15 +27,15 @@
       "theme": "Character Select",
       "size": [3, 3],
       "pairs": [
-        ["images/prompts/11-23-26/charsel/street-fighter-6.jpg", "Street Fighter 6"],
-        ["images/prompts/11-23-26/charsel/super-smash-bros.jpg", "Super Smash Bros."],
-        ["images/prompts/11-23-26/charsel/soulcalibur-ii.jpg", "Soulcalibur II"],
-        ["images/prompts/11-23-26/charsel/mortal-kombat-9.jpg", "Mortal Kombat 9"],
-        ["images/prompts/11-23-26/charsel/marvel-vs-capcom-2.jpg", "Marvel vs. Capcom 2"],
-        ["images/prompts/11-23-26/charsel/party-animals.jpg", "Party Animals"],
-        ["images/prompts/11-23-26/charsel/street-fighter-ii.jpg", "Street Fighter II"],
-        ["images/prompts/11-23-26/charsel/virtua-fighter-5.jpg", "Virtua Fighter 5"],
-        ["images/prompts/11-23-26/charsel/chivalry-2.jpg", "Chivalry 2"]
+        ["images/prompts/11-23-26/charsel/street-fighter-6.jpg", "Street Fighter 6", "images/prompts/11-23-26/charsel/street-fighter-6.full.jpg"],
+        ["images/prompts/11-23-26/charsel/super-smash-bros.jpg", "Super Smash Bros.", "images/prompts/11-23-26/charsel/super-smash-bros.full.jpg"],
+        ["images/prompts/11-23-26/charsel/soulcalibur-ii.jpg", "Soulcalibur II", "images/prompts/11-23-26/charsel/soulcalibur-ii.full.jpg"],
+        ["images/prompts/11-23-26/charsel/mortal-kombat-9.jpg", "Mortal Kombat 9", "images/prompts/11-23-26/charsel/mortal-kombat-9.full.jpg"],
+        ["images/prompts/11-23-26/charsel/marvel-vs-capcom-2.jpg", "Marvel vs. Capcom 2", "images/prompts/11-23-26/charsel/marvel-vs-capcom-2.full.jpg"],
+        ["images/prompts/11-23-26/charsel/party-animals.jpg", "Party Animals", "images/prompts/11-23-26/charsel/party-animals.full.jpg"],
+        ["images/prompts/11-23-26/charsel/street-fighter-ii.jpg", "Street Fighter II", "images/prompts/11-23-26/charsel/street-fighter-ii.full.jpg"],
+        ["images/prompts/11-23-26/charsel/virtua-fighter-5.jpg", "Virtua Fighter 5", "images/prompts/11-23-26/charsel/virtua-fighter-5.full.jpg"],
+        ["images/prompts/11-23-26/charsel/chivalry-2.jpg", "Chivalry 2", "images/prompts/11-23-26/charsel/chivalry-2.full.jpg"]
       ]
     },
     {
