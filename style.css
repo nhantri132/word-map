@@ -63,6 +63,13 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .card .warn, .warn { color: var(--accent); }
 .card.bad { display: block; color: var(--accent); }
 .hint { color: var(--muted); font-size: 14px; text-align: center; margin: 22px 0 0; }
+.todaybox { margin-top: 6px; }
+.todaybox h3 { margin: 0 0 10px; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--tile); }
+.card.today { flex-direction: column; align-items: stretch; gap: 12px; padding: 14px; border-color: var(--tileedge); }
+.card.today .thumb { width: 100%; height: auto; max-height: 46vh; }
+.card.today h2 { font-size: 24px; }
+.btn.archive { display: flex; justify-content: center; align-items: center; gap: 8px; margin: 18px 0 0; }
+.btn.archive small { font-size: 13px; opacity: .7; }
 
 /* ---------- match map ---------- */
 .mapwrap { overflow: hidden; border-radius: 14px; margin-top: 4px; transition: border-radius 1s; }

@@ -17,7 +17,7 @@ To test on your computer first, run `python3 -m http.server` in this folder and 
 
 ```
 index.html  style.css  app.js
-maps/index.json      ← list of maps shown on the home screen
+maps/index.json      ← list of maps; the last one is "Today's puzzle", the rest are in the Archive
 maps/heart.json      ← one file per Match Map
 images/heart.png     ← the picture a map reveals
 ```
@@ -44,7 +44,7 @@ images/heart.png     ← the picture a map reveals
 }
 ```
 
-3. Add `"your-map.json"` to the list in `maps/index.json`.
+3. Add `"your-map.json"` to the end of the list in `maps/index.json`. The last map in the list shows on the home screen as **Today's puzzle**; every earlier map moves to the **Archive** button.
 
 | Field | Meaning |
 |---|---|

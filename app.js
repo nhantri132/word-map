@@ -170,6 +170,12 @@ async function getIndex() {
   }));
   return cache.index;
 }
+// True for the newest map, which lives on the home screen; older ones live in the archive.
+async function isLatest(id) {
+  const maps = await getIndex();
+  const last = maps[maps.length - 1];
+  return !last || last.id === id;
+}
 async function getMap(id) {
   const m = (await getIndex()).find(m => m.id === id);
   if (!m) throw new Error(`There is no Match Map called “${id}”.`);
@@ -378,6 +384,7 @@ async function route() {
     if (parts[0] === 'm' && parts[1] && parts[2] === 'p') return await puzzleView(parts[1], parseInt(parts[3], 10));
     if (parts[0] === 'm' && parts[1]) return await mapView(parts[1]);
     if (parts[0] === 'peek' && parts[1]) return await mapView(parts[1], { peek: true });
+    if (parts[0] === 'archive') return await homeView({ archive: true });
     return await homeView();
   } catch (e) {
     newView();
@@ -421,31 +428,44 @@ document.addEventListener('visibilitychange', () => {
 });
 route();
 
-/* ---------------------------------------------------------------- home */
-async function homeView() {
+/* ---------------------------------------------------------------- home
+   The home screen shows only the newest map (the last entry in maps/index.json) as
+   "Today's puzzle". Every earlier map lives on the Archive screen, newest first. */
+async function homeView({ archive = false } = {}) {
   const maps = await getIndex();
   newView();
-  const card = m => {
+  const card = (m, big) => {
     if (m.error) return `<li class="card bad"><b>${esc(m.file)}</b><p>${esc(m.error)}</p></li>`;
     const p = progressFor(m);
     const done = m.puzzles.filter((_, i) => puzzleDone(m, p, i)).length;
     const status = done === m.puzzles.length ? 'Complete' : `${done} of ${m.puzzles.length} puzzles`;
-    return `<li><a class="card" href="#/m/${encodeURIComponent(m.id)}">
-      <canvas class="thumb" data-id="${esc(m.id)}" width="${m.W * 12}" height="${m.H * 12}"></canvas>
+    const px = big ? 24 : 12;
+    return `<li><a class="card${big ? ' today' : ''}" href="#/m/${encodeURIComponent(m.id)}">
+      <canvas class="thumb" data-id="${esc(m.id)}" width="${m.W * px}" height="${m.H * px}"></canvas>
       <div><h2>${esc(m.title)}</h2><p>${esc(status)}${m.subtitle ? ' · ' + esc(m.subtitle) : ''}</p>
       ${m.errors.length ? `<p class="warn">${m.errors.length} problem${m.errors.length > 1 ? 's' : ''} in this map</p>` : ''}</div></a></li>`;
   };
-  app.innerHTML = `<main>
+  const latest = maps[maps.length - 1];
+  const older = maps.slice(0, -1).reverse();
+  const shown = archive ? older : (latest ? [latest] : []);
+  app.innerHTML = archive ? `<main>
+    <header class="bar"><a class="back" href="#/" aria-label="Back">‹</a>
+      <div class="ttl"><h2>Archive</h2><small>${older.length} earlier map${older.length === 1 ? '' : 's'}</small></div></header>
+    <ul class="cards">${older.map(m => card(m, false)).join('')}</ul>
+  </main>` : `<main>
     <header class="top"><h1 class="logo">Match<span>Map</span></h1>
       <button class="chip" id="hap"></button></header>
-    <ul class="cards">${maps.slice().reverse().map(card).join('')}</ul>
+    ${latest ? `<section class="todaybox"><h3>Today's puzzle</h3><ul class="cards">${card(latest, true)}</ul></section>` : ''}
+    ${older.length ? `<a class="btn archive" href="#/archive">Archive <small>${older.length}</small></a>` : ''}
     <p class="hint">Match each answer to its prompt. Every match paints one pixel of a hidden picture.</p>
   </main>`;
   const hap = $('#hap');
-  const label = () => { hap.textContent = `Haptics ${Haptics.enabled ? 'on' : 'off'}`; };
-  label();
-  hap.addEventListener('click', () => { Haptics.enabled = !Haptics.enabled; label(); Haptics.correct(); });
-  for (const m of maps) {
+  if (hap) {
+    const label = () => { hap.textContent = `Haptics ${Haptics.enabled ? 'on' : 'off'}`; };
+    label();
+    hap.addEventListener('click', () => { Haptics.enabled = !Haptics.enabled; label(); Haptics.correct(); });
+  }
+  for (const m of shown) {
     if (m.error) continue;
     const cv = app.querySelector(`canvas[data-id="${CSS.escape(m.id)}"]`);
     getPixels(m).then(px => drawThumb(cv, m, px, progressFor(m))).catch(() => {});
@@ -472,7 +492,7 @@ async function mapView(id, { peek = false } = {}) {
   };
 
   app.innerHTML = `<main>
-    <header class="bar"><a class="back" href="#/" aria-label="Back">‹</a>
+    <header class="bar"><a class="back" href="${await isLatest(id) ? '#/' : '#/archive'}" aria-label="Back">‹</a>
       <div class="ttl"><h2>${esc(map.title)}</h2><small>${peek ? 'Peek mode · progress untouched' : `${done} of ${map.puzzles.length} puzzles`}</small></div>
       ${peek ? '' : '<button class="chip" id="reset">Reset</button>'}</header>
     ${map.errors.length ? `<div class="warnbox"><b>This map needs fixing:</b><ul>${map.errors.map(e => `<li>${esc(e)}</li>`).join('')}</ul></div>` : ''}
