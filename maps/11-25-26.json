@@ -1,0 +1,129 @@
+{
+  "title": "11/25/26",
+  "image": "images/11-25-26.jpg",
+  "puzzleSize": [4, 3],
+  "mapSize": [2, 4],
+  "palette": 0,
+  "puzzles": [
+    {
+      "theme": "Christopher",
+      "size": [3, 3],
+      "pairs": [
+        ["You shall have no other gods before me", "1"],
+        ["Don’t take the Lord’s name in vain", "2"],
+        ["Keep the Sabbath day holy", "3"],
+        ["Honor your father and mother", "4"],
+        ["You shall not kill", "5"],
+        ["You shall not commit adultery", "6"],
+        ["You shall not steal", "7"],
+        ["You shall not bear false witness", "8"],
+        ["Don’t covet your neighbor’s wife", "9"]
+      ]
+    },
+    {
+      "theme": "Padraig",
+      "size": [3, 3],
+      "pairs": [
+        ["images/prompts/11-21-26/padraig/colter-wall.jpg", "Colter Wall"],
+        ["images/prompts/11-21-26/padraig/radiohead.jpg", "Radiohead"],
+        ["images/prompts/11-21-26/padraig/bob-dylan.jpg", "Bob Dylan"],
+        ["images/prompts/11-21-26/padraig/vulfpeck.jpg", "Vulfpeck"],
+        ["images/prompts/11-21-26/padraig/charley-crockett.jpg", "Charley Crockett"],
+        ["images/prompts/11-21-26/padraig/gary-clark-jr.jpg", "Gary Clark Jr."],
+        ["images/prompts/11-21-26/padraig/billy-strings.jpg", "Billy Strings"],
+        ["images/prompts/11-21-26/padraig/rambler-kane.jpg", "Rambler Kane"],
+        ["images/prompts/11-21-26/padraig/watchhouse.jpg", "WATCHHOUSE"]
+      ]
+    },
+    {
+      "theme": "Michael",
+      "size": [3, 3],
+      "pairs": [
+        ["images/prompts/11-21-26/guns/ak-47.jpg", "AK-47"],
+        ["images/prompts/11-21-26/guns/ar-15.jpg", "AR-15"],
+        ["images/prompts/11-21-26/guns/m1-garand.jpg", "M1 Garand"],
+        ["images/prompts/11-21-26/guns/winchester-1873.jpg", "Winchester Model 1873"],
+        ["images/prompts/11-21-26/guns/colt-m1911.jpg", "Colt M1911"],
+        ["images/prompts/11-21-26/guns/glock-17.jpg", "Glock 17"],
+        ["images/prompts/11-21-26/guns/sw-model-29.jpg", "Smith & Wesson Model 29"],
+        ["images/prompts/11-21-26/guns/beretta-92fs.jpg", "Beretta 92FS"],
+        ["images/prompts/11-21-26/guns/remington-870.jpg", "Remington 870"]
+      ]
+    },
+    {
+      "theme": "Mom",
+      "size": [3, 3],
+      "pairs": [
+        ["images/prompts/11-21-26/asl/a.jpg", "A"],
+        ["images/prompts/11-21-26/asl/h.jpg", "H"],
+        ["images/prompts/11-21-26/asl/n.jpg", "N"],
+        ["images/prompts/11-21-26/asl/r.jpg", "R"],
+        ["images/prompts/11-21-26/asl/j.jpg", "J"],
+        ["images/prompts/11-21-26/asl/q.jpg", "Q"],
+        ["images/prompts/11-21-26/asl/x.jpg", "X"],
+        ["images/prompts/11-21-26/asl/p.jpg", "P"],
+        ["images/prompts/11-21-26/asl/u.jpg", "U"]
+      ]
+    },
+    {
+      "theme": "Dad",
+      "size": [3, 3],
+      "pairs": [
+        ["images/prompts/11-21-26/dad/jocko-willink.jpg", "Jocko Willink"],
+        ["images/prompts/11-21-26/dad/david-goggins.jpg", "David Goggins"],
+        ["images/prompts/11-21-26/dad/shawn-ryan.jpg", "Shawn Ryan"],
+        ["images/prompts/11-21-26/dad/tim-kennedy.jpg", "Tim Kennedy"],
+        ["images/prompts/11-21-26/dad/aj-pasciuti.jpg", "AJ Pasciuti"],
+        ["images/prompts/11-21-26/dad/jack-carr.jpg", "Jack Carr"],
+        ["images/prompts/11-21-26/dad/leif-babin.jpg", "Leif Babin"],
+        ["images/prompts/11-21-26/dad/andy-stumpf.jpg", "Andy Stumpf"],
+        ["images/prompts/11-21-26/dad/mike-ritland.jpg", "Mike Ritland"]
+      ]
+    },
+    {
+      "theme": "Nicholas",
+      "size": [3, 3],
+      "pairs": [
+        ["Grain mash, aged in wood casks", "Whiskey"],
+        ["Neutral spirit, often from potatoes", "Vodka"],
+        ["Juniper-flavored spirit", "Gin"],
+        ["Made from sugarcane or molasses", "Rum"],
+        ["Blue agave, from Jalisco", "Tequila"],
+        ["Smoky, pit-roasted agave", "Mezcal"],
+        ["Distilled from wine", "Brandy"],
+        ["Green anise spirit with wormwood", "Absinthe"],
+        ["Chinese sorghum spirit", "Baijiu"]
+      ]
+    },
+    {
+      "theme": "Lauren",
+      "size": [3, 3],
+      "pairs": [
+        ["images/prompts/11-25-26/pilates/the-hundred.mp4", "The Hundred"],
+        ["images/prompts/11-25-26/pilates/high-scissors.mp4", "High Scissors"],
+        ["images/prompts/11-25-26/pilates/teaser.mp4", "Teaser"],
+        ["images/prompts/11-25-26/pilates/side-kicks.mp4", "Side Kicks"],
+        ["images/prompts/11-25-26/pilates/swimming.mp4", "Swimming"],
+        ["images/prompts/11-25-26/pilates/the-roll-over.mp4", "The Roll Over"],
+        ["images/prompts/11-25-26/pilates/single-leg-stretch.mp4", "Single Leg Stretch"],
+        ["images/prompts/11-25-26/pilates/saw.mp4", "Saw"],
+        ["images/prompts/11-25-26/pilates/swan.mp4", "Swan"]
+      ]
+    },
+    {
+      "theme": "Tri",
+      "size": [3, 3],
+      "pairs": [
+        ["images/prompts/11-25-26/heroes/doctor-doom.mp4", "Doctor Doom"],
+        ["images/prompts/11-25-26/heroes/daredevil.mp4", "Daredevil"],
+        ["images/prompts/11-25-26/heroes/vision.mp4", "Vision"],
+        ["images/prompts/11-25-26/heroes/human-torch.mp4", "Human Torch"],
+        ["images/prompts/11-25-26/heroes/yelena.mp4", "Yelena"],
+        ["images/prompts/11-25-26/heroes/sam-wilson.mp4", "Sam Wilson"],
+        ["images/prompts/11-25-26/heroes/deadpool.mp4", "Deadpool"],
+        ["images/prompts/11-25-26/heroes/loki.mp4", "Loki"],
+        ["images/prompts/11-25-26/heroes/shang-chi.mp4", "Shang-Chi"]
+      ]
+    }
+  ]
+}
