@@ -1,0 +1,72 @@
+{
+  "title": "11/28/26",
+  "image": "images/11-28-26.jpg",
+  "puzzleSize": [4, 3],
+  "mapSize": [2, 2],
+  "palette": 0,
+  "puzzles": [
+    {
+      "theme": "Progressives",
+      "size": [3, 3],
+      "pairs": [
+        ["images/prompts/11-28-26/prog/mamdani.jpg", "Zohran Mamdani"],
+        ["images/prompts/11-28-26/prog/aoc.jpg", "Alexandria Ocasio-Cortez"],
+        ["images/prompts/11-28-26/prog/bernie-sanders.jpg", "Bernie Sanders"],
+        ["images/prompts/11-28-26/prog/rashida-tlaib.jpg", "Rashida Tlaib"],
+        ["images/prompts/11-28-26/prog/claire-valdez.jpg", "Claire Valdez"],
+        ["images/prompts/11-28-26/prog/darializa-chevelier.jpg", "Darializa Avila Chevalier"],
+        ["images/prompts/11-28-26/prog/melat-kiros.jpg", "Melat Kiros"],
+        ["images/prompts/11-28-26/prog/brad-lander.jpg", "Brad Lander"],
+        ["images/prompts/11-28-26/prog/abdul-el-sayed.jpg", "Abdul El-Sayed"]
+      ]
+    },
+    {
+      "theme": "Modern Civil Rights",
+      "size": [3, 3],
+      "pairs": [
+        ["images/prompts/11-28-26/civil/stacey-abrams.jpg", "Stacey Abrams"],
+        ["images/prompts/11-28-26/civil/melanie-campbell.jpg", "Melanie Campbell"],
+        ["images/prompts/11-28-26/civil/william-barber.jpg", "Dr. William Barber II"],
+        ["images/prompts/11-28-26/civil/bryan-stevenson.jpg", "Bryan Stevenson"],
+        ["images/prompts/11-28-26/civil/michelle-alexander.jpg", "Michelle Alexander"],
+        ["images/prompts/11-28-26/civil/benjamin-crump.jpg", "Benjamin Crump"],
+        ["images/prompts/11-28-26/civil/kimberle-crenshaw.jpg", "Kimberlé Crenshaw"],
+        ["images/prompts/11-28-26/civil/erika-andiola.jpg", "Erika Andiola"],
+        ["images/prompts/11-28-26/civil/chad-griffin.jpg", "Chad Griffin"]
+      ]
+    },
+    {
+      "theme": "2026",
+      "size": [3, 3],
+      "pairs": [
+        ["images/prompts/11-28-26/y2026/01-january.jpg", "January"],
+        ["images/prompts/11-28-26/y2026/02-february.jpg", "February"],
+        ["images/prompts/11-28-26/y2026/03-march.jpg", "March"],
+        ["images/prompts/11-28-26/y2026/04-april.jpg", "April"],
+        ["images/prompts/11-28-26/y2026/05-may.jpg", "May"],
+        ["images/prompts/11-28-26/y2026/06-june.jpg", "June"],
+        ["images/prompts/11-28-26/y2026/07-july.jpg", "July"],
+        ["images/prompts/11-28-26/y2026/08-august.jpg", "August"],
+        ["images/prompts/11-28-26/y2026/09-september.jpg", "September"]
+      ]
+    },
+    {
+      "theme": "Events",
+      "size": [3, 4],
+      "pairs": [
+        ["Epstein files released", "December 2025"],
+        ["Mamdani sworn in as NYC mayor", "January"],
+        ["Winter Olympics in Milan Cortina", "February"],
+        ["No Kings protests", "March"],
+        ["Artemis II launches", "April"],
+        ["Spirit Airlines shuts down", "May"],
+        ["Knicks win the NBA Finals in 5", "June"],
+        ["World Cup final", "July"],
+        ["National debt passes $40 trillion", "August"],
+        ["Trump promises $5,000 payments", "September"],
+        ["Brewers win first World Series", "October"],
+        ["The blue wave", "November"]
+      ]
+    }
+  ]
+}
